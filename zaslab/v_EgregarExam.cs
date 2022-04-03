@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace zaslab
 {
-    public partial class v_EgregarExam : Form
+    public partial class v_AgregarExam : Form
     {
-        public v_EgregarExam()
+        public v_AgregarExam()
         {
             InitializeComponent();
         }
