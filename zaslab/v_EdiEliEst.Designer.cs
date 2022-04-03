@@ -50,6 +50,7 @@
             this.btn_Agregar.TabIndex = 33;
             this.btn_Agregar.Text = "Guardar";
             this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // txt_edad
             // 
@@ -143,6 +144,7 @@
             this.button2.TabIndex = 37;
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // v_EdiEliEst
             // 
@@ -163,6 +165,7 @@
             this.Controls.Add(this.txt_nombrea);
             this.Name = "v_EdiEliEst";
             this.Text = "Editar o Eliminar";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.v_EdiEliEst_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

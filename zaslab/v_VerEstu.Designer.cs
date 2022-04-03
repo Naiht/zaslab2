@@ -45,19 +45,20 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(776, 363);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 25);
+            this.textBox1.Location = new System.Drawing.Point(109, 27);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(355, 27);
             this.textBox1.TabIndex = 1;
             // 
             // btn_Buscar
             // 
-            this.btn_Buscar.Location = new System.Drawing.Point(485, 23);
+            this.btn_Buscar.Location = new System.Drawing.Point(470, 27);
             this.btn_Buscar.Name = "btn_Buscar";
-            this.btn_Buscar.Size = new System.Drawing.Size(94, 29);
+            this.btn_Buscar.Size = new System.Drawing.Size(106, 29);
             this.btn_Buscar.TabIndex = 3;
             this.btn_Buscar.Text = "Buscar";
             this.btn_Buscar.UseVisualStyleBackColor = true;
@@ -95,7 +96,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "v_VerEstu";
-            this.Text = "v_VerEstu";
+            this.Text = "Ver estudiantes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

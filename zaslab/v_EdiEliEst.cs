@@ -16,5 +16,22 @@ namespace zaslab
         {
             InitializeComponent();
         }
+
+        private void v_EdiEliEst_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
+            this.Close();
+        }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
