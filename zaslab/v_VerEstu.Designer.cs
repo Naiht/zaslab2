@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgv_verest = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_Buscar = new System.Windows.Forms.Button();
             this.rdb_Nombre = new System.Windows.Forms.RadioButton();
             this.rdb_id = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_verest)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtgv_verest
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 75);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 363);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dtgv_verest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_verest.Location = new System.Drawing.Point(12, 75);
+            this.dtgv_verest.Name = "dtgv_verest";
+            this.dtgv_verest.RowHeadersWidth = 51;
+            this.dtgv_verest.RowTemplate.Height = 29;
+            this.dtgv_verest.Size = new System.Drawing.Size(776, 363);
+            this.dtgv_verest.TabIndex = 0;
+            this.dtgv_verest.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // textBox1
             // 
@@ -94,10 +94,10 @@
             this.Controls.Add(this.rdb_Nombre);
             this.Controls.Add(this.btn_Buscar);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgv_verest);
             this.Name = "v_VerEstu";
             this.Text = "Ver estudiantes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_verest)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,7 +105,7 @@
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dtgv_verest;
         private TextBox textBox1;
         private Button btn_Buscar;
         private RadioButton rdb_Nombre;

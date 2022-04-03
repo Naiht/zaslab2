@@ -39,7 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_id = new System.Windows.Forms.TextBox();
             this.txt_nombrea = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Eliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Agregar
@@ -76,6 +76,7 @@
             this.dtp_fecha.Name = "dtp_fecha";
             this.dtp_fecha.Size = new System.Drawing.Size(250, 27);
             this.dtp_fecha.TabIndex = 30;
+            this.dtp_fecha.ValueChanged += new System.EventHandler(this.dtp_fecha_ValueChanged);
             // 
             // cmb_Genero
             // 
@@ -136,22 +137,22 @@
             this.txt_nombrea.Size = new System.Drawing.Size(411, 27);
             this.txt_nombrea.TabIndex = 23;
             // 
-            // button2
+            // btn_Eliminar
             // 
-            this.button2.Location = new System.Drawing.Point(502, 276);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 29);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_Eliminar.Location = new System.Drawing.Point(502, 276);
+            this.btn_Eliminar.Name = "btn_Eliminar";
+            this.btn_Eliminar.Size = new System.Drawing.Size(113, 29);
+            this.btn_Eliminar.TabIndex = 37;
+            this.btn_Eliminar.Text = "Eliminar";
+            this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Click += new System.EventHandler(this.button2_Click);
             // 
             // v_EdiEliEst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 324);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.txt_edad);
             this.Controls.Add(this.label3);
@@ -166,6 +167,7 @@
             this.Name = "v_EdiEliEst";
             this.Text = "Editar o Eliminar";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.v_EdiEliEst_FormClosed);
+            this.Load += new System.EventHandler(this.v_EdiEliEst_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,6 +185,6 @@
         private Label label1;
         private TextBox txt_id;
         private TextBox txt_nombrea;
-        private Button button2;
+        private Button btn_Eliminar;
     }
 }

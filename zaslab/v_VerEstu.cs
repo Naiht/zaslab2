@@ -15,6 +15,9 @@ namespace zaslab
         public v_VerEstu()
         {
             InitializeComponent();
+            dtgv_verest.Columns.Add("","");
+            dtgv_verest.Columns[0].HeaderText = "Nombre";
+            dtgv_verest.Rows.Add();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -26,10 +29,8 @@ namespace zaslab
             {
                 //nombrec = mensaje2.nombreca;
                 // cedulacli = mensaje2.cedulaclia;
-                //this.DialogResult = DialogResult.OK;
-                MessageBox.Show("" + mensaje2.DialogResult.ToString());
+                MessageBox.Show("asdasd" + mensaje2.DialogResult.ToString());
 
-                this.Close();
             }
 
         }
