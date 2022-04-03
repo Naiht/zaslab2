@@ -19,3 +19,4 @@ C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.gen
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\ref\zaslab.dll
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.v_EdiEliEst.resources
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.v_VerEstu.resources
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.v_EgregarExam.resources

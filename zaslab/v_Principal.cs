@@ -20,5 +20,12 @@ namespace zaslab
             ver.MdiParent = this;
             ver.Show();
         }
+
+        private void ingresarExamenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            v_EgregarExam ver = new v_EgregarExam();
+            ver.MdiParent = this;
+            ver.Show();
+        }
     }
 }
