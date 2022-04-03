@@ -23,7 +23,7 @@ namespace zaslab
 
         private void ingresarExamenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_EgregarExam ver = new v_EgregarExam();
+            v_AgregarExam ver = new v_AgregarExam();
             ver.MdiParent = this;
             ver.Show();
         }

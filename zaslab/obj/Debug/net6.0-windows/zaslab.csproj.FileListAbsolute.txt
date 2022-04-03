@@ -45,3 +45,4 @@ C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.p
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.genruntimeconfig.cache
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\ref\zaslab.dll
 >>>>>>> a86477b70711b3fe777fc7e4373447521c49ae4d
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.v_AgregarExam.resources
