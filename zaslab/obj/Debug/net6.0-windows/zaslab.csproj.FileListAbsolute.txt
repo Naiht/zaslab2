@@ -17,3 +17,5 @@ C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\refint\zas
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.pdb
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.genruntimeconfig.cache
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\ref\zaslab.dll
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.v_EdiEliEst.resources
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.v_VerEstu.resources

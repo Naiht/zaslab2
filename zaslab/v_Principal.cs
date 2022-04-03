@@ -13,5 +13,12 @@ namespace zaslab
             ingre.MdiParent = this;
             ingre.Show();
         }
+
+        private void verToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            v_VerEstu ver = new v_VerEstu();
+            ver.MdiParent = this;
+            ver.Show();
+        }
     }
 }

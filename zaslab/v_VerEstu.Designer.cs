@@ -31,8 +31,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_Buscar = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rdb_Nombre = new System.Windows.Forms.RadioButton();
+            this.rdb_id = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,35 +63,35 @@
             this.btn_Buscar.Text = "Buscar";
             this.btn_Buscar.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdb_Nombre
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 12);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(80, 24);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nombe";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdb_Nombre.AutoSize = true;
+            this.rdb_Nombre.Location = new System.Drawing.Point(12, 12);
+            this.rdb_Nombre.Name = "rdb_Nombre";
+            this.rdb_Nombre.Size = new System.Drawing.Size(80, 24);
+            this.rdb_Nombre.TabIndex = 4;
+            this.rdb_Nombre.TabStop = true;
+            this.rdb_Nombre.Text = "Nombe";
+            this.rdb_Nombre.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdb_id
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(12, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(45, 24);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "ID";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdb_id.AutoSize = true;
+            this.rdb_id.Location = new System.Drawing.Point(12, 42);
+            this.rdb_id.Name = "rdb_id";
+            this.rdb_id.Size = new System.Drawing.Size(45, 24);
+            this.rdb_id.TabIndex = 5;
+            this.rdb_id.TabStop = true;
+            this.rdb_id.Text = "ID";
+            this.rdb_id.UseVisualStyleBackColor = true;
             // 
             // v_VerEstu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rdb_id);
+            this.Controls.Add(this.rdb_Nombre);
             this.Controls.Add(this.btn_Buscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
@@ -108,7 +108,7 @@
         private DataGridView dataGridView1;
         private TextBox textBox1;
         private Button btn_Buscar;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private RadioButton rdb_Nombre;
+        private RadioButton rdb_id;
     }
 }

@@ -26,12 +26,11 @@ namespace zaslab
         {
             DialogResult = DialogResult.Cancel;
             this.Close();
-            this.Close();
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-
+            DialogResult = DialogResult.OK;
         }
     }
 }
