@@ -1,6 +1,6 @@
 ﻿namespace zaslab
 {
-    partial class v_EgregarExam
+    partial class v_AgregarExam
     {
         /// <summary>
         /// Required designer variable.
@@ -224,7 +224,7 @@
             this.txtNumExam.Size = new System.Drawing.Size(100, 23);
             this.txtNumExam.TabIndex = 19;
             // 
-            // v_EgregarExam
+            // v_AgregarExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -248,8 +248,8 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.rbtnId);
             this.Controls.Add(this.rbtnNombre);
-            this.Name = "v_EgregarExam";
-            this.Text = "v_EgregarExam";
+            this.Name = "v_AgregarExam";
+            this.Text = "Agregar Examenes";
             ((System.ComponentModel.ISupportInitialize)(this.dgtEstudiantes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
