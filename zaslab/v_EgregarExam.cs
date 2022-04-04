@@ -98,42 +98,42 @@ namespace zaslab
             {
                 if (chbSangre.Checked == true)
                 {
-                    sql.multiple("insert into sangre values('','','','','','','','','','','','')");
+                    sql.multiple("insert into sangre values('','','','','','','','','','','','','','')");
                     ultimoexamen("sangre");
                     s = valor;
                     //MessageBox.Show("" + s);
                     if (chbOrina.Checked == true)
                     {
-                        sql.multiple("insert into orina values('','','','','','','','','','','','','','','','','','','','')");
+                        sql.multiple("insert into orina values('','','','','','','','','','','','','','','','','','','','','')");
                         ultimoexamen("orina");
                         o = valor;
                         //MessageBox.Show("" + o);
                         if (chbHeces.Checked == true)
                         {
-                            sql.multiple("insert into heces values('','','','')");
+                            sql.multiple("insert into heces values('','','','','')");
                             ultimoexamen("heces");
                             h = valor;
-                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "'," + h + "," + o + "," + s + ")");
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "'," + h + "," + o + "," + s + ",'" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','"+ string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
                             //MessageBox.Show("" + h);
                         }
                         else
                         {
-                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "',''," + o + "," + s + ")");
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "',''," + o + "," + s + ",'" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
                         }
                     }
                     else
                     {
                         if (chbHeces.Checked == true)
                         {
-                            sql.multiple("insert into heces values('','','','')");
+                            sql.multiple("insert into heces values('','','','','')");
                             ultimoexamen("heces");
                             h = valor;
-                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "'," + h + ",''," + s + ")");
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "'," + h + ",''," + s + ",'" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
                             //MessageBox.Show("" + h);
                         }
                         else
                         {
-                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "','',''," + s + ")");
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "','',''," + s + ",'" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
                         }
                     }
                 }
@@ -141,22 +141,22 @@ namespace zaslab
                 {
                     if (chbOrina.Checked == true)
                     {
-                        sql.multiple("insert into orina values('','','','','','','','','','','','','','','','','','','','')");
+                        sql.multiple("insert into orina values('','','','','','','','','','','','','','','','','','','','','')");
                         ultimoexamen("orina");
                         o = valor;
                         //MessageBox.Show("" + o);
                         if (chbHeces.Checked == true)
                         {
-                            sql.multiple("insert into heces values('','','','')");
+                            sql.multiple("insert into heces values('','','','','')");
                             ultimoexamen("heces");
                             h = valor;
-                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + int.Parse(lbId.Text) + "," + h + "," + o + ",'')");
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + lbId.Text + "," + h + "," + o + ",'','" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
 
                             //MessageBox.Show("" + h);
                         }
                         else
                         {
-                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + int.Parse(lbId.Text) + ",''," + o + ",'')");
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + lbId.Text + ",''," + o + ",'', '" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "', '"+ string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
 
                         }
                     }
@@ -164,10 +164,10 @@ namespace zaslab
                     {
                         if (chbHeces.Checked == true)
                         {
-                            sql.multiple("insert into heces values('','','','')");
+                            sql.multiple("insert into heces values('','','','','')");
                             ultimoexamen("heces");
                             h = valor;
-                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + int.Parse(lbId.Text) + "," + h + ",'','')");
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + lbId.Text + "," + h + ",'','', '" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "', '"+ string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
 
                             //MessageBox.Show("" + h);
                         }

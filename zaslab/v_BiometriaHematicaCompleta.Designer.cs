@@ -67,7 +67,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtObservacion = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -404,6 +404,7 @@
             this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -414,13 +415,13 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtObservacion
             // 
-            this.textBox1.Location = new System.Drawing.Point(319, 41);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(259, 139);
-            this.textBox1.TabIndex = 25;
+            this.txtObservacion.Location = new System.Drawing.Point(319, 41);
+            this.txtObservacion.Multiline = true;
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.Size = new System.Drawing.Size(259, 139);
+            this.txtObservacion.TabIndex = 25;
             // 
             // label27
             // 
@@ -437,7 +438,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 445);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtObservacion);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox1);
@@ -512,7 +513,7 @@
         private Label label20;
         private Button btnGuardar;
         private Button btnCancelar;
-        private TextBox textBox1;
+        private TextBox txtObservacion;
         private Label label27;
     }
 }

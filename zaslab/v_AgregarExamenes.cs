@@ -159,7 +159,11 @@ namespace zaslab
 
         private void btnSangre_Click(object sender, EventArgs e)
         {
-            v_BiometriaHematicaCompleta datossangre = new v_BiometriaHematicaCompleta();
+            int id = int.Parse(dgvEstudiantes.Rows[fila].Cells[6].Value.ToString()); ;
+            DateTime fecha = dateTimePicker1.Value;
+
+            //MessageBox.Show("" + id + "" + fecha);
+            v_BiometriaHematicaCompleta datossangre = new v_BiometriaHematicaCompleta(id,fecha);
             datossangre.ShowDialog();
         }
 
