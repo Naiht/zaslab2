@@ -75,3 +75,4 @@ C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.c
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.v_EGH.resources
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.EGO.resources
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.EGO.resources
+C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.v_eliminar.resources

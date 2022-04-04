@@ -31,13 +31,18 @@ namespace zaslab
             DataTable dt;
             dt = sql.tablas("estudiantes", "select e.idb as [Codigo de Beneficiario], e.nombreape as Nombre," +
                 " g.genero as Genero, e.fechanac as [Fecha de Nacimiento]," +
-                " e.edad as Edad, e.obser as Observaciones  from estudiantes as e " +
-                "inner join generos as g on e.genero=g.idtipo");
-            if(dt.Rows.Count > 0)
+                " e.edad as Edad, e.obser as Observaciones from estudiantes as e " +
+                "inner join generos as g on e.genero=g.idtipo  ");
+            
+            if (dt.Rows.Count > 0)
             {
                 dgvEstudiantes.DataSource = dt;
             }
+            
         }
+
+       
+
         int fila;
         private void dgvEstudiantes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -46,6 +51,71 @@ namespace zaslab
             lbId.Text = dgvEstudiantes.Rows[fila].Cells[0].Value.ToString();
             lbNombre.Text = dgvEstudiantes.Rows[fila].Cells[1].Value.ToString();
             lbEdad.Text = dgvEstudiantes.Rows[fila].Cells[4].Value.ToString();
+            
+            /*int h = int.Parse(dgvEstudiantes.Rows[fila].Cells[6].Value.ToString());
+            int o = int.Parse(dgvEstudiantes.Rows[fila].Cells[7].Value.ToString());
+            int s = int.Parse(dgvEstudiantes.Rows[fila].Cells[8].Value.ToString());
+            
+            if (h != 0)
+            {
+                if (o != 0)
+                {
+                    if (s != 0)
+                    {
+                        chbHeces.Checked = true;
+                        chbOrina.Checked = true;
+                        chbSangre.Checked = true;
+                    }
+                    else
+                    {
+                        chbHeces.Checked = true;
+                        chbOrina.Checked = true;
+                        chbSangre.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (s != 0)
+                    {
+                        chbHeces.Checked = true;
+                        chbOrina.Checked = false;
+                        chbSangre.Checked = true;
+                    }
+                    else
+                    {
+                        chbHeces.Checked = true;
+                        chbOrina.Checked = false;
+                        chbSangre.Checked = false;
+                    }
+                }
+            }
+            else
+            {
+                if (o != 0)
+                {
+                    if (s != 0)
+                    {
+                        chbHeces.Checked = false;
+                        chbOrina.Checked = true;
+                        chbSangre.Checked = true;
+                    }
+                    else
+                    {
+                        chbHeces.Checked = false;
+                        chbOrina.Checked = true;
+                        chbSangre.Checked = false;
+                    }
+                }
+                else
+                {
+                    if (s != 0)
+                    {
+                        chbHeces.Checked = false;
+                        chbOrina.Checked = false;
+                        chbSangre.Checked = true;
+                    }
+                }
+            }*/
             btnGuardar.Enabled = true;
         }
 
@@ -55,25 +125,29 @@ namespace zaslab
             {
                 DataTable dt;
                 dt = sql.tablas("estudiantes", "select e.idb as [Codigo de Beneficiario], e.nombreape as Nombre," +
-                    " g.genero as Genero, e.fechanac as [Fecha de Nacimiento]," +
-                    " e.edad as Edad, e.obser as Observaciones  from estudiantes as e " +
-                    "inner join generos as g on e.genero=g.idtipo where e.nombreape like '%" + txtBuscar.Text + "%'");
+                " g.genero as Genero, e.fechanac as [Fecha de Nacimiento]," +
+                " e.edad as Edad, e.obser as Observaciones from estudiantes as e " +
+                "inner join generos as g on e.genero=g.idtipo where e.nombreape like '%" + txtBuscar.Text + "%'");
+                 
                 if (dt.Rows.Count > 0)
                 {
                     dgvEstudiantes.DataSource = dt;
                 }
+               
             }
             else if (rbtnId.Checked == true)
             {
                 DataTable dt;
                 dt = sql.tablas("estudiantes", "select e.idb as [Codigo de Beneficiario], e.nombreape as Nombre," +
-                    " g.genero as Genero, e.fechanac as [Fecha de Nacimiento]," +
-                    " e.edad as Edad, e.obser as Observaciones  from estudiantes as e " +
-                    "inner join generos as g on e.genero=g.idtipo where e.idb like '%" + txtBuscar.Text + "%'");
+                " g.genero as Genero, e.fechanac as [Fecha de Nacimiento]," +
+                " e.edad as Edad, e.obser as Observaciones from estudiantes as e " +
+                "inner join generos as g on e.genero=g.idtipo  where e.idb like '%" + txtBuscar.Text + "%'");
+               
                 if (dt.Rows.Count > 0)
                 {
                     dgvEstudiantes.DataSource = dt;
                 }
+                
             }
         }
 
@@ -88,7 +162,6 @@ namespace zaslab
             }
             valor = int.Parse(dgvTomaDatos.Rows[0].Cells[0].Value.ToString());
 
-            //MessageBox.Show("hola" + valor);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -182,6 +255,24 @@ namespace zaslab
             {
                 MessageBox.Show("ingresa el numero de examen");
             }
+
+
+            lbId.Text = "";
+            lbNombre.Text = "";
+            lbEdad.Text = "";
+            chbSangre.Checked = false;
+            chbOrina.Checked = false;
+            chbHeces.Checked = false;
+            dtpTomaMuestra.Value = DateTime.Today;
+            dtpRecepcionMuestra.Value = DateTime.Today;
+            btnGuardar.Enabled = false;
+            txtNumExam.Text = "";
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            v_eliminar eliminar = new v_eliminar();
+            eliminar.ShowDialog();
         }
     }
 }
