@@ -54,11 +54,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmb_aspecto = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_color = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
@@ -75,6 +74,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.cmb_sedi = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -272,15 +272,15 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmb_sedi);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cmb_aspecto);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmb_color);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -321,13 +321,6 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "PH";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(139, 144);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(506, 27);
-            this.textBox2.TabIndex = 6;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -337,13 +330,13 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Sedimento";
             // 
-            // comboBox2
+            // cmb_aspecto
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(139, 93);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(171, 28);
-            this.comboBox2.TabIndex = 3;
+            this.cmb_aspecto.FormattingEnabled = true;
+            this.cmb_aspecto.Location = new System.Drawing.Point(139, 93);
+            this.cmb_aspecto.Name = "cmb_aspecto";
+            this.cmb_aspecto.Size = new System.Drawing.Size(171, 28);
+            this.cmb_aspecto.TabIndex = 3;
             // 
             // label2
             // 
@@ -354,13 +347,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Aspecto";
             // 
-            // comboBox1
+            // cmb_color
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(139, 42);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(171, 28);
-            this.comboBox1.TabIndex = 1;
+            this.cmb_color.FormattingEnabled = true;
+            this.cmb_color.Location = new System.Drawing.Point(139, 42);
+            this.cmb_color.Name = "cmb_color";
+            this.cmb_color.Size = new System.Drawing.Size(171, 28);
+            this.cmb_color.TabIndex = 1;
             // 
             // label1
             // 
@@ -508,6 +501,14 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "Celulas Epiteliales";
             // 
+            // cmb_sedi
+            // 
+            this.cmb_sedi.FormattingEnabled = true;
+            this.cmb_sedi.Location = new System.Drawing.Point(139, 144);
+            this.cmb_sedi.Name = "cmb_sedi";
+            this.cmb_sedi.Size = new System.Drawing.Size(171, 28);
+            this.cmb_sedi.TabIndex = 11;
+            // 
             // EGO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -562,11 +563,10 @@
         private Label label7;
         private TextBox textBox3;
         private Label label6;
-        private TextBox textBox2;
         private Label label5;
-        private ComboBox comboBox2;
+        private ComboBox cmb_aspecto;
         private Label label2;
-        private ComboBox comboBox1;
+        private ComboBox cmb_color;
         private Label label1;
         private GroupBox groupBox3;
         private TextBox textBox12;
@@ -583,5 +583,6 @@
         private Label label21;
         private TextBox textBox15;
         private Label label20;
+        private ComboBox cmb_sedi;
     }
 }

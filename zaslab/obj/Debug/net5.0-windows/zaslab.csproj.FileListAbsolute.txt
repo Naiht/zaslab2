@@ -1,0 +1,17 @@
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.csproj.AssemblyReference.cache
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.EGO.resources
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.Form1.resources
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.pruebareportes.resources
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.v_AgregarExamenes.resources
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.v_BiometriaHematicaCompleta.resources
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.v_EdiEliEst.resources
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.v_EGH.resources
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.v_AgregarExam.resources
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.v_IngreE.resources
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.v_Principal.resources
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.v_VerEstu.resources
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.csproj.GenerateResource.cache
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.AssemblyInfoInputs.cache
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.AssemblyInfo.cs
+C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net5.0-windows\zaslab.csproj.CoreCompileInputs.cache
