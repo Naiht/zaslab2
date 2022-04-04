@@ -41,7 +41,7 @@
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_obser = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txt_edad
@@ -157,20 +157,20 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "Observación";
             // 
-            // textBox1
+            // txt_obser
             // 
-            this.textBox1.Location = new System.Drawing.Point(190, 261);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(479, 115);
-            this.textBox1.TabIndex = 25;
+            this.txt_obser.Location = new System.Drawing.Point(190, 261);
+            this.txt_obser.Multiline = true;
+            this.txt_obser.Name = "txt_obser";
+            this.txt_obser.Size = new System.Drawing.Size(479, 115);
+            this.txt_obser.TabIndex = 25;
             // 
             // v_IngreE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(698, 436);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_obser);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Agregar);
@@ -207,6 +207,6 @@
         private Button btn_Agregar;
         private Button button1;
         private Label label5;
-        private TextBox textBox1;
+        private TextBox txt_obser;
     }
 }

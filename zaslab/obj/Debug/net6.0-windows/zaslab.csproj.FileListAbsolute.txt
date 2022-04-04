@@ -46,7 +46,6 @@ C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.g
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\ref\zaslab.dll
 >>>>>>> a86477b70711b3fe777fc7e4373447521c49ae4d
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.v_AgregarExam.resources
-<<<<<<< HEAD
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.v_EGH.resources
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\bin\Debug\net6.0-windows\ExcelReader.dll
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.csproj.CopyComplete
@@ -60,7 +59,6 @@ C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\bin\Debug\net6.0-windows\runtimes\u
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.v_AgregarExamenes.resources
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.v_BiometriaHematicaCompleta.resources
-=======
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\bin\Debug\net6.0-windows\ExcelDataReader.dll
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\bin\Debug\net6.0-windows\ExcelDataReader.DataSet.dll
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\bin\Debug\net6.0-windows\ExcelReader.dll

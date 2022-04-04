@@ -30,7 +30,6 @@
         {
             this.dtgv_verest = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn_Buscar = new System.Windows.Forms.Button();
             this.rdb_Nombre = new System.Windows.Forms.RadioButton();
             this.rdb_id = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_verest)).BeginInit();
@@ -39,29 +38,21 @@
             // dtgv_verest
             // 
             this.dtgv_verest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_verest.Location = new System.Drawing.Point(12, 75);
+            this.dtgv_verest.Location = new System.Drawing.Point(12, 105);
             this.dtgv_verest.Name = "dtgv_verest";
             this.dtgv_verest.RowHeadersWidth = 51;
             this.dtgv_verest.RowTemplate.Height = 29;
-            this.dtgv_verest.Size = new System.Drawing.Size(776, 363);
+            this.dtgv_verest.Size = new System.Drawing.Size(824, 405);
             this.dtgv_verest.TabIndex = 0;
             this.dtgv_verest.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 27);
+            this.textBox1.Location = new System.Drawing.Point(141, 25);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(355, 27);
+            this.textBox1.Size = new System.Drawing.Size(596, 27);
             this.textBox1.TabIndex = 1;
-            // 
-            // btn_Buscar
-            // 
-            this.btn_Buscar.Location = new System.Drawing.Point(470, 27);
-            this.btn_Buscar.Name = "btn_Buscar";
-            this.btn_Buscar.Size = new System.Drawing.Size(106, 29);
-            this.btn_Buscar.TabIndex = 3;
-            this.btn_Buscar.Text = "Buscar";
-            this.btn_Buscar.UseVisualStyleBackColor = true;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // rdb_Nombre
             // 
@@ -89,10 +80,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(848, 522);
             this.Controls.Add(this.rdb_id);
             this.Controls.Add(this.rdb_Nombre);
-            this.Controls.Add(this.btn_Buscar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dtgv_verest);
             this.Name = "v_VerEstu";
@@ -108,7 +98,6 @@
 
         private DataGridView dtgv_verest;
         private TextBox textBox1;
-        private Button btn_Buscar;
         private RadioButton rdb_Nombre;
         private RadioButton rdb_id;
     }
