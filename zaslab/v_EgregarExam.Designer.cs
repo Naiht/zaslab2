@@ -32,7 +32,7 @@
             this.rbtnId = new System.Windows.Forms.RadioButton();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dgtEstudiantes = new System.Windows.Forms.DataGridView();
+            this.dgvEstudiantes = new System.Windows.Forms.DataGridView();
             this.nombre = new System.Windows.Forms.Label();
             this.edad = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.dtpRecepcionMuestra = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgtEstudiantes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).BeginInit();
             this.SuspendLayout();
             // 
             // rbtnNombre
@@ -92,19 +92,20 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // dgtEstudiantes
+            // dgvEstudiantes
             // 
-            this.dgtEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgtEstudiantes.Location = new System.Drawing.Point(9, 54);
-            this.dgtEstudiantes.Name = "dgtEstudiantes";
-            this.dgtEstudiantes.RowTemplate.Height = 25;
-            this.dgtEstudiantes.Size = new System.Drawing.Size(494, 298);
-            this.dgtEstudiantes.TabIndex = 4;
+            this.dgvEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstudiantes.Location = new System.Drawing.Point(9, 54);
+            this.dgvEstudiantes.Name = "dgvEstudiantes";
+            this.dgvEstudiantes.RowTemplate.Height = 25;
+            this.dgvEstudiantes.Size = new System.Drawing.Size(726, 298);
+            this.dgvEstudiantes.TabIndex = 4;
+            this.dgvEstudiantes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstudiantes_CellClick);
             // 
             // nombre
             // 
             this.nombre.AutoSize = true;
-            this.nombre.Location = new System.Drawing.Point(509, 82);
+            this.nombre.Location = new System.Drawing.Point(741, 82);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(54, 15);
             this.nombre.TabIndex = 5;
@@ -113,7 +114,7 @@
             // edad
             // 
             this.edad.AutoSize = true;
-            this.edad.Location = new System.Drawing.Point(509, 108);
+            this.edad.Location = new System.Drawing.Point(741, 108);
             this.edad.Name = "edad";
             this.edad.Size = new System.Drawing.Size(36, 15);
             this.edad.TabIndex = 7;
@@ -122,7 +123,7 @@
             // id
             // 
             this.id.AutoSize = true;
-            this.id.Location = new System.Drawing.Point(509, 54);
+            this.id.Location = new System.Drawing.Point(741, 54);
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(130, 15);
             this.id.TabIndex = 8;
@@ -131,7 +132,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(509, 197);
+            this.label1.Location = new System.Drawing.Point(741, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 15);
             this.label1.TabIndex = 9;
@@ -140,7 +141,7 @@
             // chbSangre
             // 
             this.chbSangre.AutoSize = true;
-            this.chbSangre.Location = new System.Drawing.Point(512, 215);
+            this.chbSangre.Location = new System.Drawing.Point(744, 215);
             this.chbSangre.Name = "chbSangre";
             this.chbSangre.Size = new System.Drawing.Size(221, 19);
             this.chbSangre.TabIndex = 10;
@@ -150,7 +151,7 @@
             // chbOrina
             // 
             this.chbOrina.AutoSize = true;
-            this.chbOrina.Location = new System.Drawing.Point(512, 240);
+            this.chbOrina.Location = new System.Drawing.Point(744, 240);
             this.chbOrina.Name = "chbOrina";
             this.chbOrina.Size = new System.Drawing.Size(193, 19);
             this.chbOrina.TabIndex = 11;
@@ -160,7 +161,7 @@
             // chbHeces
             // 
             this.chbHeces.AutoSize = true;
-            this.chbHeces.Location = new System.Drawing.Point(512, 265);
+            this.chbHeces.Location = new System.Drawing.Point(744, 265);
             this.chbHeces.Name = "chbHeces";
             this.chbHeces.Size = new System.Drawing.Size(162, 19);
             this.chbHeces.TabIndex = 12;
@@ -169,7 +170,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(519, 329);
+            this.btnGuardar.Location = new System.Drawing.Point(751, 329);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 13;
@@ -178,7 +179,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(600, 329);
+            this.btnEliminar.Location = new System.Drawing.Point(832, 329);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 14;
@@ -188,7 +189,7 @@
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(569, 82);
+            this.lbNombre.Location = new System.Drawing.Point(801, 82);
             this.lbNombre.Name = "lbNombre";
             this.lbNombre.Size = new System.Drawing.Size(67, 15);
             this.lbNombre.TabIndex = 15;
@@ -197,7 +198,7 @@
             // lbEdad
             // 
             this.lbEdad.AutoSize = true;
-            this.lbEdad.Location = new System.Drawing.Point(569, 108);
+            this.lbEdad.Location = new System.Drawing.Point(801, 108);
             this.lbEdad.Name = "lbEdad";
             this.lbEdad.Size = new System.Drawing.Size(19, 15);
             this.lbEdad.TabIndex = 16;
@@ -206,7 +207,7 @@
             // lbId
             // 
             this.lbId.AutoSize = true;
-            this.lbId.Location = new System.Drawing.Point(637, 54);
+            this.lbId.Location = new System.Drawing.Point(869, 54);
             this.lbId.Name = "lbId";
             this.lbId.Size = new System.Drawing.Size(25, 15);
             this.lbId.TabIndex = 17;
@@ -215,7 +216,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(512, 293);
+            this.label2.Location = new System.Drawing.Point(744, 293);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 15);
             this.label2.TabIndex = 18;
@@ -223,7 +224,7 @@
             // 
             // txtNumExam
             // 
-            this.txtNumExam.Location = new System.Drawing.Point(598, 290);
+            this.txtNumExam.Location = new System.Drawing.Point(830, 290);
             this.txtNumExam.Name = "txtNumExam";
             this.txtNumExam.Size = new System.Drawing.Size(100, 23);
             this.txtNumExam.TabIndex = 19;
@@ -231,7 +232,7 @@
             // dtpTomaMuestra
             // 
             this.dtpTomaMuestra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTomaMuestra.Location = new System.Drawing.Point(648, 128);
+            this.dtpTomaMuestra.Location = new System.Drawing.Point(880, 128);
             this.dtpTomaMuestra.Name = "dtpTomaMuestra";
             this.dtpTomaMuestra.Size = new System.Drawing.Size(103, 23);
             this.dtpTomaMuestra.TabIndex = 20;
@@ -239,7 +240,7 @@
             // dtpRecepcionMuestra
             // 
             this.dtpRecepcionMuestra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpRecepcionMuestra.Location = new System.Drawing.Point(648, 167);
+            this.dtpRecepcionMuestra.Location = new System.Drawing.Point(880, 167);
             this.dtpRecepcionMuestra.Name = "dtpRecepcionMuestra";
             this.dtpRecepcionMuestra.Size = new System.Drawing.Size(103, 23);
             this.dtpRecepcionMuestra.TabIndex = 21;
@@ -247,7 +248,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(509, 136);
+            this.label3.Location = new System.Drawing.Point(741, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 15);
             this.label3.TabIndex = 22;
@@ -256,7 +257,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(509, 175);
+            this.label4.Location = new System.Drawing.Point(741, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 15);
             this.label4.TabIndex = 23;
@@ -266,7 +267,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 362);
+            this.ClientSize = new System.Drawing.Size(1000, 362);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpRecepcionMuestra);
@@ -285,7 +286,7 @@
             this.Controls.Add(this.id);
             this.Controls.Add(this.edad);
             this.Controls.Add(this.nombre);
-            this.Controls.Add(this.dgtEstudiantes);
+            this.Controls.Add(this.dgvEstudiantes);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.rbtnId);
@@ -293,7 +294,7 @@
             this.Name = "v_AgregarExam";
             this.Text = "Agregar Examenes";
             this.Load += new System.EventHandler(this.v_AgregarExam_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgtEstudiantes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,7 +306,7 @@
         private RadioButton rbtnId;
         private TextBox txtBuscar;
         private Button btnBuscar;
-        private DataGridView dgtEstudiantes;
+        private DataGridView dgvEstudiantes;
         private Label nombre;
         private Label edad;
         private Label id;

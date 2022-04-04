@@ -72,3 +72,4 @@ C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.v
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.v_BiometriaHematicaCompleta.resources
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.csproj.CopyComplete
 >>>>>>> 4c767fe43eabfba909f5be894f07a219f12962e6
+C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.v_EGH.resources
