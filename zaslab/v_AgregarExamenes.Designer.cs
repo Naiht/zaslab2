@@ -186,6 +186,7 @@
             this.btnSangre.TabIndex = 34;
             this.btnSangre.Text = "Biometria Hemática Completa (BHC)";
             this.btnSangre.UseVisualStyleBackColor = true;
+            this.btnSangre.Click += new System.EventHandler(this.btnSangre_Click);
             // 
             // btnOrina
             // 

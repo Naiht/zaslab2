@@ -156,5 +156,11 @@ namespace zaslab
             }
             borrarcolumna();
         }
+
+        private void btnSangre_Click(object sender, EventArgs e)
+        {
+            v_BiometriaHematicaCompleta datossangre = new v_BiometriaHematicaCompleta();
+            datossangre.ShowDialog();
+        }
     }
 }
