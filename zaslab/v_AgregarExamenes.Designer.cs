@@ -38,8 +38,7 @@
             this.id = new System.Windows.Forms.Label();
             this.edad = new System.Windows.Forms.Label();
             this.nombre = new System.Windows.Forms.Label();
-            this.dgtEstudiantes = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.dgvEstudiantes = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.rbtnId = new System.Windows.Forms.RadioButton();
             this.rbtnNombre = new System.Windows.Forms.RadioButton();
@@ -49,13 +48,13 @@
             this.lbNumExam = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgtEstudiantes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(521, 161);
+            this.label2.Location = new System.Drawing.Point(747, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 15);
             this.label2.TabIndex = 33;
@@ -64,33 +63,30 @@
             // lbId
             // 
             this.lbId.AutoSize = true;
-            this.lbId.Location = new System.Drawing.Point(654, 67);
+            this.lbId.Location = new System.Drawing.Point(880, 54);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(25, 15);
+            this.lbId.Size = new System.Drawing.Size(0, 15);
             this.lbId.TabIndex = 32;
-            this.lbId.Text = "123";
             // 
             // lbEdad
             // 
             this.lbEdad.AutoSize = true;
-            this.lbEdad.Location = new System.Drawing.Point(610, 126);
+            this.lbEdad.Location = new System.Drawing.Point(836, 113);
             this.lbEdad.Name = "lbEdad";
-            this.lbEdad.Size = new System.Drawing.Size(19, 15);
+            this.lbEdad.Size = new System.Drawing.Size(0, 15);
             this.lbEdad.TabIndex = 31;
-            this.lbEdad.Text = "23";
             // 
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(610, 99);
+            this.lbNombre.Location = new System.Drawing.Point(836, 86);
             this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(67, 15);
+            this.lbNombre.Size = new System.Drawing.Size(0, 15);
             this.lbNombre.TabIndex = 30;
-            this.lbNombre.Text = "josue mejia";
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(642, 361);
+            this.btnEliminar.Location = new System.Drawing.Point(868, 348);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 29;
@@ -99,7 +95,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(553, 361);
+            this.btnGuardar.Location = new System.Drawing.Point(779, 348);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 28;
@@ -109,7 +105,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(521, 231);
+            this.label1.Location = new System.Drawing.Point(747, 218);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 15);
             this.label1.TabIndex = 27;
@@ -118,7 +114,7 @@
             // id
             // 
             this.id.AutoSize = true;
-            this.id.Location = new System.Drawing.Point(521, 67);
+            this.id.Location = new System.Drawing.Point(747, 54);
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(130, 15);
             this.id.TabIndex = 26;
@@ -127,7 +123,7 @@
             // edad
             // 
             this.edad.AutoSize = true;
-            this.edad.Location = new System.Drawing.Point(521, 126);
+            this.edad.Location = new System.Drawing.Point(747, 113);
             this.edad.Name = "edad";
             this.edad.Size = new System.Drawing.Size(36, 15);
             this.edad.TabIndex = 25;
@@ -136,29 +132,21 @@
             // nombre
             // 
             this.nombre.AutoSize = true;
-            this.nombre.Location = new System.Drawing.Point(521, 98);
+            this.nombre.Location = new System.Drawing.Point(747, 85);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(54, 15);
             this.nombre.TabIndex = 24;
             this.nombre.Text = "Nombre:";
             // 
-            // dgtEstudiantes
+            // dgvEstudiantes
             // 
-            this.dgtEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgtEstudiantes.Location = new System.Drawing.Point(21, 54);
-            this.dgtEstudiantes.Name = "dgtEstudiantes";
-            this.dgtEstudiantes.RowTemplate.Height = 25;
-            this.dgtEstudiantes.Size = new System.Drawing.Size(494, 330);
-            this.dgtEstudiantes.TabIndex = 23;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(553, 12);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 22;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.dgvEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstudiantes.Location = new System.Drawing.Point(21, 54);
+            this.dgvEstudiantes.Name = "dgvEstudiantes";
+            this.dgvEstudiantes.RowTemplate.Height = 25;
+            this.dgvEstudiantes.Size = new System.Drawing.Size(720, 330);
+            this.dgvEstudiantes.TabIndex = 23;
+            this.dgvEstudiantes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtEstudiantes_CellClick);
             // 
             // txtBuscar
             // 
@@ -166,6 +154,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(421, 23);
             this.txtBuscar.TabIndex = 21;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // rbtnId
             // 
@@ -191,7 +180,7 @@
             // 
             // btnSangre
             // 
-            this.btnSangre.Location = new System.Drawing.Point(521, 259);
+            this.btnSangre.Location = new System.Drawing.Point(747, 246);
             this.btnSangre.Name = "btnSangre";
             this.btnSangre.Size = new System.Drawing.Size(242, 23);
             this.btnSangre.TabIndex = 34;
@@ -200,7 +189,7 @@
             // 
             // btnOrina
             // 
-            this.btnOrina.Location = new System.Drawing.Point(521, 288);
+            this.btnOrina.Location = new System.Drawing.Point(747, 275);
             this.btnOrina.Name = "btnOrina";
             this.btnOrina.Size = new System.Drawing.Size(242, 23);
             this.btnOrina.TabIndex = 35;
@@ -209,7 +198,7 @@
             // 
             // btnHeces
             // 
-            this.btnHeces.Location = new System.Drawing.Point(521, 317);
+            this.btnHeces.Location = new System.Drawing.Point(747, 304);
             this.btnHeces.Name = "btnHeces";
             this.btnHeces.Size = new System.Drawing.Size(242, 23);
             this.btnHeces.TabIndex = 36;
@@ -219,16 +208,15 @@
             // lbNumExam
             // 
             this.lbNumExam.AutoSize = true;
-            this.lbNumExam.Location = new System.Drawing.Point(615, 161);
+            this.lbNumExam.Location = new System.Drawing.Point(841, 148);
             this.lbNumExam.Name = "lbNumExam";
-            this.lbNumExam.Size = new System.Drawing.Size(13, 15);
+            this.lbNumExam.Size = new System.Drawing.Size(0, 15);
             this.lbNumExam.TabIndex = 37;
-            this.lbNumExam.Text = "1";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(654, 191);
+            this.dateTimePicker1.Location = new System.Drawing.Point(880, 178);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(98, 23);
             this.dateTimePicker1.TabIndex = 38;
@@ -236,7 +224,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(521, 197);
+            this.label3.Location = new System.Drawing.Point(747, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 15);
             this.label3.TabIndex = 39;
@@ -246,7 +234,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 403);
+            this.ClientSize = new System.Drawing.Size(1002, 403);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lbNumExam);
@@ -263,14 +251,14 @@
             this.Controls.Add(this.id);
             this.Controls.Add(this.edad);
             this.Controls.Add(this.nombre);
-            this.Controls.Add(this.dgtEstudiantes);
-            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.dgvEstudiantes);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.rbtnId);
             this.Controls.Add(this.rbtnNombre);
             this.Name = "v_AgregarExamenes";
             this.Text = "Agregar Resultados";
-            ((System.ComponentModel.ISupportInitialize)(this.dgtEstudiantes)).EndInit();
+            this.Load += new System.EventHandler(this.v_AgregarExamenes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,8 +276,7 @@
         private Label id;
         private Label edad;
         private Label nombre;
-        private DataGridView dgtEstudiantes;
-        private Button btnBuscar;
+        private DataGridView dgvEstudiantes;
         private TextBox txtBuscar;
         private RadioButton rbtnId;
         private RadioButton rbtnNombre;

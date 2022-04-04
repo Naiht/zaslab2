@@ -31,7 +31,6 @@
             this.rbtnNombre = new System.Windows.Forms.RadioButton();
             this.rbtnId = new System.Windows.Forms.RadioButton();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvEstudiantes = new System.Windows.Forms.DataGridView();
             this.nombre = new System.Windows.Forms.Label();
             this.edad = new System.Windows.Forms.Label();
@@ -51,7 +50,9 @@
             this.dtpRecepcionMuestra = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.dgvTomaDatos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTomaDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // rbtnNombre
@@ -83,15 +84,6 @@
             this.txtBuscar.Size = new System.Drawing.Size(421, 23);
             this.txtBuscar.TabIndex = 2;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(541, 12);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 3;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // dgvEstudiantes
             // 
@@ -177,6 +169,7 @@
             this.btnGuardar.TabIndex = 13;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEliminar
             // 
@@ -261,11 +254,22 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Recepción de Muestra";
             // 
+            // dgvTomaDatos
+            // 
+            this.dgvTomaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTomaDatos.Location = new System.Drawing.Point(880, 40);
+            this.dgvTomaDatos.Name = "dgvTomaDatos";
+            this.dgvTomaDatos.RowTemplate.Height = 25;
+            this.dgvTomaDatos.Size = new System.Drawing.Size(85, 57);
+            this.dgvTomaDatos.TabIndex = 24;
+            this.dgvTomaDatos.Visible = false;
+            // 
             // v_AgregarExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 362);
+            this.Controls.Add(this.dgvTomaDatos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpRecepcionMuestra);
@@ -285,7 +289,6 @@
             this.Controls.Add(this.edad);
             this.Controls.Add(this.nombre);
             this.Controls.Add(this.dgvEstudiantes);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.rbtnId);
             this.Controls.Add(this.rbtnNombre);
@@ -293,6 +296,7 @@
             this.Text = "Agregar Examenes";
             this.Load += new System.EventHandler(this.v_AgregarExam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTomaDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,7 +307,6 @@
         private RadioButton rbtnNombre;
         private RadioButton rbtnId;
         private TextBox txtBuscar;
-        private Button btnBuscar;
         private DataGridView dgvEstudiantes;
         private Label nombre;
         private Label edad;
@@ -323,5 +326,6 @@
         private DateTimePicker dtpRecepcionMuestra;
         private Label label3;
         private Label label4;
+        private DataGridView dgvTomaDatos;
     }
 }

@@ -21,12 +21,11 @@ namespace zaslab
 
         private void v_AgregarExam_Load(object sender, EventArgs e)
         {
-            /*dtpTomaMuestra.Format = DateTimePickerFormat.Custom;
-            dtpTomaMuestra.CustomFormat = "MM'/'dd'/'yyyy hh':'mm tt";*/
-
+            btnGuardar.Enabled = false;
             dgvEstudiantes.ReadOnly = true;
             dgvEstudiantes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
-            dgvEstudiantes.auto
+            dgvEstudiantes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;//cambia el tamaño de la columna de acuerdo al contenido
+
             dgvEstudiantes.AllowUserToAddRows = false;
 
             DataTable dt;
@@ -47,6 +46,7 @@ namespace zaslab
             lbId.Text = dgvEstudiantes.Rows[fila].Cells[0].Value.ToString();
             lbNombre.Text = dgvEstudiantes.Rows[fila].Cells[1].Value.ToString();
             lbEdad.Text = dgvEstudiantes.Rows[fila].Cells[4].Value.ToString();
+            btnGuardar.Enabled = true;
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -74,6 +74,113 @@ namespace zaslab
                 {
                     dgvEstudiantes.DataSource = dt;
                 }
+            }
+        }
+
+        int valor;
+        private void ultimoexamen(string tabla)//recibe el nombre del examen y devulve el id del ultimo ingresado
+        {
+            DataTable sangre;
+            sangre = sql.tablas("sangre", "select MAX(id) from " + tabla);
+            if (sangre.Rows.Count > 0)
+            {
+                dgvTomaDatos.DataSource = sangre;
+            }
+            valor = int.Parse(dgvTomaDatos.Rows[0].Cells[0].Value.ToString());
+
+            //MessageBox.Show("hola" + valor);
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            int s, o, h;
+            if (txtNumExam.Text != "")
+            {
+                if (chbSangre.Checked == true)
+                {
+                    sql.multiple("insert into sangre values('','','','','','','','','','','','')");
+                    ultimoexamen("sangre");
+                    s = valor;
+                    //MessageBox.Show("" + s);
+                    if (chbOrina.Checked == true)
+                    {
+                        sql.multiple("insert into orina values('','','','','','','','','','','','','','','','','','','','')");
+                        ultimoexamen("orina");
+                        o = valor;
+                        //MessageBox.Show("" + o);
+                        if (chbHeces.Checked == true)
+                        {
+                            sql.multiple("insert into heces values('','','','')");
+                            ultimoexamen("heces");
+                            h = valor;
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + int.Parse(lbId.Text) + "," + h + "," + o + "," + s + ")");
+                            //MessageBox.Show("" + h);
+                        }
+                        else
+                        {
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + int.Parse(lbId.Text) + ",''," + o + "," + s + ")");
+                        }
+                    }
+                    else
+                    {
+                        if (chbHeces.Checked == true)
+                        {
+                            sql.multiple("insert into heces values('','','','')");
+                            ultimoexamen("heces");
+                            h = valor;
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + int.Parse(lbId.Text) + "," + h + ",''," + s + ")");
+                            //MessageBox.Show("" + h);
+                        }
+                        else
+                        {
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + int.Parse(lbId.Text) + ",'',''," + s + ")");
+                        }
+                    }
+                }
+                else
+                {
+                    if (chbOrina.Checked == true)
+                    {
+                        sql.multiple("insert into orina values('','','','','','','','','','','','','','','','','','','','')");
+                        ultimoexamen("orina");
+                        o = valor;
+                        //MessageBox.Show("" + o);
+                        if (chbHeces.Checked == true)
+                        {
+                            sql.multiple("insert into heces values('','','','')");
+                            ultimoexamen("heces");
+                            h = valor;
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + int.Parse(lbId.Text) + "," + h + "," + o + ",'')");
+
+                            //MessageBox.Show("" + h);
+                        }
+                        else
+                        {
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + int.Parse(lbId.Text) + ",''," + o + ",'')");
+
+                        }
+                    }
+                    else
+                    {
+                        if (chbHeces.Checked == true)
+                        {
+                            sql.multiple("insert into heces values('','','','')");
+                            ultimoexamen("heces");
+                            h = valor;
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + int.Parse(lbId.Text) + "," + h + ",'','')");
+
+                            //MessageBox.Show("" + h);
+                        }
+                        else
+                        {
+                            MessageBox.Show("debes seleccionar minimo un examen");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("ingresa el numero de examen");
             }
         }
     }
