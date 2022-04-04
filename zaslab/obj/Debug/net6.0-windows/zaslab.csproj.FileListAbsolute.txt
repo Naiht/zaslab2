@@ -75,7 +75,6 @@ C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.c
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.v_EGH.resources
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.EGO.resources
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.EGO.resources
-<<<<<<< HEAD
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\bin\Debug\net6.0-windows\Microsoft.ReportViewer.Common.dll
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\bin\Debug\net6.0-windows\Microsoft.ReportViewer.ProcessingObjectModel.DLL
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\bin\Debug\net6.0-windows\Microsoft.ReportViewer.WebForms.DLL
@@ -154,6 +153,8 @@ C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\bin\Debug\net6.0-windows\zh-Hant\Mi
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.pruebareportes.resources
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\bin\Debug\net6.0-windows\itextsharp.dll
-=======
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.v_eliminar.resources
 >>>>>>> e3f1a0b651fd47a17e9095e73fdef4366d1d438d
+C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.pruebareportes.resources

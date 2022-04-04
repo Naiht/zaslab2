@@ -19,13 +19,7 @@ namespace zaslab
 
         sqlcon sql = new sqlcon();
 
-        private void borrarcolumnas()
-        {
-            dgvEstudiantes.Columns[6].Visible = false;
-            dgvEstudiantes.Columns[7].Visible = false;
-            dgvEstudiantes.Columns[8].Visible = false;
-            dgvEstudiantes.Columns[9].Visible = false;
-        }
+        
 
         private void v_eliminar_Load(object sender, EventArgs e)
         {
@@ -43,8 +37,12 @@ namespace zaslab
             if (dt.Rows.Count > 0)
             {
                 dgvEstudiantes.DataSource = dt;
+                dgvEstudiantes.Columns[6].Visible = false;
+                dgvEstudiantes.Columns[7].Visible = false;
+                dgvEstudiantes.Columns[8].Visible = false;
+                dgvEstudiantes.Columns[9].Visible = false;
             }
-            borrarcolumnas();
+            
         }
 
         int fila;
@@ -66,8 +64,12 @@ namespace zaslab
                 if (dt.Rows.Count > 0)
                 {
                     dgvEstudiantes.DataSource = dt;
+                    dgvEstudiantes.Columns[6].Visible = false;
+                    dgvEstudiantes.Columns[7].Visible = false;
+                    dgvEstudiantes.Columns[8].Visible = false;
+                    dgvEstudiantes.Columns[9].Visible = false;
                 }
-                borrarcolumnas();
+                
             }
             else if (rbtnId.Checked == true)
             {
@@ -80,8 +82,12 @@ namespace zaslab
                 if (dt.Rows.Count > 0)
                 {
                     dgvEstudiantes.DataSource = dt;
+                    dgvEstudiantes.Columns[6].Visible = false;
+                    dgvEstudiantes.Columns[7].Visible = false;
+                    dgvEstudiantes.Columns[8].Visible = false;
+                    dgvEstudiantes.Columns[9].Visible = false;
                 }
-                borrarcolumnas();
+                
             }
         }
 
@@ -89,10 +95,10 @@ namespace zaslab
         {
             //MessageBox.Show("" + int.Parse(dgvEstudiantes.Rows[fila].Cells[9].Value.ToString()));
 
-            sql.multiple("Delete from heces where numexamen =" + int.Parse(dgvEstudiantes.Rows[fila].Cells[6].Value.ToString()));
+            sql.multiple("Delete from heces where id =" + int.Parse(dgvEstudiantes.Rows[fila].Cells[6].Value.ToString()));
             sql.multiple("Delete from orina where id =" + int.Parse(dgvEstudiantes.Rows[fila].Cells[7].Value.ToString()));
             sql.multiple("Delete from sangre where id =" + int.Parse(dgvEstudiantes.Rows[fila].Cells[8].Value.ToString()));
-            sql.multiple("Delete from examrealizados where id =" + int.Parse(dgvEstudiantes.Rows[fila].Cells[9].Value.ToString()));
+            sql.multiple("Delete from examrealizados where numexamen =" + int.Parse(dgvEstudiantes.Rows[fila].Cells[9].Value.ToString()));
         }
     }
 }

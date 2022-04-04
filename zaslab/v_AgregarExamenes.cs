@@ -19,12 +19,7 @@ namespace zaslab
 
         sqlcon sql = new sqlcon();
 
-        private void borrarcolumna()
-        {
-            dgvEstudiantes.Columns[4].Visible = false;
-            dgvEstudiantes.Columns[5].Visible = false;
-            dgvEstudiantes.Columns[6].Visible = false;
-        }
+       
 
      
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -39,9 +34,12 @@ namespace zaslab
                 if (dt.Rows.Count > 0)
                 {
                     dgvEstudiantes.DataSource = dt;
+                    dgvEstudiantes.Columns[4].Visible = false;
+                    dgvEstudiantes.Columns[5].Visible = false;
+                    dgvEstudiantes.Columns[6].Visible = false;
                 }
 
-                borrarcolumna();
+                
             }
             else if (rbtnId.Checked == true)
             {
@@ -53,8 +51,11 @@ namespace zaslab
                 if (dt.Rows.Count > 0)
                 {
                     dgvEstudiantes.DataSource = dt;
+                    dgvEstudiantes.Columns[4].Visible = false;
+                    dgvEstudiantes.Columns[5].Visible = false;
+                    dgvEstudiantes.Columns[6].Visible = false;
                 }
-                borrarcolumna();
+               
             }
         }
 
@@ -153,8 +154,11 @@ namespace zaslab
             if (dt.Rows.Count > 0)
             {
                 dgvEstudiantes.DataSource = dt;
+                dgvEstudiantes.Columns[4].Visible = false;
+                dgvEstudiantes.Columns[5].Visible = false;
+                dgvEstudiantes.Columns[6].Visible = false;
             }
-            borrarcolumna();
+           
         }
 
         private void btnSangre_Click(object sender, EventArgs e)
