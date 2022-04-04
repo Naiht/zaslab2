@@ -18,9 +18,6 @@ namespace zaslab
         public v_VerEstu()
         {
             InitializeComponent();
-            /*dtgv_verest.Columns.Add("","");
-            dtgv_verest.Columns[0].HeaderText = "Nombre";
-            dtgv_verest.Rows.Add();*/
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -38,55 +35,27 @@ namespace zaslab
 
         }
 
+        sqlcon sql = new sqlcon();
         private void v_VerEstu_Load(object sender, EventArgs e)
         {
-            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
-            FileStream fStream = File.Open(@"C:\Users\Na1hTKRZ\Desktop\holi.xlsx", FileMode.Open, FileAccess.Read);
-            IExcelDataReader excelDataReader = ExcelReaderFactory.CreateOpenXmlReader(fStream);
-            DataSet resultDataSet = excelDataReader.AsDataSet();
-            excelDataReader.Close();
 
-            DataTable table = resultDataSet.Tables[0];
-            DataRow row = table.Rows[0];
-            string cell = row[0].ToString();
-            dtgv_verest.DataSource = table;
+            dtgv_verest.ReadOnly = true;
+            dtgv_verest.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dtgv_verest.AllowUserToResizeRows = false;
 
-            sqlcon sql = new sqlcon();
+            DataTable tabla;
+            tabla = sql.tablas("reparacion", "select e.id, e.nombreape, g.genero, e.fechanac, e.edad, e.obser from estudiantes e INNER JOIN generos g ON g.idtipo = e.genero");
 
-            DataRow row2 = table.Rows[1];
-            string id = row2[0].ToString();
-            string nombre = row2[1].ToString();
-            string genero = row2[2].ToString();
-            string fecha = "00/00/0000";
-
-            fecha = string.Format("{0: yyyy-MM-dd}", row2[3].ToString());
-
-            DateTime fecha2 = DateTime.Parse(fecha);
-            DateTime hoy = DateTime.Now;
-            int ed = fecha2.Year;
-            int h = hoy.Year;
-
-            int edad = h - ed;
-
-            int gene = 0;
-            if (genero == "Female" || genero == "Mujer")
+            if (tabla.Rows.Count > 0)
             {
-                gene = 1;
+                dtgv_verest.DataSource = tabla;
+                dtgv_verest.Columns[0].HeaderText = "Codigo Beneficiario";
+                dtgv_verest.Columns[1].HeaderText = "Nombre y Apellido";
+                dtgv_verest.Columns[2].HeaderText = "Genero";
+                dtgv_verest.Columns[3].HeaderText = "Fecha de nacimiento";
+                dtgv_verest.Columns[4].HeaderText = "Edad";
+                dtgv_verest.Columns[5].HeaderText = "Observación";
             }
-            else
-            {
-                gene = 0;
-            }
-
-            MessageBox.Show("" + id + " " + nombre +" " + genero + " "+fecha + "" + edad);
-
-            /*foreach (DataRow dr in table.Rows)
-            {
-                DataRow row2 = table.Rows[0];
-                string nombre = row[0].ToString();
-            }*/
-
-
         }
     }
 }

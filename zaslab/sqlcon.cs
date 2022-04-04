@@ -12,7 +12,7 @@ namespace zaslab
 {
     internal class sqlcon
     {
-        private string cadena = "Data Source=(local);Initial Catalog=rgb;Integrated Security=True";
+        private string cadena = "Data Source=(local);Initial Catalog=zaslab;Integrated Security=True";
         private SqlConnection coneccion;
         private SqlCommand comando;
 

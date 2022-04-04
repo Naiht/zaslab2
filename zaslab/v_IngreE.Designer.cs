@@ -40,6 +40,8 @@
             this.txt_nombrea = new System.Windows.Forms.TextBox();
             this.btn_Agregar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txt_edad
@@ -100,9 +102,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 20);
+            this.label2.Size = new System.Drawing.Size(162, 20);
             this.label2.TabIndex = 15;
-            this.label2.Text = "ID local del beneficiario";
+            this.label2.Text = "Codigo de beneficiario";
             // 
             // label1
             // 
@@ -124,12 +126,12 @@
             // 
             this.txt_nombrea.Location = new System.Drawing.Point(190, 87);
             this.txt_nombrea.Name = "txt_nombrea";
-            this.txt_nombrea.Size = new System.Drawing.Size(517, 27);
+            this.txt_nombrea.Size = new System.Drawing.Size(492, 27);
             this.txt_nombrea.TabIndex = 12;
             // 
             // btn_Agregar
             // 
-            this.btn_Agregar.Location = new System.Drawing.Point(569, 260);
+            this.btn_Agregar.Location = new System.Drawing.Point(556, 395);
             this.btn_Agregar.Name = "btn_Agregar";
             this.btn_Agregar.Size = new System.Drawing.Size(113, 29);
             this.btn_Agregar.TabIndex = 22;
@@ -139,18 +141,37 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(16, 260);
+            this.button1.Location = new System.Drawing.Point(16, 395);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 29);
             this.button1.TabIndex = 23;
             this.button1.Text = "Importar Excel";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 273);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 20);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Observación";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(190, 261);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(479, 115);
+            this.textBox1.TabIndex = 25;
+            // 
             // v_IngreE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 312);
+            this.ClientSize = new System.Drawing.Size(698, 436);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Agregar);
             this.Controls.Add(this.txt_edad);
@@ -164,7 +185,7 @@
             this.Controls.Add(this.txt_id);
             this.Controls.Add(this.txt_nombrea);
             this.Name = "v_IngreE";
-            this.Text = "v_IngreE";
+            this.Text = "Ingresar Estudiante";
             this.Load += new System.EventHandler(this.v_IngreE_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -185,5 +206,7 @@
         private TextBox txt_nombrea;
         private Button btn_Agregar;
         private Button button1;
+        private Label label5;
+        private TextBox textBox1;
     }
 }

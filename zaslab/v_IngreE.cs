@@ -26,9 +26,14 @@ namespace zaslab
 
         private void dtp_fecha_ValueChanged(object sender, EventArgs e)
         {
-            int edad = 0;
+            string fecha = "00/00/0000";
+            fecha = string.Format("{0: yyyy-MM-dd}", dtp_fecha.Value);
+            DateTime fechaNacimiento = DateTime.Parse(fecha);
 
-            edad = DateTime.Now.Year - dtp_fecha.Value.Year;
+            int edad = DateTime.Today.Year - fechaNacimiento.Year;
+
+            if (DateTime.Today < fechaNacimiento.AddYears(edad))
+                --edad;
 
             txt_edad.Text = edad.ToString();
         }
