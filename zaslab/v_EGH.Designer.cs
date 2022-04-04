@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmb_Consis = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_color = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Parasito = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Guardar = new System.Windows.Forms.Button();
+            this.btn_Cancelar = new System.Windows.Forms.Button();
             this.txt_obser = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -46,9 +46,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cmb_Consis);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmb_color);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -57,13 +57,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Examen Fisico";
             // 
-            // comboBox2
+            // cmb_Consis
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(139, 93);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(151, 28);
-            this.comboBox2.TabIndex = 3;
+            this.cmb_Consis.FormattingEnabled = true;
+            this.cmb_Consis.Location = new System.Drawing.Point(139, 88);
+            this.cmb_Consis.Name = "cmb_Consis";
+            this.cmb_Consis.Size = new System.Drawing.Size(151, 28);
+            this.cmb_Consis.TabIndex = 3;
             // 
             // label2
             // 
@@ -74,13 +74,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Consistencia";
             // 
-            // comboBox1
+            // cmb_color
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(139, 42);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 28);
-            this.comboBox1.TabIndex = 1;
+            this.cmb_color.FormattingEnabled = true;
+            this.cmb_color.Location = new System.Drawing.Point(139, 37);
+            this.cmb_color.Name = "cmb_color";
+            this.cmb_color.Size = new System.Drawing.Size(151, 28);
+            this.cmb_color.TabIndex = 1;
             // 
             // label1
             // 
@@ -93,7 +93,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txt_Parasito);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(12, 160);
             this.groupBox2.Name = "groupBox2";
@@ -102,12 +102,12 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Examen Microscopico";
             // 
-            // textBox1
+            // txt_Parasito
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(243, 27);
-            this.textBox1.TabIndex = 4;
+            this.txt_Parasito.Location = new System.Drawing.Point(115, 47);
+            this.txt_Parasito.Name = "txt_Parasito";
+            this.txt_Parasito.Size = new System.Drawing.Size(290, 27);
+            this.txt_Parasito.TabIndex = 4;
             // 
             // label3
             // 
@@ -118,36 +118,38 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Parasito";
             // 
-            // button1
+            // btn_Guardar
             // 
-            this.button1.Location = new System.Drawing.Point(499, 421);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Guardar.Location = new System.Drawing.Point(504, 393);
+            this.btn_Guardar.Name = "btn_Guardar";
+            this.btn_Guardar.Size = new System.Drawing.Size(94, 29);
+            this.btn_Guardar.TabIndex = 2;
+            this.btn_Guardar.Text = "Guardar";
+            this.btn_Guardar.UseVisualStyleBackColor = true;
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
-            // button2
+            // btn_Cancelar
             // 
-            this.button2.Location = new System.Drawing.Point(599, 421);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Location = new System.Drawing.Point(604, 393);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(94, 29);
+            this.btn_Cancelar.TabIndex = 3;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // txt_obser
             // 
-            this.txt_obser.Location = new System.Drawing.Point(127, 291);
+            this.txt_obser.Location = new System.Drawing.Point(109, 285);
             this.txt_obser.Multiline = true;
             this.txt_obser.Name = "txt_obser";
-            this.txt_obser.Size = new System.Drawing.Size(552, 89);
+            this.txt_obser.Size = new System.Drawing.Size(589, 89);
             this.txt_obser.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 294);
+            this.label4.Location = new System.Drawing.Point(12, 288);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 20);
             this.label4.TabIndex = 5;
@@ -157,11 +159,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 473);
+            this.ClientSize = new System.Drawing.Size(710, 437);
             this.Controls.Add(this.txt_obser);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Cancelar);
+            this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "v_EGH";
@@ -178,15 +180,15 @@
         #endregion
 
         private GroupBox groupBox1;
-        private ComboBox comboBox2;
+        private ComboBox cmb_Consis;
         private Label label2;
-        private ComboBox comboBox1;
+        private ComboBox cmb_color;
         private Label label1;
         private GroupBox groupBox2;
-        private TextBox textBox1;
+        private TextBox txt_Parasito;
         private Label label3;
-        private Button button1;
-        private Button button2;
+        private Button btn_Guardar;
+        private Button btn_Cancelar;
         private TextBox txt_obser;
         private Label label4;
     }

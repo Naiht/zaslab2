@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace zaslab
 {
-    public partial class v_EGH : Form
+    public partial class EGO : Form
     {
-        public v_EGH()
+        public EGO()
         {
             InitializeComponent();
+        }
+
+        private void EGO_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void btn_Guardar_Click(object sender, EventArgs e)
