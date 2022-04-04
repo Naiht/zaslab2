@@ -113,12 +113,12 @@ namespace zaslab
                             sql.multiple("insert into heces values('','','','')");
                             ultimoexamen("heces");
                             h = valor;
-                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + int.Parse(lbId.Text) + "," + h + "," + o + "," + s + ")");
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "'," + h + "," + o + "," + s + ")");
                             //MessageBox.Show("" + h);
                         }
                         else
                         {
-                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + int.Parse(lbId.Text) + ",''," + o + "," + s + ")");
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "',''," + o + "," + s + ")");
                         }
                     }
                     else
@@ -128,12 +128,12 @@ namespace zaslab
                             sql.multiple("insert into heces values('','','','')");
                             ultimoexamen("heces");
                             h = valor;
-                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + int.Parse(lbId.Text) + "," + h + ",''," + s + ")");
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "'," + h + ",''," + s + ")");
                             //MessageBox.Show("" + h);
                         }
                         else
                         {
-                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + int.Parse(lbId.Text) + ",'',''," + s + ")");
+                            sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "','',''," + s + ")");
                         }
                     }
                 }
