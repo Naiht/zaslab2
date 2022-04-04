@@ -67,6 +67,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -396,7 +398,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(54, 417);
+            this.btnGuardar.Location = new System.Drawing.Point(40, 400);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 22;
@@ -405,18 +407,37 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(184, 417);
+            this.btnCancelar.Location = new System.Drawing.Point(170, 400);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 23;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(319, 41);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(259, 139);
+            this.textBox1.TabIndex = 25;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(319, 20);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(84, 15);
+            this.label27.TabIndex = 26;
+            this.label27.Text = "Observaciones";
+            // 
             // v_BiometriaHematicaCompleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 480);
+            this.ClientSize = new System.Drawing.Size(609, 445);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox1);
@@ -491,5 +512,7 @@
         private Label label20;
         private Button btnGuardar;
         private Button btnCancelar;
+        private TextBox textBox1;
+        private Label label27;
     }
 }

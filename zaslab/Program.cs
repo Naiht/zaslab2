@@ -12,6 +12,7 @@ namespace zaslab
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new v_Principal());
+            //Application.Run(new v_AgregarExam());
         }
     }
 }
