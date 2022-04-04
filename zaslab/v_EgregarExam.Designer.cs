@@ -82,6 +82,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(421, 23);
             this.txtBuscar.TabIndex = 2;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnBuscar
             // 
@@ -191,27 +192,24 @@
             this.lbNombre.AutoSize = true;
             this.lbNombre.Location = new System.Drawing.Point(801, 82);
             this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(67, 15);
+            this.lbNombre.Size = new System.Drawing.Size(0, 15);
             this.lbNombre.TabIndex = 15;
-            this.lbNombre.Text = "josue mejia";
             // 
             // lbEdad
             // 
             this.lbEdad.AutoSize = true;
             this.lbEdad.Location = new System.Drawing.Point(801, 108);
             this.lbEdad.Name = "lbEdad";
-            this.lbEdad.Size = new System.Drawing.Size(19, 15);
+            this.lbEdad.Size = new System.Drawing.Size(0, 15);
             this.lbEdad.TabIndex = 16;
-            this.lbEdad.Text = "23";
             // 
             // lbId
             // 
             this.lbId.AutoSize = true;
             this.lbId.Location = new System.Drawing.Point(869, 54);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(25, 15);
+            this.lbId.Size = new System.Drawing.Size(0, 15);
             this.lbId.TabIndex = 17;
-            this.lbId.Text = "123";
             // 
             // label2
             // 

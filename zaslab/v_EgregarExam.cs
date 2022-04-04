@@ -26,6 +26,7 @@ namespace zaslab
 
             dgvEstudiantes.ReadOnly = true;
             dgvEstudiantes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dgvEstudiantes.auto
             dgvEstudiantes.AllowUserToAddRows = false;
 
             DataTable dt;
@@ -46,6 +47,34 @@ namespace zaslab
             lbId.Text = dgvEstudiantes.Rows[fila].Cells[0].Value.ToString();
             lbNombre.Text = dgvEstudiantes.Rows[fila].Cells[1].Value.ToString();
             lbEdad.Text = dgvEstudiantes.Rows[fila].Cells[4].Value.ToString();
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (rbtnNombre.Checked == true)
+            {
+                DataTable dt;
+                dt = sql.tablas("estudiantes", "select e.idb as [Codigo de Beneficiario], e.nombreape as Nombre," +
+                    " g.genero as Genero, e.fechanac as [Fecha de Nacimiento]," +
+                    " e.edad as Edad, e.obser as Observaciones  from estudiantes as e " +
+                    "inner join generos as g on e.genero=g.idtipo where e.nombreape like '%" + txtBuscar.Text + "%'");
+                if (dt.Rows.Count > 0)
+                {
+                    dgvEstudiantes.DataSource = dt;
+                }
+            }
+            else if (rbtnId.Checked == true)
+            {
+                DataTable dt;
+                dt = sql.tablas("estudiantes", "select e.idb as [Codigo de Beneficiario], e.nombreape as Nombre," +
+                    " g.genero as Genero, e.fechanac as [Fecha de Nacimiento]," +
+                    " e.edad as Edad, e.obser as Observaciones  from estudiantes as e " +
+                    "inner join generos as g on e.genero=g.idtipo where e.idb like '%" + txtBuscar.Text + "%'");
+                if (dt.Rows.Count > 0)
+                {
+                    dgvEstudiantes.DataSource = dt;
+                }
+            }
         }
     }
 }
