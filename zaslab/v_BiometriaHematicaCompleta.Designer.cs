@@ -69,7 +69,9 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtObservacion = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
+            this.dgvdatosexam = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvdatosexam)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -414,6 +416,7 @@
             this.btnCancelar.TabIndex = 23;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtObservacion
             // 
@@ -432,11 +435,22 @@
             this.label27.TabIndex = 26;
             this.label27.Text = "Observaciones";
             // 
+            // dgvdatosexam
+            // 
+            this.dgvdatosexam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvdatosexam.Location = new System.Drawing.Point(319, 230);
+            this.dgvdatosexam.Name = "dgvdatosexam";
+            this.dgvdatosexam.RowTemplate.Height = 25;
+            this.dgvdatosexam.Size = new System.Drawing.Size(240, 150);
+            this.dgvdatosexam.TabIndex = 27;
+            this.dgvdatosexam.Visible = false;
+            // 
             // v_BiometriaHematicaCompleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 445);
+            this.Controls.Add(this.dgvdatosexam);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.txtObservacion);
             this.Controls.Add(this.btnCancelar);
@@ -465,8 +479,10 @@
             this.Controls.Add(this.label1);
             this.Name = "v_BiometriaHematicaCompleta";
             this.Text = "Biometria Hematica Completa";
+            this.Load += new System.EventHandler(this.v_BiometriaHematicaCompleta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvdatosexam)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -515,5 +531,6 @@
         private Button btnCancelar;
         private TextBox txtObservacion;
         private Label label27;
+        private DataGridView dgvdatosexam;
     }
 }
