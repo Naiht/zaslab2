@@ -4,6 +4,9 @@
     <Compile Update="v_EdiEliEst.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="v_EGH.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="v_EgregarExam.cs">
       <SubType>Form</SubType>
     </Compile>

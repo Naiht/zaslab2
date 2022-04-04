@@ -97,6 +97,7 @@
             this.Controls.Add(this.dtgv_verest);
             this.Name = "v_VerEstu";
             this.Text = "Ver estudiantes";
+            this.Load += new System.EventHandler(this.v_VerEstu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_verest)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
