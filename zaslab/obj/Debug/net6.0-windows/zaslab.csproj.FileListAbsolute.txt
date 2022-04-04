@@ -155,4 +155,10 @@ C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\bin\Debug\net6.0-windows\BouncyCast
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\bin\Debug\net6.0-windows\itextsharp.dll
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.v_eliminar.resources
 >>>>>>> e3f1a0b651fd47a17e9095e73fdef4366d1d438d
+<<<<<<< HEAD
 C:\Users\Na1hTKRZ\source\repos\zaslab\zaslab\obj\Debug\net6.0-windows\zaslab.v_eliminar.resources
+=======
+C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.pruebareportes.resources
+>>>>>>> cb3745427e0ce978cf323024abd08e3ddc6a39b0
