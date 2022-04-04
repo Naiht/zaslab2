@@ -16,5 +16,12 @@ namespace zaslab
         {
             InitializeComponent();
         }
+
+        private void v_AgregarExam_Load(object sender, EventArgs e)
+        {
+            /*dtpTomaMuestra.Format = DateTimePickerFormat.Custom;
+            dtpTomaMuestra.CustomFormat = "MM'/'dd'/'yyyy hh':'mm tt";*/
+
+        }
     }
 }
