@@ -168,6 +168,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "v_EGH";
             this.Text = "Examen General de Heces";
+            this.Load += new System.EventHandler(this.v_EGH_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

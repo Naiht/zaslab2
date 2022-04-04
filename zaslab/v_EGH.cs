@@ -34,5 +34,20 @@ namespace zaslab
                 this.Close();
             }
         }
+
+        private void v_EGH_Load(object sender, EventArgs e)
+        {
+            rellenarcmb();
+        }
+
+        private void rellenarcmb() {
+            cmb_color.Items.Add("Cafe");
+            cmb_color.Items.Add("Gris");
+            cmb_color.Items.Add("Rojo");
+            cmb_color.Items.Add("Verda");
+
+            cmb_Consis.Items.Add("Pastosa");
+            cmb_Consis.Items.Add("Rigida");
+        }
     }
 }

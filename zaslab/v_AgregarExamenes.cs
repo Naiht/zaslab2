@@ -27,10 +27,10 @@ namespace zaslab
             if (rbtnNombre.Checked == true)
             {
                 DataTable dt;
-                dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombe, g.genero Genero, e.edad " +
-                    ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangrefrom estudiantes as e" +
-                    " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.nombreap like '%"
-                    + txtBuscar.Text +"%'");
+                dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombe, g.genero Genero, e.edad" +
+                    ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre from estudiantes as e" +
+                    " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.nombreape like '%"
+                   + txtBuscar.Text + "%'");
                 if (dt.Rows.Count > 0)
                 {
                     dgvEstudiantes.DataSource = dt;
