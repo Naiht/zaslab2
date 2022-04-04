@@ -162,5 +162,27 @@ namespace zaslab
             v_BiometriaHematicaCompleta datossangre = new v_BiometriaHematicaCompleta();
             datossangre.ShowDialog();
         }
+
+        private void btnOrina_Click(object sender, EventArgs e)
+        {
+            EGO mensaje2 = new EGO();
+            mensaje2.ShowDialog();
+
+            if (mensaje2.DialogResult == DialogResult.OK)
+            {
+                MessageBox.Show("Operación Exitosa4e" + mensaje2.DialogResult.ToString());
+            }
+        }
+
+        private void btnHeces_Click(object sender, EventArgs e)
+        {
+            v_EGH mensaje2 = new v_EGH();
+            mensaje2.ShowDialog();
+
+            if (mensaje2.DialogResult == DialogResult.OK)
+            {
+                MessageBox.Show("Operación Exitosa4e" + mensaje2.DialogResult.ToString());
+            }
+        }
     }
 }
