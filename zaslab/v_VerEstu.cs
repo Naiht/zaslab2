@@ -43,7 +43,7 @@ namespace zaslab
                 //nombrec = mensaje2.nombreca;
                 // cedulacli = mensaje2.cedulaclia;
                 cargadatos();
-                MessageBox.Show("asdasd" + mensaje2.DialogResult.ToString());
+                MessageBox.Show("Operación Exitosa4e" + mensaje2.DialogResult.ToString());
 
             }
 
@@ -79,6 +79,10 @@ namespace zaslab
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            dtgv_verest.ReadOnly = true;
+            dtgv_verest.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dtgv_verest.AllowUserToResizeRows = false;
+
             if (rdb_id.Checked == true)
             {
 

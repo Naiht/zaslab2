@@ -48,9 +48,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 25);
+            this.textBox1.Location = new System.Drawing.Point(180, 28);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(596, 27);
+            this.textBox1.Size = new System.Drawing.Size(642, 27);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -70,10 +70,10 @@
             this.rdb_id.AutoSize = true;
             this.rdb_id.Location = new System.Drawing.Point(12, 42);
             this.rdb_id.Name = "rdb_id";
-            this.rdb_id.Size = new System.Drawing.Size(45, 24);
+            this.rdb_id.Size = new System.Drawing.Size(162, 24);
             this.rdb_id.TabIndex = 5;
             this.rdb_id.TabStop = true;
-            this.rdb_id.Text = "ID";
+            this.rdb_id.Text = "Codigo Beneficiario";
             this.rdb_id.UseVisualStyleBackColor = true;
             // 
             // v_VerEstu

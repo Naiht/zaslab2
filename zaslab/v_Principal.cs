@@ -27,5 +27,12 @@ namespace zaslab
             ver.MdiParent = this;
             ver.Show();
         }
+
+        private void verExamenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            v_AgregarExamenes ver = new v_AgregarExamenes();
+            ver.MdiParent = this;
+            ver.Show();
+        }
     }
 }
