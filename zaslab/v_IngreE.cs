@@ -38,10 +38,34 @@ namespace zaslab
             txt_edad.Text = edad.ToString();
         }
 
-
+        sqlcon sql = new sqlcon();
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            limpiar();
+
+            DialogResult dr = MessageBox.Show("¿Son corretos los datos?", "Datos", MessageBoxButtons.YesNo);
+
+            if(dr == DialogResult.Yes){
+                string codigob = txt_id.Text;
+                string nombrea = txt_nombrea.Text;
+                int genero = cmb_Genero.SelectedIndex;
+                DateTime fechanac = dtp_fecha.Value;
+                int edad = 0;
+                try
+                {
+                    edad = int.Parse(txt_edad.Text);
+                }
+                catch (Exception ex)
+                {
+                }
+
+                string obser = txt_obser.Text;
+
+
+                sql.multiple("insert into estudiantes values('" + codigob + "','" + nombrea + "'," + genero + ",'" + string.Format("{0: yyyy-MM-dd}", fechanac) + "'," + edad + ",'"+txt_obser.Text+"')");
+
+                limpiar();
+            }
+
         }
 
         valilimpia vali = new valilimpia();
