@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mejia\\Desktop\\examenes\\zaslab2\\zaslab\\zaslab.csproj": {}
+    "C:\\Users\\Na1hTKRZ\\source\\repos\\zaslab\\zaslab\\zaslab.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mejia\\Desktop\\examenes\\zaslab2\\zaslab\\zaslab.csproj": {
+    "C:\\Users\\Na1hTKRZ\\source\\repos\\zaslab\\zaslab\\zaslab.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mejia\\Desktop\\examenes\\zaslab2\\zaslab\\zaslab.csproj",
+        "projectUniqueName": "C:\\Users\\Na1hTKRZ\\source\\repos\\zaslab\\zaslab\\zaslab.csproj",
         "projectName": "zaslab",
-        "projectPath": "C:\\Users\\mejia\\Desktop\\examenes\\zaslab2\\zaslab\\zaslab.csproj",
-        "packagesPath": "C:\\Users\\mejia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mejia\\Desktop\\examenes\\zaslab2\\zaslab\\obj\\",
+        "projectPath": "C:\\Users\\Na1hTKRZ\\source\\repos\\zaslab\\zaslab\\zaslab.csproj",
+        "packagesPath": "C:\\Users\\Na1hTKRZ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Na1hTKRZ\\source\\repos\\zaslab\\zaslab\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mejia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Na1hTKRZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
