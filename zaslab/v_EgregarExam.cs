@@ -22,6 +22,12 @@ namespace zaslab
         private void v_AgregarExam_Load(object sender, EventArgs e)
         {
             btnGuardar.Enabled = false;
+
+            recarga();
+        }
+
+
+        private void recarga() {
             dgvEstudiantes.ReadOnly = true;
             dgvEstudiantes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
             dgvEstudiantes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;//cambia el tamaño de la columna de acuerdo al contenido
@@ -30,17 +36,16 @@ namespace zaslab
 
             DataTable dt;
             dt = sql.tablas("estudiantes", "select e.idb as [Codigo de Beneficiario], e.nombreape as Nombre," +
-                " g.genero as Genero, e.fechanac as [Fecha de Nacimiento]," +
-                " e.edad as Edad, e.obser as Observaciones from estudiantes as e " +
-                "inner join generos as g on e.genero=g.idtipo  ");
-            
-            if (dt.Rows.Count > 0)
+                 " g.genero as Genero, e.fechanac as [Fecha de Nacimiento]," +
+                 " e.edad as Edad, e.obser as Observaciones from estudiantes as e " +
+                 "inner join generos as g on e.genero=g.idtipo  ");
+
+               if (dt.Rows.Count > 0)
             {
                 dgvEstudiantes.DataSource = dt;
-            }
-            
-        }
 
+            }
+        }
        
 
         int fila;
@@ -51,71 +56,38 @@ namespace zaslab
             lbId.Text = dgvEstudiantes.Rows[fila].Cells[0].Value.ToString();
             lbNombre.Text = dgvEstudiantes.Rows[fila].Cells[1].Value.ToString();
             lbEdad.Text = dgvEstudiantes.Rows[fila].Cells[4].Value.ToString();
-            
-            /*int h = int.Parse(dgvEstudiantes.Rows[fila].Cells[6].Value.ToString());
-            int o = int.Parse(dgvEstudiantes.Rows[fila].Cells[7].Value.ToString());
-            int s = int.Parse(dgvEstudiantes.Rows[fila].Cells[8].Value.ToString());
-            
+
+            /*int h = int.Parse(dgvEstudiantes.Rows[fila].Cells[4].Value.ToString());
+            int o = int.Parse(dgvEstudiantes.Rows[fila].Cells[5].Value.ToString());
+            int s = int.Parse(dgvEstudiantes.Rows[fila].Cells[6].Value.ToString());
             if (h != 0)
             {
-                if (o != 0)
-                {
-                    if (s != 0)
-                    {
-                        chbHeces.Checked = true;
-                        chbOrina.Checked = true;
-                        chbSangre.Checked = true;
-                    }
-                    else
-                    {
-                        chbHeces.Checked = true;
-                        chbOrina.Checked = true;
-                        chbSangre.Checked = false;
-                    }
-                }
-                else
-                {
-                    if (s != 0)
-                    {
-                        chbHeces.Checked = true;
-                        chbOrina.Checked = false;
-                        chbSangre.Checked = true;
-                    }
-                    else
-                    {
-                        chbHeces.Checked = true;
-                        chbOrina.Checked = false;
-                        chbSangre.Checked = false;
-                    }
-                }
+                chbHeces.Checked = true;
             }
             else
             {
-                if (o != 0)
-                {
-                    if (s != 0)
-                    {
-                        chbHeces.Checked = false;
-                        chbOrina.Checked = true;
-                        chbSangre.Checked = true;
-                    }
-                    else
-                    {
-                        chbHeces.Checked = false;
-                        chbOrina.Checked = true;
-                        chbSangre.Checked = false;
-                    }
-                }
-                else
-                {
-                    if (s != 0)
-                    {
-                        chbHeces.Checked = false;
-                        chbOrina.Checked = false;
-                        chbSangre.Checked = true;
-                    }
-                }
+                chbHeces.Checked = false;
+            }
+
+            if (o != 0)
+            {
+                chbOrina.Checked = true;
+            }
+            else
+            {
+                chbOrina.Checked = false;
+            }
+
+            if (s != 0)
+            {
+                chbSangre.Checked = true;
+            }
+            else
+            {
+                chbSangre.Checked = false;
             }*/
+
+
             btnGuardar.Enabled = true;
         }
 
@@ -267,6 +239,7 @@ namespace zaslab
             dtpRecepcionMuestra.Value = DateTime.Today;
             btnGuardar.Enabled = false;
             txtNumExam.Text = "";
+            recarga();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
