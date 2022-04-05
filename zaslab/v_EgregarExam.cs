@@ -59,14 +59,19 @@ namespace zaslab
 
             DataTable sangre;
             sangre = sql.tablas("examrealizado", "select * from examrealizados where idestudiante = '" + dgvEstudiantes.Rows[fila].Cells[0].Value.ToString() + "'");
+            
 
-            if (sangre.Rows.Count > 0) { 
+            if (sangre.Rows.Count > 0) {
 
+                dgvdatos.DataSource = sangre;
                 //NuevaConsultaQueIncluyaLosParametros
 
-                /*int h = int.Parse(dgvEstudiantes.Rows[fila].Cells[4].Value.ToString());
-                int o = int.Parse(dgvEstudiantes.Rows[fila].Cells[5].Value.ToString());
-                int s = int.Parse(dgvEstudiantes.Rows[fila].Cells[6].Value.ToString());
+                int h = int.Parse(dgvdatos.Rows[0].Cells[3].Value.ToString());
+                int o = int.Parse(dgvdatos.Rows[0].Cells[4].Value.ToString());
+                int s = int.Parse(dgvdatos.Rows[0].Cells[5].Value.ToString());
+                dtpTomaMuestra.Value = DateTime.Parse(dgvdatos.Rows[0].Cells[6].Value.ToString());
+                dtpRecepcionMuestra.Value = DateTime.Parse(dgvdatos.Rows[0].Cells[7].Value.ToString());
+
                 if (h != 0)
                 {
                     chbHeces.Checked = true;
@@ -92,10 +97,12 @@ namespace zaslab
                 else
                 {
                     chbSangre.Checked = false;
-                }*/
+                }
             }
-            else { 
-            
+            else {
+                chbHeces.Checked = false;
+                chbOrina.Checked = false;
+                chbSangre.Checked = false;
             }
 
 
@@ -146,6 +153,8 @@ namespace zaslab
             valor = int.Parse(dgvTomaDatos.Rows[0].Cells[0].Value.ToString());
 
         }
+
+    
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -254,38 +263,60 @@ namespace zaslab
                     if (int.Parse(dgvdatos.Rows[0].Cells[5].Value.ToString()) == 0)
                     {
                         sql.multiple("insert into sangre values('','','','','','','','','','','','','','')");
+                        ultimoexamen("sangre");
+                        sql.multiple("update examrealizados set idsangre = " + valor + " where idestudiante = '" + lbId.Text + "'");
+                    }
+                    else
+                    {
+                        sql.multiple("update examrealizados set fechatoma ='" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "', fecharecep = '" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "'  where idestudiante = '" + lbId.Text + "'");
+
                     }
                 }
                 else
                 {
                     sql.multiple("delete from sangre where id=" + int.Parse(dgvdatos.Rows[0].Cells[5].Value.ToString()));
-                    sql.multiple("update examrealizados set idsangre = 0 where idestudiante = '" + lbId.Text + "'");
+                    sql.multiple("update examrealizados set idsangre = 0, fechatoma ='" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "', fecharecep = '" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "'  where idestudiante = '" + lbId.Text + "'");
                 }
                 if(chbOrina.Checked == true)
                 {
                     if (int.Parse(dgvdatos.Rows[0].Cells[4].Value.ToString()) == 0)
                     {
                         sql.multiple("insert into orina values('','','','','','','','','','','','','','','','','','','','','')");
+                        ultimoexamen("orina");
+                        sql.multiple("update examrealizados set idorina = " + valor + " where idestudiante = '" + lbId.Text + "'");
+
+                    }
+                    else
+                    {
+                        sql.multiple("update examrealizados set fechatoma ='" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "', fecharecep = '" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "'  where idestudiante = '" + lbId.Text + "'");
+
                     }
                 }
                 else
                 {
                     sql.multiple("delete from orina where id=" + int.Parse(dgvdatos.Rows[0].Cells[4].Value.ToString()));
-                    sql.multiple("update examrealizados set idorina = 0 where idestudiante = '" + lbId.Text + "'");
+                    sql.multiple("update examrealizados set idorina = 0, fechatoma ='"+ string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value)+"', fecharecep = '"+ string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value)+"' where idestudiante = '" + lbId.Text + "'");
                 }
                 if (chbHeces.Checked == true)
                 {
                     if (int.Parse(dgvdatos.Rows[0].Cells[3].Value.ToString()) == 0)
                     {
                         sql.multiple("insert into heces values('','','','','')");
+                        ultimoexamen("heces");
+                        sql.multiple("update examrealizados set idheces = " + valor + " where idestudiante = '" + lbId.Text + "'");
+                    }
+                    else
+                    {
+                        sql.multiple("update examrealizados set fechatoma ='" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "', fecharecep = '" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "'  where idestudiante = '" + lbId.Text + "'");
+
                     }
                 }
                 else
                 {
                     sql.multiple("delete from heces where id=" + int.Parse(dgvdatos.Rows[0].Cells[3].Value.ToString()));
-                    sql.multiple("update examrealizados set idheces = 0 where idestudiante = '" + lbId.Text + "'");
+                    sql.multiple("update examrealizados set idheces = 0, fechatoma ='" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "', fecharecep = '" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "'  where idestudiante = '" + lbId.Text + "'");
                 }
-                MessageBox.Show("ingresa el numero de exame22n");
+                //MessageBox.Show("ingresa el numero de exame22n");
             }
 
             lbId.Text = "";
