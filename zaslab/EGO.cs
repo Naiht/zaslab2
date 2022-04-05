@@ -25,13 +25,13 @@ namespace zaslab
         {
             InitializeComponent();
             exam = idexam;
-                        rellenarcm();
+            rellenarcm();
+            relletabal();
         }
 
         private void EGO_Load(object sender, EventArgs e)
         {
-            rellenarcm();
-            relletabal();
+
         }
 
         private void rellenarcm()
@@ -59,7 +59,7 @@ namespace zaslab
  
         private void relletabal() {
             DataTable orina;
-            orina = sql.tablas("sangre", "select * from orina where id=" + exam);
+            orina = sql.tablas("orina", "select * from orina where id=" + exam);
             //heces = sql.tablas("sangre", "select * from heces where id= 3");
             if (orina.Rows.Count > 0)
             {
@@ -70,6 +70,27 @@ namespace zaslab
                 txtph.Text = dgvdatosexam.Rows[0].Cells[3].Value.ToString();
 
                 txtdensi.Text = dgvdatosexam.Rows[0].Cells[4].Value.ToString();
+                
+                txtleucoEF.Text = dgvdatosexam.Rows[0].Cells[5].Value.ToString();
+                txtnitritos.Text = dgvdatosexam.Rows[0].Cells[6].Value.ToString();
+                txturobili.Text = dgvdatosexam.Rows[0].Cells[7].Value.ToString();
+                
+                txtproteina.Text = dgvdatosexam.Rows[0].Cells[8].Value.ToString();
+                txthemo.Text = dgvdatosexam.Rows[0].Cells[9].Value.ToString();
+                
+                txtcetonas.Text = dgvdatosexam.Rows[0].Cells[10].Value.ToString();
+                txtbili.Text = dgvdatosexam.Rows[0].Cells[11].Value.ToString();
+                txtgluco.Text = dgvdatosexam.Rows[0].Cells[12].Value.ToString();
+                
+                cmbceluepi.Text = dgvdatosexam.Rows[0].Cells[13].Value.ToString();
+                cmbbacte.Text = dgvdatosexam.Rows[0].Cells[14].Value.ToString();
+                txtleucoEQ.Text = dgvdatosexam.Rows[0].Cells[15].Value.ToString();
+                txteritro.Text = dgvdatosexam.Rows[0].Cells[16].Value.ToString();
+                txtcrista.Text = dgvdatosexam.Rows[0].Cells[17].Value.ToString();
+                txtcilin.Text = dgvdatosexam.Rows[0].Cells[18].Value.ToString();
+                txtotros.Text = dgvdatosexam.Rows[0].Cells[19].Value.ToString();
+                fecha = DateTime.Parse(dgvdatosexam.Rows[0].Cells[20].Value.ToString());
+                txtobserva.Text = dgvdatosexam.Rows[0].Cells[21].Value.ToString();
                 //txt_obser.Text = dgvdatosexam.Rows[0].Cells[5].Value.ToString();
 
 
@@ -93,6 +114,11 @@ namespace zaslab
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
 
+            sql.multiple("update orina set color = '" + cmb_color.SelectedItem.ToString() +"', aspecto = '"+cmb_aspecto.SelectedItem.ToString()+"', " +
+                "ph = "+float.Parse(txtph.Text)+", densidad = '"+txtdensi.Text+"', leucocitosEF = '"+txtleucoEF.Text+"', nitritos = '"+txtnitritos.Text+"', " +
+                "urobilinogeno = '"+txturobili.Text+"', proteina ='"+txtproteina.Text+"', hemoglobina = '"+txthemo.Text+"', bilirrubinas= '"+txtbili.Text+"', glucosa='"+txtgluco.Text+"', " +
+                "celulas_epitaliales='"+cmbceluepi.SelectedItem+"', bacterias = '"+cmbbacte.SelectedItem+"', leucocitosEM = '"+txtleucoEQ.Text+"', eritrocitos='"+txteritro.Text+"', cristales='"+txtcrista.Text+"', " +
+                "otro = '"+txtotros.Text+"', fecharesul ='', observacion = '"+txtobserva.Text+"', cetonas = '"+txtcetonas.Text+ "', clilindros = '"+txtcilin.Text+"' where id = " + exam);
 
             DialogResult = DialogResult.Cancel;
             this.Close();
