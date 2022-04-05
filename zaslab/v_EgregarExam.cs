@@ -57,35 +57,46 @@ namespace zaslab
             lbNombre.Text = dgvEstudiantes.Rows[fila].Cells[1].Value.ToString();
             lbEdad.Text = dgvEstudiantes.Rows[fila].Cells[4].Value.ToString();
 
-            /*int h = int.Parse(dgvEstudiantes.Rows[fila].Cells[4].Value.ToString());
-            int o = int.Parse(dgvEstudiantes.Rows[fila].Cells[5].Value.ToString());
-            int s = int.Parse(dgvEstudiantes.Rows[fila].Cells[6].Value.ToString());
-            if (h != 0)
-            {
-                chbHeces.Checked = true;
-            }
-            else
-            {
-                chbHeces.Checked = false;
-            }
+            DataTable sangre;
+            sangre = sql.tablas("examrealizado", "select * from examrealizados where idestudiante = '" + dgvEstudiantes.Rows[fila].Cells[0].Value.ToString() + "'");
 
-            if (o != 0)
-            {
-                chbOrina.Checked = true;
-            }
-            else
-            {
-                chbOrina.Checked = false;
-            }
+            if (sangre.Rows.Count > 0) { 
 
-            if (s != 0)
-            {
-                chbSangre.Checked = true;
+                //NuevaConsultaQueIncluyaLosParametros
+
+                /*int h = int.Parse(dgvEstudiantes.Rows[fila].Cells[4].Value.ToString());
+                int o = int.Parse(dgvEstudiantes.Rows[fila].Cells[5].Value.ToString());
+                int s = int.Parse(dgvEstudiantes.Rows[fila].Cells[6].Value.ToString());
+                if (h != 0)
+                {
+                    chbHeces.Checked = true;
+                }
+                else
+                {
+                    chbHeces.Checked = false;
+                }
+
+                if (o != 0)
+                {
+                    chbOrina.Checked = true;
+                }
+                else
+                {
+                    chbOrina.Checked = false;
+                }
+
+                if (s != 0)
+                {
+                    chbSangre.Checked = true;
+                }
+                else
+                {
+                    chbSangre.Checked = false;
+                }*/
             }
-            else
-            {
-                chbSangre.Checked = false;
-            }*/
+            else { 
+            
+            }
 
 
             btnGuardar.Enabled = true;

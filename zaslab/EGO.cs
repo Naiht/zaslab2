@@ -17,9 +17,21 @@ namespace zaslab
             InitializeComponent();
         }
 
+        sqlcon sql = new sqlcon();
+        int exam;
+        DateTime fecha;
+
+        public EGO(int idexam, DateTime fecharesul)
+        {
+            InitializeComponent();
+            exam = idexam;
+                        rellenarcm();
+        }
+
         private void EGO_Load(object sender, EventArgs e)
         {
             rellenarcm();
+            relletabal();
         }
 
         private void rellenarcm()
@@ -44,8 +56,44 @@ namespace zaslab
             cmb_sedi.Items.Add("Escaso");
         }
 
+ 
+        private void relletabal() {
+            DataTable orina;
+            orina = sql.tablas("sangre", "select * from orina where id=" + exam);
+            //heces = sql.tablas("sangre", "select * from heces where id= 3");
+            if (orina.Rows.Count > 0)
+            {
+                dgvdatosexam.DataSource = orina;
+
+                cmb_color.SelectedItem = dgvdatosexam.Rows[0].Cells[1].Value.ToString();
+                cmb_aspecto.SelectedItem = dgvdatosexam.Rows[0].Cells[2].Value.ToString();
+                txtph.Text = dgvdatosexam.Rows[0].Cells[3].Value.ToString();
+
+                txtdensi.Text = dgvdatosexam.Rows[0].Cells[4].Value.ToString();
+                //txt_obser.Text = dgvdatosexam.Rows[0].Cells[5].Value.ToString();
+
+
+                if (cmb_sedi.SelectedItem == "")
+                {
+                    cmb_sedi.SelectedIndex = 0;
+                }
+
+                if (cmb_aspecto.SelectedItem == "")
+                {
+                    cmb_aspecto.SelectedIndex = 0;
+                }
+
+                if (cmb_color.SelectedItem == "")
+                {
+                    cmb_color.SelectedIndex = 0;
+                }
+            }
+        }
+
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
+
+
             DialogResult = DialogResult.Cancel;
             this.Close();
         }
@@ -61,5 +109,6 @@ namespace zaslab
                 this.Close();
             }
         }
+
     }
 }

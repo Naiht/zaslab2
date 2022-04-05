@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_obser = new System.Windows.Forms.TextBox();
+            this.txtobserva = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.btn_Guardar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtgluco = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtbili = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtcetonas = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txthemo = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtproteina = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txturobili = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtnitritos = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtleucoEQ = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cmb_sedi = new System.Windows.Forms.ComboBox();
+            this.txtdensi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtph = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cmb_aspecto = new System.Windows.Forms.ComboBox();
@@ -60,33 +61,34 @@
             this.cmb_color = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtcilin = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtotros = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtcrista = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txteritro = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtleucoEF = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbbacte = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbceluepi = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.cmb_sedi = new System.Windows.Forms.ComboBox();
+            this.dgvdatosexam = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvdatosexam)).BeginInit();
             this.SuspendLayout();
             // 
-            // txt_obser
+            // txtobserva
             // 
-            this.txt_obser.Location = new System.Drawing.Point(857, 278);
-            this.txt_obser.Multiline = true;
-            this.txt_obser.Name = "txt_obser";
-            this.txt_obser.Size = new System.Drawing.Size(552, 137);
-            this.txt_obser.TabIndex = 12;
+            this.txtobserva.Location = new System.Drawing.Point(857, 278);
+            this.txtobserva.Multiline = true;
+            this.txtobserva.Name = "txtobserva";
+            this.txtobserva.Size = new System.Drawing.Size(552, 137);
+            this.txtobserva.TabIndex = 12;
             // 
             // label4
             // 
@@ -119,21 +121,21 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.txtgluco);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.txtbili);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.textBox10);
+            this.groupBox2.Controls.Add(this.txtcetonas);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.textBox11);
+            this.groupBox2.Controls.Add(this.txthemo);
             this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.txtproteina);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.txturobili);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.txtnitritos);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtleucoEQ);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(12, 234);
             this.groupBox2.Name = "groupBox2";
@@ -142,12 +144,12 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Examen Quimico";
             // 
-            // textBox8
+            // txtgluco
             // 
-            this.textBox8.Location = new System.Drawing.Point(493, 183);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(243, 27);
-            this.textBox8.TabIndex = 18;
+            this.txtgluco.Location = new System.Drawing.Point(493, 183);
+            this.txtgluco.Name = "txtgluco";
+            this.txtgluco.Size = new System.Drawing.Size(243, 27);
+            this.txtgluco.TabIndex = 18;
             // 
             // label11
             // 
@@ -158,12 +160,12 @@
             this.label11.TabIndex = 17;
             this.label11.Text = "Glucosa";
             // 
-            // textBox9
+            // txtbili
             // 
-            this.textBox9.Location = new System.Drawing.Point(493, 140);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(243, 27);
-            this.textBox9.TabIndex = 16;
+            this.txtbili.Location = new System.Drawing.Point(493, 140);
+            this.txtbili.Name = "txtbili";
+            this.txtbili.Size = new System.Drawing.Size(243, 27);
+            this.txtbili.TabIndex = 16;
             // 
             // label12
             // 
@@ -174,12 +176,12 @@
             this.label12.TabIndex = 15;
             this.label12.Text = "Bilirrubinas";
             // 
-            // textBox10
+            // txtcetonas
             // 
-            this.textBox10.Location = new System.Drawing.Point(493, 96);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(243, 27);
-            this.textBox10.TabIndex = 14;
+            this.txtcetonas.Location = new System.Drawing.Point(493, 96);
+            this.txtcetonas.Name = "txtcetonas";
+            this.txtcetonas.Size = new System.Drawing.Size(243, 27);
+            this.txtcetonas.TabIndex = 14;
             // 
             // label13
             // 
@@ -190,12 +192,12 @@
             this.label13.TabIndex = 13;
             this.label13.Text = "Cetonas";
             // 
-            // textBox11
+            // txthemo
             // 
-            this.textBox11.Location = new System.Drawing.Point(493, 50);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(243, 27);
-            this.textBox11.TabIndex = 12;
+            this.txthemo.Location = new System.Drawing.Point(493, 50);
+            this.txthemo.Name = "txthemo";
+            this.txthemo.Size = new System.Drawing.Size(243, 27);
+            this.txthemo.TabIndex = 12;
             // 
             // label14
             // 
@@ -206,12 +208,12 @@
             this.label14.TabIndex = 11;
             this.label14.Text = "Hemoglobina";
             // 
-            // textBox7
+            // txtproteina
             // 
-            this.textBox7.Location = new System.Drawing.Point(131, 180);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(243, 27);
-            this.textBox7.TabIndex = 10;
+            this.txtproteina.Location = new System.Drawing.Point(131, 180);
+            this.txtproteina.Name = "txtproteina";
+            this.txtproteina.Size = new System.Drawing.Size(243, 27);
+            this.txtproteina.TabIndex = 10;
             // 
             // label10
             // 
@@ -222,12 +224,12 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Proteina";
             // 
-            // textBox6
+            // txturobili
             // 
-            this.textBox6.Location = new System.Drawing.Point(131, 137);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(243, 27);
-            this.textBox6.TabIndex = 8;
+            this.txturobili.Location = new System.Drawing.Point(131, 137);
+            this.txturobili.Name = "txturobili";
+            this.txturobili.Size = new System.Drawing.Size(243, 27);
+            this.txturobili.TabIndex = 8;
             // 
             // label9
             // 
@@ -238,12 +240,12 @@
             this.label9.TabIndex = 7;
             this.label9.Text = "Urobilinógeno";
             // 
-            // textBox5
+            // txtnitritos
             // 
-            this.textBox5.Location = new System.Drawing.Point(131, 93);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(243, 27);
-            this.textBox5.TabIndex = 6;
+            this.txtnitritos.Location = new System.Drawing.Point(131, 93);
+            this.txtnitritos.Name = "txtnitritos";
+            this.txtnitritos.Size = new System.Drawing.Size(243, 27);
+            this.txtnitritos.TabIndex = 6;
             // 
             // label8
             // 
@@ -254,12 +256,12 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Nitritos";
             // 
-            // textBox1
+            // txtleucoEQ
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(243, 27);
-            this.textBox1.TabIndex = 4;
+            this.txtleucoEQ.Location = new System.Drawing.Point(131, 47);
+            this.txtleucoEQ.Name = "txtleucoEQ";
+            this.txtleucoEQ.Size = new System.Drawing.Size(243, 27);
+            this.txtleucoEQ.TabIndex = 4;
             // 
             // label3
             // 
@@ -273,9 +275,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cmb_sedi);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txtdensi);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtph);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cmb_aspecto);
@@ -289,12 +291,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Examen Fisico";
             // 
-            // textBox4
+            // cmb_sedi
             // 
-            this.textBox4.Location = new System.Drawing.Point(402, 89);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(243, 27);
-            this.textBox4.TabIndex = 10;
+            this.cmb_sedi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_sedi.FormattingEnabled = true;
+            this.cmb_sedi.Location = new System.Drawing.Point(139, 144);
+            this.cmb_sedi.Name = "cmb_sedi";
+            this.cmb_sedi.Size = new System.Drawing.Size(171, 28);
+            this.cmb_sedi.TabIndex = 11;
+            // 
+            // txtdensi
+            // 
+            this.txtdensi.Location = new System.Drawing.Point(402, 89);
+            this.txtdensi.Name = "txtdensi";
+            this.txtdensi.Size = new System.Drawing.Size(243, 27);
+            this.txtdensi.TabIndex = 10;
             // 
             // label7
             // 
@@ -305,12 +316,12 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Densidad";
             // 
-            // textBox3
+            // txtph
             // 
-            this.textBox3.Location = new System.Drawing.Point(402, 38);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(243, 27);
-            this.textBox3.TabIndex = 8;
+            this.txtph.Location = new System.Drawing.Point(402, 38);
+            this.txtph.Name = "txtph";
+            this.txtph.Size = new System.Drawing.Size(243, 27);
+            this.txtph.TabIndex = 8;
             // 
             // label6
             // 
@@ -332,6 +343,7 @@
             // 
             // cmb_aspecto
             // 
+            this.cmb_aspecto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_aspecto.FormattingEnabled = true;
             this.cmb_aspecto.Location = new System.Drawing.Point(139, 93);
             this.cmb_aspecto.Name = "cmb_aspecto";
@@ -349,6 +361,7 @@
             // 
             // cmb_color
             // 
+            this.cmb_color.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_color.FormattingEnabled = true;
             this.cmb_color.Location = new System.Drawing.Point(139, 42);
             this.cmb_color.Name = "cmb_color";
@@ -366,19 +379,19 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox16);
+            this.groupBox3.Controls.Add(this.txtcilin);
             this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.textBox15);
+            this.groupBox3.Controls.Add(this.txtotros);
             this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.textBox12);
+            this.groupBox3.Controls.Add(this.txtcrista);
             this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.textBox13);
+            this.groupBox3.Controls.Add(this.txteritro);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.textBox14);
+            this.groupBox3.Controls.Add(this.txtleucoEF);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.comboBox3);
+            this.groupBox3.Controls.Add(this.cmbbacte);
             this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.comboBox4);
+            this.groupBox3.Controls.Add(this.cmbceluepi);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Location = new System.Drawing.Point(723, 13);
             this.groupBox3.Name = "groupBox3";
@@ -387,12 +400,12 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Examen Fisico";
             // 
-            // textBox16
+            // txtcilin
             // 
-            this.textBox16.Location = new System.Drawing.Point(402, 123);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(243, 27);
-            this.textBox16.TabIndex = 14;
+            this.txtcilin.Location = new System.Drawing.Point(402, 123);
+            this.txtcilin.Name = "txtcilin";
+            this.txtcilin.Size = new System.Drawing.Size(243, 27);
+            this.txtcilin.TabIndex = 14;
             // 
             // label21
             // 
@@ -403,12 +416,12 @@
             this.label21.TabIndex = 13;
             this.label21.Text = "Cilindros";
             // 
-            // textBox15
+            // txtotros
             // 
-            this.textBox15.Location = new System.Drawing.Point(403, 168);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(243, 27);
-            this.textBox15.TabIndex = 12;
+            this.txtotros.Location = new System.Drawing.Point(403, 168);
+            this.txtotros.Name = "txtotros";
+            this.txtotros.Size = new System.Drawing.Size(243, 27);
+            this.txtotros.TabIndex = 12;
             // 
             // label20
             // 
@@ -419,12 +432,12 @@
             this.label20.TabIndex = 11;
             this.label20.Text = "Otros";
             // 
-            // textBox12
+            // txtcrista
             // 
-            this.textBox12.Location = new System.Drawing.Point(404, 73);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(243, 27);
-            this.textBox12.TabIndex = 10;
+            this.txtcrista.Location = new System.Drawing.Point(404, 73);
+            this.txtcrista.Name = "txtcrista";
+            this.txtcrista.Size = new System.Drawing.Size(243, 27);
+            this.txtcrista.TabIndex = 10;
             // 
             // label15
             // 
@@ -435,12 +448,12 @@
             this.label15.TabIndex = 9;
             this.label15.Text = "Cristales";
             // 
-            // textBox13
+            // txteritro
             // 
-            this.textBox13.Location = new System.Drawing.Point(403, 26);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(243, 27);
-            this.textBox13.TabIndex = 8;
+            this.txteritro.Location = new System.Drawing.Point(403, 26);
+            this.txteritro.Name = "txteritro";
+            this.txteritro.Size = new System.Drawing.Size(243, 27);
+            this.txteritro.TabIndex = 8;
             // 
             // label16
             // 
@@ -451,12 +464,12 @@
             this.label16.TabIndex = 7;
             this.label16.Text = "Eritrocitos";
             // 
-            // textBox14
+            // txtleucoEF
             // 
-            this.textBox14.Location = new System.Drawing.Point(149, 153);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(171, 27);
-            this.textBox14.TabIndex = 6;
+            this.txtleucoEF.Location = new System.Drawing.Point(149, 153);
+            this.txtleucoEF.Name = "txtleucoEF";
+            this.txtleucoEF.Size = new System.Drawing.Size(171, 27);
+            this.txtleucoEF.TabIndex = 6;
             // 
             // label17
             // 
@@ -467,13 +480,13 @@
             this.label17.TabIndex = 5;
             this.label17.Text = "Leucocitos";
             // 
-            // comboBox3
+            // cmbbacte
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(149, 102);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(171, 28);
-            this.comboBox3.TabIndex = 3;
+            this.cmbbacte.FormattingEnabled = true;
+            this.cmbbacte.Location = new System.Drawing.Point(149, 102);
+            this.cmbbacte.Name = "cmbbacte";
+            this.cmbbacte.Size = new System.Drawing.Size(171, 28);
+            this.cmbbacte.TabIndex = 3;
             // 
             // label18
             // 
@@ -484,13 +497,13 @@
             this.label18.TabIndex = 2;
             this.label18.Text = "Bacterias";
             // 
-            // comboBox4
+            // cmbceluepi
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(149, 51);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(171, 28);
-            this.comboBox4.TabIndex = 1;
+            this.cmbceluepi.FormattingEnabled = true;
+            this.cmbceluepi.Location = new System.Drawing.Point(149, 51);
+            this.cmbceluepi.Name = "cmbceluepi";
+            this.cmbceluepi.Size = new System.Drawing.Size(171, 28);
+            this.cmbceluepi.TabIndex = 1;
             // 
             // label19
             // 
@@ -501,21 +514,26 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "Celulas Epiteliales";
             // 
-            // cmb_sedi
+            // dgvdatosexam
             // 
-            this.cmb_sedi.FormattingEnabled = true;
-            this.cmb_sedi.Location = new System.Drawing.Point(139, 144);
-            this.cmb_sedi.Name = "cmb_sedi";
-            this.cmb_sedi.Size = new System.Drawing.Size(171, 28);
-            this.cmb_sedi.TabIndex = 11;
+            this.dgvdatosexam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvdatosexam.Location = new System.Drawing.Point(787, 429);
+            this.dgvdatosexam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvdatosexam.Name = "dgvdatosexam";
+            this.dgvdatosexam.RowHeadersWidth = 51;
+            this.dgvdatosexam.RowTemplate.Height = 25;
+            this.dgvdatosexam.Size = new System.Drawing.Size(133, 30);
+            this.dgvdatosexam.TabIndex = 29;
+            this.dgvdatosexam.Visible = false;
             // 
             // EGO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1426, 487);
+            this.Controls.Add(this.dgvdatosexam);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.txt_obser);
+            this.Controls.Add(this.txtobserva);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Guardar);
@@ -530,6 +548,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvdatosexam)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,31 +556,31 @@
 
         #endregion
 
-        private TextBox txt_obser;
+        private TextBox txtobserva;
         private Label label4;
         private Button btn_Cancelar;
         private Button btn_Guardar;
         private GroupBox groupBox2;
-        private TextBox textBox8;
+        private TextBox txtgluco;
         private Label label11;
-        private TextBox textBox9;
+        private TextBox txtbili;
         private Label label12;
-        private TextBox textBox10;
+        private TextBox txtcetonas;
         private Label label13;
-        private TextBox textBox11;
+        private TextBox txthemo;
         private Label label14;
-        private TextBox textBox7;
+        private TextBox txtproteina;
         private Label label10;
-        private TextBox textBox6;
+        private TextBox txturobili;
         private Label label9;
-        private TextBox textBox5;
+        private TextBox txtnitritos;
         private Label label8;
-        private TextBox textBox1;
+        private TextBox txtleucoEQ;
         private Label label3;
         private GroupBox groupBox1;
-        private TextBox textBox4;
+        private TextBox txtdensi;
         private Label label7;
-        private TextBox textBox3;
+        private TextBox txtph;
         private Label label6;
         private Label label5;
         private ComboBox cmb_aspecto;
@@ -569,20 +588,21 @@
         private ComboBox cmb_color;
         private Label label1;
         private GroupBox groupBox3;
-        private TextBox textBox12;
+        private TextBox txtcrista;
         private Label label15;
-        private TextBox textBox13;
+        private TextBox txteritro;
         private Label label16;
-        private TextBox textBox14;
+        private TextBox txtleucoEF;
         private Label label17;
-        private ComboBox comboBox3;
+        private ComboBox cmbbacte;
         private Label label18;
-        private ComboBox comboBox4;
+        private ComboBox cmbceluepi;
         private Label label19;
-        private TextBox textBox16;
+        private TextBox txtcilin;
         private Label label21;
-        private TextBox textBox15;
+        private TextBox txtotros;
         private Label label20;
         private ComboBox cmb_sedi;
+        private DataGridView dgvdatosexam;
     }
 }
