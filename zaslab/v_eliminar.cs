@@ -99,6 +99,24 @@ namespace zaslab
             sql.multiple("Delete from orina where id =" + int.Parse(dgvEstudiantes.Rows[fila].Cells[7].Value.ToString()));
             sql.multiple("Delete from sangre where id =" + int.Parse(dgvEstudiantes.Rows[fila].Cells[8].Value.ToString()));
             sql.multiple("Delete from examrealizados where numexamen =" + int.Parse(dgvEstudiantes.Rows[fila].Cells[9].Value.ToString()));
+
+            DataTable dt;
+            dt = sql.tablas("estudiantes", "select e.idb as [Codigo de Beneficiario], e.nombreape as Nombre," +
+                " g.genero as Genero, e.fechanac as [Fecha de Nacimiento]," +
+                " e.edad as Edad, e.obser as Observaciones, idheces, idorina,idsangre, er.numexamen from estudiantes as e " +
+                "inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb=er.idestudiante ");
+            if (dt.Rows.Count > 0)
+            {
+                dgvEstudiantes.DataSource = dt;
+                dgvEstudiantes.Columns[6].Visible = false;
+                dgvEstudiantes.Columns[7].Visible = false;
+                dgvEstudiantes.Columns[8].Visible = false;
+                dgvEstudiantes.Columns[9].Visible = false;
+            }
+            else
+            {
+                dgvEstudiantes.DataSource = dt;
+            }
         }
     }
 }
