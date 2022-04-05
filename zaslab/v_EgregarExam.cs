@@ -245,31 +245,45 @@ namespace zaslab
                     MessageBox.Show("ingresa el numero de examen");
                 }
             }
-            else {
-                /*Paara actualizar*/
+            else 
+            {
+                dgvdatos.DataSource = sangre;
+                //Paara actualizar
                 if(chbSangre.Checked == true)
                 {
-
+                    if (int.Parse(dgvdatos.Rows[0].Cells[5].Value.ToString()) == 0)
+                    {
+                        sql.multiple("insert into sangre values('','','','','','','','','','','','','','')");
+                    }
                 }
                 else
                 {
-
+                    sql.multiple("delete from sangre where id=" + int.Parse(dgvdatos.Rows[0].Cells[5].Value.ToString()));
+                    sql.multiple("update examrealizados set idsangre = 0 where idestudiante = '" + lbId.Text + "'");
                 }
                 if(chbOrina.Checked == true)
                 {
-
+                    if (int.Parse(dgvdatos.Rows[0].Cells[4].Value.ToString()) == 0)
+                    {
+                        sql.multiple("insert into orina values('','','','','','','','','','','','','','','','','','','','','')");
+                    }
                 }
                 else
                 {
-
+                    sql.multiple("delete from orina where id=" + int.Parse(dgvdatos.Rows[0].Cells[4].Value.ToString()));
+                    sql.multiple("update examrealizados set idorina = 0 where idestudiante = '" + lbId.Text + "'");
                 }
                 if (chbHeces.Checked == true)
                 {
-
+                    if (int.Parse(dgvdatos.Rows[0].Cells[3].Value.ToString()) == 0)
+                    {
+                        sql.multiple("insert into heces values('','','','','')");
+                    }
                 }
                 else
                 {
-
+                    sql.multiple("delete from heces where id=" + int.Parse(dgvdatos.Rows[0].Cells[3].Value.ToString()));
+                    sql.multiple("update examrealizados set idheces = 0 where idestudiante = '" + lbId.Text + "'");
                 }
                 MessageBox.Show("ingresa el numero de exame22n");
             }
