@@ -277,6 +277,7 @@
             this.dgvdatos.RowTemplate.Height = 25;
             this.dgvdatos.Size = new System.Drawing.Size(604, 75);
             this.dgvdatos.TabIndex = 25;
+            this.dgvdatos.Visible = false;
             // 
             // v_AgregarExam
             // 
