@@ -63,7 +63,7 @@
             // lbId
             // 
             this.lbId.AutoSize = true;
-            this.lbId.Location = new System.Drawing.Point(1006, 72);
+            this.lbId.Location = new System.Drawing.Point(1025, 72);
             this.lbId.Name = "lbId";
             this.lbId.Size = new System.Drawing.Size(0, 20);
             this.lbId.TabIndex = 32;
@@ -148,7 +148,7 @@
             this.dgvEstudiantes.Name = "dgvEstudiantes";
             this.dgvEstudiantes.RowHeadersWidth = 51;
             this.dgvEstudiantes.RowTemplate.Height = 25;
-            this.dgvEstudiantes.Size = new System.Drawing.Size(823, 440);
+            this.dgvEstudiantes.Size = new System.Drawing.Size(785, 440);
             this.dgvEstudiantes.TabIndex = 23;
             this.dgvEstudiantes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgtEstudiantes_CellClick);
             // 
@@ -214,7 +214,7 @@
             this.btnHeces.Name = "btnHeces";
             this.btnHeces.Size = new System.Drawing.Size(277, 31);
             this.btnHeces.TabIndex = 36;
-            this.btnHeces.Text = "Examen General de Heces";
+            this.btnHeces.Text = "Examen General de Heces (EGH)";
             this.btnHeces.UseVisualStyleBackColor = true;
             this.btnHeces.Click += new System.EventHandler(this.btnHeces_Click);
             // 
@@ -229,10 +229,10 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1006, 237);
+            this.dateTimePicker1.Location = new System.Drawing.Point(1011, 238);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(111, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(163, 27);
             this.dateTimePicker1.TabIndex = 38;
             // 
             // label3
@@ -248,7 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 537);
+            this.ClientSize = new System.Drawing.Size(1198, 537);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lbNumExam);

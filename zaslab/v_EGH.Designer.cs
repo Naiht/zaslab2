@@ -40,8 +40,10 @@
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.txt_obser = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.dgvdatosexam = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvdatosexam)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -59,6 +61,7 @@
             // 
             // cmb_Consis
             // 
+            this.cmb_Consis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Consis.FormattingEnabled = true;
             this.cmb_Consis.Location = new System.Drawing.Point(139, 88);
             this.cmb_Consis.Name = "cmb_Consis";
@@ -76,6 +79,7 @@
             // 
             // cmb_color
             // 
+            this.cmb_color.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_color.FormattingEnabled = true;
             this.cmb_color.Location = new System.Drawing.Point(139, 37);
             this.cmb_color.Name = "cmb_color";
@@ -155,11 +159,24 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Observación";
             // 
+            // dgvdatosexam
+            // 
+            this.dgvdatosexam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvdatosexam.Location = new System.Drawing.Point(12, 394);
+            this.dgvdatosexam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvdatosexam.Name = "dgvdatosexam";
+            this.dgvdatosexam.RowHeadersWidth = 51;
+            this.dgvdatosexam.RowTemplate.Height = 25;
+            this.dgvdatosexam.Size = new System.Drawing.Size(133, 30);
+            this.dgvdatosexam.TabIndex = 28;
+            this.dgvdatosexam.Visible = false;
+            // 
             // v_EGH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 437);
+            this.Controls.Add(this.dgvdatosexam);
             this.Controls.Add(this.txt_obser);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_Cancelar);
@@ -173,6 +190,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvdatosexam)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +210,6 @@
         private Button btn_Cancelar;
         private TextBox txt_obser;
         private Label label4;
+        private DataGridView dgvdatosexam;
     }
 }

@@ -62,15 +62,15 @@
             // ingresarToolStripMenuItem
             // 
             this.ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
-            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
-            this.ingresarToolStripMenuItem.Text = "Ingresar";
+            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.ingresarToolStripMenuItem.Text = "Ingresar estudiantes";
             this.ingresarToolStripMenuItem.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
             // 
             // verToolStripMenuItem
             // 
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
-            this.verToolStripMenuItem.Text = "Ver";
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.verToolStripMenuItem.Text = "Editar/ Eliminar estudiantes";
             this.verToolStripMenuItem.Click += new System.EventHandler(this.verToolStripMenuItem_Click);
             // 
             // examenesToolStripMenuItem

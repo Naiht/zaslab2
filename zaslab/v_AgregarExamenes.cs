@@ -70,65 +70,27 @@ namespace zaslab
             int h = int.Parse(dgvEstudiantes.Rows[fila].Cells[4].Value.ToString());
             int o = int.Parse(dgvEstudiantes.Rows[fila].Cells[5].Value.ToString());
             int s = int.Parse(dgvEstudiantes.Rows[fila].Cells[6].Value.ToString());
-            if (h != 0)
-            {
-                if (o != 0)
-                {
-                    if (s != 0)
-                    {
-                        btnHeces.Enabled = true;
-                        btnOrina.Enabled = true;
-                        btnSangre.Enabled = true;
-                    }
-                    else
-                    {
-                        btnHeces.Enabled = true;
-                        btnOrina.Enabled = true;
-                        btnSangre.Enabled = false;
-                    }
-                }
-                else
-                {
-                    if (s != 0)
-                    {
-                        btnHeces.Enabled = true;
-                        btnOrina.Enabled = false;
-                        btnSangre.Enabled = true;
-                    }
-                    else
-                    {
-                        btnHeces.Enabled = true;
-                        btnOrina.Enabled = false;
-                        btnSangre.Enabled = false;
-                    }
-                }
+            if (h != 0){
+                btnHeces.Enabled = true;
+            }
+            else {
+                btnHeces.Enabled = false;
+            }
+
+            if (o != 0) {
+                btnOrina.Enabled = true;
             }
             else
             {
-                if (o != 0)
-                {
-                    if (s != 0)
-                    {
-                        btnHeces.Enabled = false;
-                        btnOrina.Enabled = true;
-                        btnSangre.Enabled = true;
-                    }
-                    else
-                    {
-                        btnHeces.Enabled = false;
-                        btnOrina.Enabled = true;
-                        btnSangre.Enabled = false;
-                    }
-                }
-                else
-                {
-                    if (s != 0)
-                    {
-                        btnHeces.Enabled = false;
-                        btnOrina.Enabled = false;
-                        btnSangre.Enabled = true;
-                    }
-                }
+                btnOrina.Enabled = false;
+            }
+
+            if (s != 0) {
+                btnSangre.Enabled = true;
+            }
+            else
+            {
+                btnSangre.Enabled = false;
             }
         }
 
@@ -140,6 +102,7 @@ namespace zaslab
 
             dgvEstudiantes.ReadOnly = true;
             dgvEstudiantes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dgvEstudiantes.AllowUserToResizeRows = false;
             dgvEstudiantes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;//cambia el tamaño de la columna de acuerdo al contenido
             dgvEstudiantes.AllowUserToAddRows = false;
 
@@ -169,27 +132,37 @@ namespace zaslab
             //MessageBox.Show("" + id + "" + fecha);
             v_BiometriaHematicaCompleta datossangre = new v_BiometriaHematicaCompleta(id,fecha);
             datossangre.ShowDialog();
+            if (datossangre.DialogResult == DialogResult.OK)
+            {
+                MessageBox.Show("Operación Exitosa");
+            }
         }
 
         private void btnOrina_Click(object sender, EventArgs e)
         {
+
+            int id = int.Parse(dgvEstudiantes.Rows[fila].Cells[5].Value.ToString()); ;
+            DateTime fecha = dateTimePicker1.Value;
+
             EGO mensaje2 = new EGO();
             mensaje2.ShowDialog();
-
             if (mensaje2.DialogResult == DialogResult.OK)
             {
-                MessageBox.Show("Operación Exitosa4e" + mensaje2.DialogResult.ToString());
+                MessageBox.Show("Operación Exitosa");
             }
         }
 
         private void btnHeces_Click(object sender, EventArgs e)
         {
-            v_EGH mensaje2 = new v_EGH();
+            int id = int.Parse(dgvEstudiantes.Rows[fila].Cells[4].Value.ToString()); ;
+            DateTime fecha = dateTimePicker1.Value;
+
+            v_EGH mensaje2 = new v_EGH(id, fecha);
             mensaje2.ShowDialog();
 
             if (mensaje2.DialogResult == DialogResult.OK)
             {
-                MessageBox.Show("Operación Exitosa4e" + mensaje2.DialogResult.ToString());
+                MessageBox.Show("Operación Exitosa");
             }
         }
     }
