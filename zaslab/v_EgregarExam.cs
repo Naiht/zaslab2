@@ -236,13 +236,32 @@ namespace zaslab
             }
             else {
                 /*Paara actualizar*/
+                if(chbSangre.Checked == true)
+                {
+
+                }
+                else
+                {
+
+                }
+                if(chbOrina.Checked == true)
+                {
+
+                }
+                else
+                {
+
+                }
+                if (chbHeces.Checked == true)
+                {
+
+                }
+                else
+                {
+
+                }
                 MessageBox.Show("ingresa el numero de exame22n");
             }
-
-
-       
-    
-
 
             lbId.Text = "";
             lbNombre.Text = "";
