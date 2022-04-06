@@ -50,12 +50,10 @@
             this.txtleucoEQ = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmb_sedi = new System.Windows.Forms.ComboBox();
             this.txtdensi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtph = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.cmb_aspecto = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmb_color = new System.Windows.Forms.ComboBox();
@@ -274,12 +272,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmb_sedi);
             this.groupBox1.Controls.Add(this.txtdensi);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtph);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cmb_aspecto);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cmb_color);
@@ -290,15 +286,6 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Examen Fisico";
-            // 
-            // cmb_sedi
-            // 
-            this.cmb_sedi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_sedi.FormattingEnabled = true;
-            this.cmb_sedi.Location = new System.Drawing.Point(139, 144);
-            this.cmb_sedi.Name = "cmb_sedi";
-            this.cmb_sedi.Size = new System.Drawing.Size(171, 28);
-            this.cmb_sedi.TabIndex = 11;
             // 
             // txtdensi
             // 
@@ -331,15 +318,6 @@
             this.label6.Size = new System.Drawing.Size(28, 20);
             this.label6.TabIndex = 7;
             this.label6.Text = "PH";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 152);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Sedimento";
             // 
             // cmb_aspecto
             // 
@@ -582,7 +560,6 @@
         private Label label7;
         private TextBox txtph;
         private Label label6;
-        private Label label5;
         private ComboBox cmb_aspecto;
         private Label label2;
         private ComboBox cmb_color;
@@ -602,7 +579,6 @@
         private Label label21;
         private TextBox txtotros;
         private Label label20;
-        private ComboBox cmb_sedi;
         private DataGridView dgvdatosexam;
     }
 }

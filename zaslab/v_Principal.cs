@@ -34,5 +34,12 @@ namespace zaslab
             ver.MdiParent = this;
             ver.Show();
         }
+
+        private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pruebareportes ver = new pruebareportes();
+            ver.MdiParent = this;
+            ver.Show();
+        }
     }
 }

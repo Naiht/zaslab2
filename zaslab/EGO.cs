@@ -49,11 +49,6 @@ namespace zaslab
             cmb_aspecto.Items.Add("Ligeramente Turbio");
             cmb_aspecto.Items.Add("Turbio");
 
-            cmb_sedi.Items.Add("Otros");
-            cmb_sedi.Items.Add("Abundante");
-            cmb_sedi.Items.Add("Regular Cantidad");
-            cmb_sedi.Items.Add("Poca Cantidad");
-            cmb_sedi.Items.Add("Escaso");
         }
 
  
@@ -94,10 +89,7 @@ namespace zaslab
                 //txt_obser.Text = dgvdatosexam.Rows[0].Cells[5].Value.ToString();
 
 
-                if (cmb_sedi.SelectedItem == "")
-                {
-                    cmb_sedi.SelectedIndex = 0;
-                }
+                
 
                 if (cmb_aspecto.SelectedItem == "")
                 {
@@ -117,8 +109,11 @@ namespace zaslab
             sql.multiple("update orina set color = '" + cmb_color.SelectedItem.ToString() +"', aspecto = '"+cmb_aspecto.SelectedItem.ToString()+"', " +
                 "ph = "+float.Parse(txtph.Text)+", densidad = '"+txtdensi.Text+"', leucocitosEF = '"+txtleucoEF.Text+"', nitritos = '"+txtnitritos.Text+"', " +
                 "urobilinogeno = '"+txturobili.Text+"', proteina ='"+txtproteina.Text+"', hemoglobina = '"+txthemo.Text+"', bilirrubinas= '"+txtbili.Text+"', glucosa='"+txtgluco.Text+"', " +
-                "celulas_epitaliales='"+cmbceluepi.SelectedItem+"', bacterias = '"+cmbbacte.SelectedItem+"', leucocitosEM = '"+txtleucoEQ.Text+"', eritrocitos='"+txteritro.Text+"', cristales='"+txtcrista.Text+"', " +
-                "otro = '"+txtotros.Text+"', fecharesul ='', observacion = '"+txtobserva.Text+"', cetonas = '"+txtcetonas.Text+ "', clilindros = '"+txtcilin.Text+"' where id = " + exam);
+                "celulas_epitaliales='"+cmbceluepi.Text+"', bacterias = '"+cmbbacte.Text+"', leucocitosEM = '"+txtleucoEQ.Text+"', eritrocitos='"+txteritro.Text+"', cristales='"+txtcrista.Text+"', " +
+                "otro = '"+txtotros.Text+"', fecharesul ='', observacion = '"+txtobserva.Text+"', cetonas = '"+txtcetonas.Text+ "', " +
+                "clilindros = '"+txtcilin.Text+ "' where id = " + exam);
+
+
 
             DialogResult = DialogResult.Cancel;
             this.Close();

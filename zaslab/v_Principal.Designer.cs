@@ -35,6 +35,7 @@
             this.examenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresarExamenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verExamenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.estudiantesToolStripMenuItem,
-            this.examenesToolStripMenuItem});
+            this.examenesToolStripMenuItem,
+            this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1170, 28);
@@ -96,6 +98,13 @@
             this.verExamenToolStripMenuItem.Text = "Ingresar/Editar  Resultados";
             this.verExamenToolStripMenuItem.Click += new System.EventHandler(this.verExamenToolStripMenuItem_Click);
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            this.reportesToolStripMenuItem.Click += new System.EventHandler(this.reportesToolStripMenuItem_Click);
+            // 
             // v_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -122,5 +131,6 @@
         private ToolStripMenuItem verToolStripMenuItem;
         private ToolStripMenuItem ingresarExamenToolStripMenuItem;
         private ToolStripMenuItem verExamenToolStripMenuItem;
+        private ToolStripMenuItem reportesToolStripMenuItem;
     }
 }

@@ -28,7 +28,7 @@ namespace zaslab
             {
                 DataTable dt;
                 dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombe, g.genero Genero, e.edad" +
-                    ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre from estudiantes as e" +
+                    ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
                     " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.nombreape like '%"
                    + txtBuscar.Text + "%'");
                 if (dt.Rows.Count > 0)
@@ -45,7 +45,7 @@ namespace zaslab
             {
                 DataTable dt;
                 dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombe, g.genero Genero, e.edad" +
-                    ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre from estudiantes as e" +
+                    ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
                     " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.idb like '%"
                    + txtBuscar.Text + "%'");
                 if (dt.Rows.Count > 0)
@@ -112,7 +112,7 @@ namespace zaslab
 
             DataTable dt;
             dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombe, g.genero Genero, e.edad as Edad, " +
-                "er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre from estudiantes as e" +
+                "er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
                 " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante");
             if (dt.Rows.Count > 0)
             {

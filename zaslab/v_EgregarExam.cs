@@ -22,7 +22,7 @@ namespace zaslab
         private void v_AgregarExam_Load(object sender, EventArgs e)
         {
             btnGuardar.Enabled = false;
-
+            //dgvdatos.Visible = true;
             recarga();
         }
 
@@ -71,6 +71,8 @@ namespace zaslab
                 int s = int.Parse(dgvdatos.Rows[0].Cells[5].Value.ToString());
                 dtpTomaMuestra.Value = DateTime.Parse(dgvdatos.Rows[0].Cells[6].Value.ToString());
                 dtpRecepcionMuestra.Value = DateTime.Parse(dgvdatos.Rows[0].Cells[7].Value.ToString());
+                txtNumExam.Text = dgvdatos.Rows[0].Cells[1].Value.ToString();
+                
 
                 if (h != 0)
                 {
