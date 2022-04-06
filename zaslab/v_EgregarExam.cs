@@ -187,12 +187,12 @@ namespace zaslab
                                 sql.multiple("insert into heces values('','','','','')");
                                 ultimoexamen("heces");
                                 h = valor;
-                                sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "'," + h + "," + o + "," + s + ",'" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
+                                sql.multiple("insert into  examrealizados values('" + txtNumExam.Text + "','" + lbId.Text + "'," + h + "," + o + "," + s + ",'" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
                                 //MessageBox.Show("" + h);
                             }
                             else
                             {
-                                sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "',''," + o + "," + s + ",'" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
+                                sql.multiple("insert into  examrealizados values('" + txtNumExam.Text + "','" + lbId.Text + "',''," + o + "," + s + ",'" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
                             }
                         }
                         else
@@ -202,12 +202,12 @@ namespace zaslab
                                 sql.multiple("insert into heces values('','','','','')");
                                 ultimoexamen("heces");
                                 h = valor;
-                                sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "'," + h + ",''," + s + ",'" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
+                                sql.multiple("insert into  examrealizados values('" + txtNumExam.Text + "','" + lbId.Text + "'," + h + ",''," + s + ",'" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
                                 //MessageBox.Show("" + h);
                             }
                             else
                             {
-                                sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + ",'" + lbId.Text + "','',''," + s + ",'" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
+                                sql.multiple("insert into  examrealizados values('" + txtNumExam.Text + ",'" + lbId.Text + "','',''," + s + ",'" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
                             }
                         }
                     }
@@ -224,13 +224,13 @@ namespace zaslab
                                 sql.multiple("insert into heces values('','','','','')");
                                 ultimoexamen("heces");
                                 h = valor;
-                                sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + lbId.Text + "," + h + "," + o + ",'','" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
+                                sql.multiple("insert into  examrealizados values('" + txtNumExam.Text + "','" + lbId.Text + "'," + h + "," + o + ",'','" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
 
                                 //MessageBox.Show("" + h);
                             }
                             else
                             {
-                                sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + lbId.Text + ",''," + o + ",'', '" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "', '" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
+                                sql.multiple("insert into  examrealizados values('" + txtNumExam.Text + "','" + lbId.Text + "',''," + o + ",'', '" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "', '" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
 
                             }
                         }
@@ -241,7 +241,7 @@ namespace zaslab
                                 sql.multiple("insert into heces values('','','','','')");
                                 ultimoexamen("heces");
                                 h = valor;
-                                sql.multiple("insert into  examrealizados values(" + txtNumExam.Text + "," + lbId.Text + "," + h + ",'','', '" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "', '" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
+                                sql.multiple("insert into  examrealizados values('" + txtNumExam.Text + "','" + lbId.Text + "','" + h + ",'','', '" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "', '" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
 
                                 //MessageBox.Show("" + h);
                             }
