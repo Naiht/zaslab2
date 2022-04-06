@@ -241,7 +241,7 @@ namespace zaslab
                                 sql.multiple("insert into heces values('','','','','')");
                                 ultimoexamen("heces");
                                 h = valor;
-                                sql.multiple("insert into  examrealizados values('" + txtNumExam.Text + "','" + lbId.Text + "','" + h + ",'','', '" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "', '" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
+                                sql.multiple("insert into  examrealizados values('" + txtNumExam.Text + "','" + lbId.Text + "'," + h + ",'','', '" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "', '" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
 
                                 //MessageBox.Show("" + h);
                             }
