@@ -19,12 +19,13 @@ namespace zaslab
 
         sqlcon sql = new sqlcon();
         int exam;
-        DateTime fecha;
+        DateTime fecha,fecha2;
 
         public EGO(int idexam, DateTime fecharesul)
         {
             InitializeComponent();
             exam = idexam;
+            fecha2=fecharesul;
             rellenarcm();
             relletabal();
         }
@@ -110,7 +111,7 @@ namespace zaslab
                 "ph = "+float.Parse(txtph.Text)+", densidad = '"+txtdensi.Text+"', leucocitosEF = '"+txtleucoEF.Text+"', nitritos = '"+txtnitritos.Text+"', " +
                 "urobilinogeno = '"+txturobili.Text+"', proteina ='"+txtproteina.Text+"', hemoglobina = '"+txthemo.Text+"', bilirrubinas= '"+txtbili.Text+"', glucosa='"+txtgluco.Text+"', " +
                 "celulas_epitaliales='"+cmbceluepi.Text+"', bacterias = '"+cmbbacte.Text+"', leucocitosEM = '"+txtleucoEQ.Text+"', eritrocitos='"+txteritro.Text+"', cristales='"+txtcrista.Text+"', " +
-                "otro = '"+txtotros.Text+"', fecharesul ='" + fecha + "', observacion = '"+txtobserva.Text+"', cetonas = '"+txtcetonas.Text+ "', " +
+                "otro = '"+txtotros.Text+"', fecharesul ='" + fecha2 + "', observacion = '"+txtobserva.Text+"', cetonas = '"+txtcetonas.Text+ "', " +
                 "clilindros = '"+txtcilin.Text+ "' where id = " + exam);
 
 
