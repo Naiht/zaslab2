@@ -43,7 +43,7 @@ namespace zaslab
                 //nombrec = mensaje2.nombreca;
                 // cedulacli = mensaje2.cedulaclia;
                 cargadatos();
-                MessageBox.Show("Operación Exitosa4e" + mensaje2.DialogResult.ToString());
+                MessageBox.Show("Operación Exitosa");
 
             }
 

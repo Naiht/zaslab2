@@ -105,6 +105,7 @@
             this.dtp_fecha.Name = "dtp_fecha";
             this.dtp_fecha.Size = new System.Drawing.Size(250, 27);
             this.dtp_fecha.TabIndex = 45;
+            this.dtp_fecha.ValueChanged += new System.EventHandler(this.dtp_fecha_ValueChanged_1);
             // 
             // cmb_Genero
             // 

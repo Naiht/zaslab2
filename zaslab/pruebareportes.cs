@@ -120,10 +120,9 @@ namespace zaslab
             /*Datos de la tabla*/
 
 
-
-            hecest(doc);
+           // hecest(doc);
             
-            sangret(doc);
+            //sangret(doc);
 
             orinat(doc);
 
@@ -145,7 +144,7 @@ namespace zaslab
         {
 
             DataTable sangre;
-            sangre = sql.tablas("sangre", "select * from sangre where id= "+sangree);
+            sangre = sql.tablas("sangre", "select * from sangre where id="+sangree);
             //heces = sql.tablas("sangre", "select * from sangre where id= 3");
             if (sangre.Rows.Count > 0)
             {

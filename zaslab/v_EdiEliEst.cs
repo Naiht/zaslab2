@@ -78,7 +78,7 @@ namespace zaslab
 
                 string obser = txt_obser.Text;
 
-                sql.multiple("update estudiantes set idb = '"+codigob+"', nombreape = '"+nombrea+"' , genero = "+genero+" , fechanac = '" + string.Format("{0: yyyy-MM-dd}", fechanac) + "', obser = '"+obser+"' where idb = '"+codpublico1+"'");
+                sql.multiple("update estudiantes set idb = '"+codigob+"', nombreape = '"+nombrea+"' , genero = "+genero+" , fechanac = '" + string.Format("{0: yyyy-MM-dd}", fechanac) + "', edad = "+txt_edad.Text+",obser = '"+obser+"' where idb = '"+codpublico1+"'");
                 
 
                 this.Close();
@@ -91,6 +91,11 @@ namespace zaslab
         }
 
         private void dtp_fecha_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtp_fecha_ValueChanged_1(object sender, EventArgs e)
         {
             string fecha = "00/00/0000";
             fecha = string.Format("{0: yyyy-MM-dd}", dtp_fecha.Value);

@@ -51,11 +51,11 @@
             // dgv_resultado
             // 
             this.dgv_resultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_resultado.Location = new System.Drawing.Point(798, 20);
+            this.dgv_resultado.Location = new System.Drawing.Point(818, 41);
             this.dgv_resultado.Name = "dgv_resultado";
             this.dgv_resultado.RowHeadersWidth = 51;
             this.dgv_resultado.RowTemplate.Height = 29;
-            this.dgv_resultado.Size = new System.Drawing.Size(215, 39);
+            this.dgv_resultado.Size = new System.Drawing.Size(673, 411);
             this.dgv_resultado.TabIndex = 1;
             // 
             // dgvEstudiantes
@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1021, 529);
+            this.ClientSize = new System.Drawing.Size(1503, 622);
             this.Controls.Add(this.dgvEstudiantes);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.rbtnId);
