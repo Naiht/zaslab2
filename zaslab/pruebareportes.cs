@@ -281,6 +281,9 @@ namespace zaslab
 
             doc.Add(tblc);
 
+            Paragraph obser = new Paragraph();
+
+
         }
 
 
