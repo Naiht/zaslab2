@@ -28,7 +28,7 @@ namespace zaslab
 
 
                 sql.multiple("update heces set color = '" + cmb_color.SelectedItem.ToString() + "'" +
-                    ", consistencia = '"+ cmb_Consis.SelectedItem.ToString() + "',fecharesul='',observacion = '"+txt_obser.Text+ "', parasito= '"+txt_Parasito.Text+"' where id = "+exam); 
+                    ", consistencia = '"+ cmb_Consis.SelectedItem.ToString() + "',fecharesul='" + fecha + "',observacion = '"+txt_obser.Text+ "', parasito= '"+txt_Parasito.Text+"' where id = "+exam); 
 
                 this.Close();
             }
