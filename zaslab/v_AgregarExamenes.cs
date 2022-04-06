@@ -67,6 +67,7 @@ namespace zaslab
             lbId.Text = dgvEstudiantes.Rows[fila].Cells[0].Value.ToString();
             lbNombre.Text = dgvEstudiantes.Rows[fila].Cells[1].Value.ToString();
             lbEdad.Text = dgvEstudiantes.Rows[fila].Cells[3].Value.ToString();
+            lbNumExam.Text = dgvEstudiantes.Rows[fila].Cells[7].Value.ToString();
             int h = int.Parse(dgvEstudiantes.Rows[fila].Cells[4].Value.ToString());
             int o = int.Parse(dgvEstudiantes.Rows[fila].Cells[5].Value.ToString());
             int s = int.Parse(dgvEstudiantes.Rows[fila].Cells[6].Value.ToString());

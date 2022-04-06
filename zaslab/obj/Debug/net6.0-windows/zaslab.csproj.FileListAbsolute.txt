@@ -160,3 +160,4 @@ C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\bin\Debug\net6.0-windows\BouncyCa
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\bin\Debug\net6.0-windows\itextsharp.dll
 C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.pruebareportes.resources
 >>>>>>> cb3745427e0ce978cf323024abd08e3ddc6a39b0
+C:\Users\mejia\Desktop\examenes\zaslab2\zaslab\obj\Debug\net6.0-windows\zaslab.sangrereptest.resources
