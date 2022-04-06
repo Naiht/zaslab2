@@ -56,7 +56,18 @@ namespace zaslab
             doc.Add(Chunk.NEWLINE);
             //Paciente
             Paragraph parrafopaci = new Paragraph();
-            parrafopaci.Add("Paciente: \nNacido el: ,edad \nGenero:");
+            string genero = "";
+            if(int.Parse(dgvEstudiantes.Rows[fila].Cells[7].Value.ToString()) == 0)
+            {
+                genero = "Hombre";
+            }
+            else
+            {
+                genero = "Mujer";
+            }
+
+            parrafopaci.Add("Paciente: "+dgvEstudiantes.Rows[fila].Cells[1].Value.ToString()+" " +
+                "\nEdad: " + dgvEstudiantes.Rows[fila].Cells[3].Value.ToString() + " \nGenero: " + genero);
             doc.Add(parrafopaci);
 
 
@@ -120,9 +131,9 @@ namespace zaslab
             /*Datos de la tabla*/
 
 
-           // hecest(doc);
+            hecest(doc);
             
-            //sangret(doc);
+            sangret(doc);
 
             orinat(doc);
 
@@ -149,6 +160,10 @@ namespace zaslab
             if (sangre.Rows.Count > 0)
             {
                 dgv_resultado.DataSource = sangre;
+            }
+            else
+            {
+                return;
             }
 
             Paragraph nom = new Paragraph("",contentFont);
@@ -693,6 +708,9 @@ namespace zaslab
             {
                 dgv_resultado.DataSource = heces;
             }
+            else {
+                return;
+            }
 
 
             Paragraph nom = new Paragraph("",contentFont);
@@ -847,6 +865,10 @@ namespace zaslab
             if (orina.Rows.Count > 0)
             {
                 dgv_resultado.DataSource = orina;
+            }
+            else
+            {
+                return;
             }
 
 
@@ -1714,7 +1736,7 @@ namespace zaslab
             dgvEstudiantes.AllowUserToResizeRows = false;
             dgvEstudiantes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;//cambia el tamaño de la columna de acuerdo al contenido
             dgvEstudiantes.AllowUserToAddRows = false;
-
+            dgv_resultado.Visible = false;
 
 
             // llena el datagridview al cargar el formulario
@@ -1732,9 +1754,10 @@ namespace zaslab
             }
         }
 
+        int fila;
         private void dgvEstudiantes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int fila = 0;
+            fila = 0;
             fila = dgvEstudiantes.CurrentRow.Index;
             hecese = int.Parse(dgvEstudiantes.Rows[fila].Cells[4].Value.ToString());
             orinae = int.Parse(dgvEstudiantes.Rows[fila].Cells[5].Value.ToString());

@@ -34,13 +34,14 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.rbtnId = new System.Windows.Forms.RadioButton();
             this.rbtnNombre = new System.Windows.Forms.RadioButton();
+            this.bnt_ImprTodo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_resultado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(919, 487);
+            this.button1.Location = new System.Drawing.Point(695, 525);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 0;
@@ -51,11 +52,11 @@
             // dgv_resultado
             // 
             this.dgv_resultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_resultado.Location = new System.Drawing.Point(818, 41);
+            this.dgv_resultado.Location = new System.Drawing.Point(683, 25);
             this.dgv_resultado.Name = "dgv_resultado";
             this.dgv_resultado.RowHeadersWidth = 51;
             this.dgv_resultado.RowTemplate.Height = 29;
-            this.dgv_resultado.Size = new System.Drawing.Size(673, 411);
+            this.dgv_resultado.Size = new System.Drawing.Size(106, 24);
             this.dgv_resultado.TabIndex = 1;
             // 
             // dgvEstudiantes
@@ -102,11 +103,21 @@
             this.rbtnNombre.Text = "Nombre";
             this.rbtnNombre.UseVisualStyleBackColor = true;
             // 
+            // bnt_ImprTodo
+            // 
+            this.bnt_ImprTodo.Location = new System.Drawing.Point(556, 526);
+            this.bnt_ImprTodo.Name = "bnt_ImprTodo";
+            this.bnt_ImprTodo.Size = new System.Drawing.Size(133, 29);
+            this.bnt_ImprTodo.TabIndex = 28;
+            this.bnt_ImprTodo.Text = "Imprimir Todo";
+            this.bnt_ImprTodo.UseVisualStyleBackColor = true;
+            // 
             // pruebareportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1503, 622);
+            this.ClientSize = new System.Drawing.Size(803, 567);
+            this.Controls.Add(this.bnt_ImprTodo);
             this.Controls.Add(this.dgvEstudiantes);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.rbtnId);
@@ -131,5 +142,6 @@
         private TextBox txtBuscar;
         private RadioButton rbtnId;
         private RadioButton rbtnNombre;
+        private Button bnt_ImprTodo;
     }
 }
