@@ -105,6 +105,7 @@ namespace zaslab
                 chbHeces.Checked = false;
                 chbOrina.Checked = false;
                 chbSangre.Checked = false;
+                txtNumExam.Text = "";
             }
 
 

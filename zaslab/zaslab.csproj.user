@@ -7,9 +7,6 @@
     <Compile Update="pruebareportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="sangrereptest.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="v_AgregarExamenes.cs">
       <SubType>Form</SubType>
     </Compile>
