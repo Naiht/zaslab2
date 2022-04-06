@@ -22,8 +22,12 @@ namespace zaslab
         }
 
 
-        public void reporte() {
-            FileStream fs = new FileStream(@"C:\Users\Na1hTKRZ\Desktop\test.pdf", FileMode.Create);
+        string repnombre = "";
+
+        public void reporte(int fila) {
+            repnombre = dgvEstudiantes.Rows[fila].Cells[1].Value.ToString();
+
+            FileStream fs = new FileStream(@"C:\Users\Na1hTKRZ\Desktop\"+repnombre+".pdf", FileMode.Create);
             Document doc = new Document(PageSize.LETTER, 40, 40, 5, 5);
             PdfWriter pw = PdfWriter.GetInstance(doc, fs);
 
@@ -65,6 +69,7 @@ namespace zaslab
             {
                 genero = "Mujer";
             }
+
 
             parrafopaci.Add("Paciente: "+dgvEstudiantes.Rows[fila].Cells[1].Value.ToString()+" " +
                 "\nEdad: " + dgvEstudiantes.Rows[fila].Cells[3].Value.ToString() + " \nGenero: " + genero);
@@ -142,6 +147,8 @@ namespace zaslab
             doc.Close();
             pw.Close();
         }
+
+ 
 
         sqlcon sql = new sqlcon();
 
@@ -1726,7 +1733,8 @@ namespace zaslab
 
         private void button1_Click(object sender, EventArgs e)
         {
-            reporte();
+            reporte(fila);
+            MessageBox.Show("Reporte Generado Exitosamente");
         }
 
         private void pruebareportes_Load(object sender, EventArgs e)
@@ -1762,6 +1770,15 @@ namespace zaslab
             hecese = int.Parse(dgvEstudiantes.Rows[fila].Cells[4].Value.ToString());
             orinae = int.Parse(dgvEstudiantes.Rows[fila].Cells[5].Value.ToString());
             sangree = int.Parse(dgvEstudiantes.Rows[fila].Cells[6].Value.ToString());
+        }
+
+        private void bnt_ImprTodo_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvEstudiantes.RowCount; i++) {
+                //reporte2(i);
+            }
+
+            MessageBox.Show("Reporte Generado Exitosamente");
         }
     }
 }

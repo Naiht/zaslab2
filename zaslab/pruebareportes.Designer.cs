@@ -111,6 +111,7 @@
             this.bnt_ImprTodo.TabIndex = 28;
             this.bnt_ImprTodo.Text = "Imprimir Todo";
             this.bnt_ImprTodo.UseVisualStyleBackColor = true;
+            this.bnt_ImprTodo.Click += new System.EventHandler(this.bnt_ImprTodo_Click);
             // 
             // pruebareportes
             // 
