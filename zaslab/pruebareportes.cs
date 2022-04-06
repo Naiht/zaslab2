@@ -729,6 +729,7 @@ namespace zaslab
             PdfPTable tblc = new PdfPTable(4);
             tblc.WidthPercentage = 100;
 
+
             /*Elem1*/
             Paragraph nombreE = new Paragraph();
             nombreE.Add("Color");
@@ -736,8 +737,6 @@ namespace zaslab
             PdfPCell celNombrE = new PdfPCell();
             celNombrE.AddElement(nombreE);
             celNombrE.Border = 0;
-
-
 
             tblc.AddCell(celNombrE);
 

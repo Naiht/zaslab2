@@ -91,12 +91,12 @@ namespace zaslab
 
                 
 
-                if (cmb_aspecto.SelectedItem == "")
+                if (cmb_aspecto.Text == "")
                 {
                     cmb_aspecto.SelectedIndex = 0;
                 }
 
-                if (cmb_color.SelectedItem == "")
+                if (cmb_color.Text == "")
                 {
                     cmb_color.SelectedIndex = 0;
                 }
