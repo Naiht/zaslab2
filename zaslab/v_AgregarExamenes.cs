@@ -144,7 +144,7 @@ namespace zaslab
             int id = int.Parse(dgvEstudiantes.Rows[fila].Cells[5].Value.ToString()); ;
             DateTime fecha = dateTimePicker1.Value;
 
-            EGO mensaje2 = new EGO();
+            EGO mensaje2 = new EGO(id, fecha);
             mensaje2.ShowDialog();
             if (mensaje2.DialogResult == DialogResult.OK)
             {
