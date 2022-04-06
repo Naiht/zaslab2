@@ -110,7 +110,7 @@ namespace zaslab
                 "ph = "+float.Parse(txtph.Text)+", densidad = '"+txtdensi.Text+"', leucocitosEF = '"+txtleucoEF.Text+"', nitritos = '"+txtnitritos.Text+"', " +
                 "urobilinogeno = '"+txturobili.Text+"', proteina ='"+txtproteina.Text+"', hemoglobina = '"+txthemo.Text+"', bilirrubinas= '"+txtbili.Text+"', glucosa='"+txtgluco.Text+"', " +
                 "celulas_epitaliales='"+cmbceluepi.Text+"', bacterias = '"+cmbbacte.Text+"', leucocitosEM = '"+txtleucoEQ.Text+"', eritrocitos='"+txteritro.Text+"', cristales='"+txtcrista.Text+"', " +
-                "otro = '"+txtotros.Text+"', fecharesul ='', observacion = '"+txtobserva.Text+"', cetonas = '"+txtcetonas.Text+ "', " +
+                "otro = '"+txtotros.Text+"', fecharesul ='" + fecha + "', observacion = '"+txtobserva.Text+"', cetonas = '"+txtcetonas.Text+ "', " +
                 "clilindros = '"+txtcilin.Text+ "' where id = " + exam);
 
 
