@@ -45,7 +45,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Imprimir";
+            this.button1.Text = "Generar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -78,6 +78,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(481, 27);
             this.txtBuscar.TabIndex = 26;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // rbtnId
             // 
@@ -109,7 +110,7 @@
             this.bnt_ImprTodo.Name = "bnt_ImprTodo";
             this.bnt_ImprTodo.Size = new System.Drawing.Size(133, 29);
             this.bnt_ImprTodo.TabIndex = 28;
-            this.bnt_ImprTodo.Text = "Imprimir Todo";
+            this.bnt_ImprTodo.Text = "Generar Todo";
             this.bnt_ImprTodo.UseVisualStyleBackColor = true;
             this.bnt_ImprTodo.Click += new System.EventHandler(this.bnt_ImprTodo_Click);
             // 
@@ -125,6 +126,7 @@
             this.Controls.Add(this.rbtnNombre);
             this.Controls.Add(this.dgv_resultado);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "pruebareportes";
             this.Text = "Reportes";
             this.Load += new System.EventHandler(this.pruebareportes_Load);

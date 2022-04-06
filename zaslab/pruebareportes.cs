@@ -1739,6 +1739,7 @@ namespace zaslab
 
         private void pruebareportes_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
             dgvEstudiantes.ReadOnly = true;
             dgvEstudiantes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
             dgvEstudiantes.AllowUserToResizeRows = false;
@@ -1746,6 +1747,7 @@ namespace zaslab
             dgvEstudiantes.AllowUserToAddRows = false;
             dgv_resultado.Visible = false;
 
+            rbtnNombre.Checked = true;
 
             // llena el datagridview al cargar el formulario
 
@@ -1774,11 +1776,55 @@ namespace zaslab
 
         private void bnt_ImprTodo_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dgvEstudiantes.RowCount; i++) {
-                //reporte2(i);
+            fila = dgvEstudiantes.RowCount-1;
+            while (fila >= 0)
+            {
+                hecese = int.Parse(dgvEstudiantes.Rows[fila].Cells[4].Value.ToString());
+                orinae = int.Parse(dgvEstudiantes.Rows[fila].Cells[5].Value.ToString());
+                sangree = int.Parse(dgvEstudiantes.Rows[fila].Cells[6].Value.ToString());
+                reporte(fila);
+                fila--;
             }
 
+
             MessageBox.Show("Reporte Generado Exitosamente");
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if (rbtnNombre.Checked == true)
+            {
+                DataTable dt;
+                dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombe, g.genero Genero, e.edad" +
+                    ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
+                    " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.nombreape like '%"
+                   + txtBuscar.Text + "%'");
+                if (dt.Rows.Count > 0)
+                {
+                    dgvEstudiantes.DataSource = dt;
+                    dgvEstudiantes.Columns[4].Visible = false;
+                    dgvEstudiantes.Columns[5].Visible = false;
+                    dgvEstudiantes.Columns[6].Visible = false;
+                }
+
+
+            }
+            else if (rbtnId.Checked == true)
+            {
+                DataTable dt;
+                dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombe, g.genero Genero, e.edad" +
+                    ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
+                    " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.idb like '%"
+                   + txtBuscar.Text + "%'");
+                if (dt.Rows.Count > 0)
+                {
+                    dgvEstudiantes.DataSource = dt;
+                    dgvEstudiantes.Columns[4].Visible = false;
+                    dgvEstudiantes.Columns[5].Visible = false;
+                    dgvEstudiantes.Columns[6].Visible = false;
+                }
+
+            }
         }
     }
 }
