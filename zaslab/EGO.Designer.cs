@@ -517,6 +517,7 @@
             this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EGO";
             this.Text = "Examen General de Orina";
             this.Load += new System.EventHandler(this.EGO_Load);

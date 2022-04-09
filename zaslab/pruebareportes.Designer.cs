@@ -35,6 +35,8 @@
             this.rbtnId = new System.Windows.Forms.RadioButton();
             this.rbtnNombre = new System.Windows.Forms.RadioButton();
             this.bnt_ImprTodo = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_resultado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).BeginInit();
             this.SuspendLayout();
@@ -114,6 +116,10 @@
             this.bnt_ImprTodo.UseVisualStyleBackColor = true;
             this.bnt_ImprTodo.Click += new System.EventHandler(this.bnt_ImprTodo_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "Ruta";
+            // 
             // pruebareportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -146,5 +152,7 @@
         private RadioButton rbtnId;
         private RadioButton rbtnNombre;
         private Button bnt_ImprTodo;
+        private OpenFileDialog openFileDialog1;
+        private SaveFileDialog saveFileDialog1;
     }
 }

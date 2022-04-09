@@ -61,7 +61,6 @@
             // 
             // cmb_Consis
             // 
-            this.cmb_Consis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Consis.FormattingEnabled = true;
             this.cmb_Consis.Location = new System.Drawing.Point(139, 88);
             this.cmb_Consis.Name = "cmb_Consis";
@@ -79,7 +78,6 @@
             // 
             // cmb_color
             // 
-            this.cmb_color.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_color.FormattingEnabled = true;
             this.cmb_color.Location = new System.Drawing.Point(139, 37);
             this.cmb_color.Name = "cmb_color";

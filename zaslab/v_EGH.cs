@@ -27,8 +27,8 @@ namespace zaslab
                 DialogResult = DialogResult.OK;
 
 
-                sql.multiple("update heces set color = '" + cmb_color.SelectedItem.ToString() + "'" +
-                    ", consistencia = '"+ cmb_Consis.SelectedItem.ToString() + "',fecharesul='" + fecha + "',observacion = '"+txt_obser.Text+ "', parasito= '"+txt_Parasito.Text+"' where id = "+exam); 
+                sql.multiple("update heces set color = '" + cmb_color.Text + "'" +
+                    ", consistencia = '"+ cmb_Consis.Text + "',fecharesul='" + string.Format("{0: yyyy-MM-dd}", fecha)+ "',observacion = '"+txt_obser.Text+ "', parasito= '"+txt_Parasito.Text+"' where id = "+exam); 
 
                 this.Close();
             }
@@ -62,8 +62,8 @@ namespace zaslab
             {
                 dgvdatosexam.DataSource = heces;
 
-                cmb_color.SelectedItem = dgvdatosexam.Rows[0].Cells[1].Value.ToString();
-                cmb_Consis.SelectedItem = dgvdatosexam.Rows[0].Cells[2].Value.ToString();
+                cmb_color.Text = dgvdatosexam.Rows[0].Cells[1].Value.ToString();
+                cmb_Consis.Text = dgvdatosexam.Rows[0].Cells[2].Value.ToString();
                 txt_Parasito.Text = dgvdatosexam.Rows[0].Cells[3].Value.ToString();
                 txt_obser.Text = dgvdatosexam.Rows[0].Cells[5].Value.ToString();
                 if (cmb_Consis.SelectedItem == "") {
@@ -86,6 +86,8 @@ namespace zaslab
 
             cmb_Consis.Items.Add("Pastosa");
             cmb_Consis.Items.Add("Rigida");
+            cmb_Consis.Items.Add("Liquida");
+            cmb_Consis.Items.Add("Solida");
             cmb_Consis.SelectedIndex = 0;
         }
     }

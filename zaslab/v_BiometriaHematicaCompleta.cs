@@ -31,19 +31,29 @@ namespace zaslab
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            
-            if (txtGlobulosRojos.Text != "" && txtHematocrito.Text != " " && txtHemoglobina.Text != "" && txtLeucocitos.Text != "" && txtMCV.Text != "" &&
-                txtMCH.Text != "" && txtMCHC.Text != "" && txtNeutrofilos.Text != "" && txtLinfocitos.Text != "" && txtMonocitos.Text != "" && txtEosinofilos.Text != "" && txtBasofilos.Text != "")
+
+            DialogResult resultado = MessageBox.Show("¿Son correctos los datos del examen?", "Resultados examen", MessageBoxButtons.OKCancel);
+
+            if (resultado == DialogResult.OK)
             {
-                sql.multiple("update sangre set globulos_rojos ='" + txtGlobulosRojos.Text + "',hematocrito = '" + txtHematocrito.Text + "', hemoglobina ='" + txtHemoglobina.Text + "',leucocitos ='" + txtLeucocitos.Text +
-                    "',MCV ='" + txtMCV.Text + "',MCH='" + txtMCH.Text + "',MCHC='" + txtMCHC.Text + "',neutrofilos ='" + txtNeutrofilos.Text + "',linfocitos ='" + txtLinfocitos.Text + "',monocitos ='" + txtMonocitos.Text +
-                    "',eosinofilos ='" + txtEosinofilos.Text + "',basofilos ='" + txtBasofilos.Text + "',fecharesul ='" + string.Format("{0: yyyy-MM-dd}", fecha) + "',observaciones = '" + txtObservacion.Text + "' where id =" + exam);
+                DialogResult = DialogResult.OK;
+
+
+                if (txtGlobulosRojos.Text != "" && txtHematocrito.Text != " " && txtHemoglobina.Text != "" && txtLeucocitos.Text != "" && txtMCV.Text != "" &&
+                    txtMCH.Text != "" && txtMCHC.Text != "" && txtNeutrofilos.Text != "" && txtLinfocitos.Text != "" && txtMonocitos.Text != "" && txtEosinofilos.Text != "" && txtBasofilos.Text != "")
+                {
+                    sql.multiple("update sangre set globulos_rojos ='" + txtGlobulosRojos.Text + "',hematocrito = '" + txtHematocrito.Text + "', hemoglobina ='" + txtHemoglobina.Text + "',leucocitos ='" + txtLeucocitos.Text +
+                        "',MCV ='" + txtMCV.Text + "',MCH='" + txtMCH.Text + "',MCHC='" + txtMCHC.Text + "',neutrofilos ='" + txtNeutrofilos.Text + "',linfocitos ='" + txtLinfocitos.Text + "',monocitos ='" + txtMonocitos.Text +
+                        "',eosinofilos ='" + txtEosinofilos.Text + "',basofilos ='" + txtBasofilos.Text + "',fecharesul ='" + string.Format("{0: yyyy-MM-dd}", fecha) + "',observaciones = '" + txtObservacion.Text + "' where id =" + exam);
+                }
+                else
+                {
+                    MessageBox.Show("debes llenar todos los campos");
+                }
+
+                this.Close();
             }
-            else
-            {
-                MessageBox.Show("debes llenar todos los campos");
-            }
-            this.Close();
+
         }
 
         private void v_BiometriaHematicaCompleta_Load(object sender, EventArgs e)

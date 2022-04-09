@@ -184,6 +184,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_id);
             this.Controls.Add(this.txt_nombrea);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "v_IngreE";
             this.Text = "Ingresar Estudiante";
             this.Load += new System.EventHandler(this.v_IngreE_Load);

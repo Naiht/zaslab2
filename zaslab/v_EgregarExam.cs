@@ -207,7 +207,7 @@ namespace zaslab
                             }
                             else
                             {
-                                sql.multiple("insert into  examrealizados values('" + txtNumExam.Text + ",'" + lbId.Text + "','',''," + s + ",'" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
+                                sql.multiple("insert into  examrealizados values('" + txtNumExam.Text + "','" + lbId.Text + "','',''," + s + ",'" + string.Format("{0: yyyy-MM-dd}", dtpTomaMuestra.Value) + "','" + string.Format("{0: yyyy-MM-dd}", dtpRecepcionMuestra.Value) + "')");
                             }
                         }
                     }

@@ -85,6 +85,7 @@
             this.Controls.Add(this.rdb_Nombre);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dtgv_verest);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "v_VerEstu";
             this.Text = "Ver estudiantes";
             this.Load += new System.EventHandler(this.v_VerEstu_Load);

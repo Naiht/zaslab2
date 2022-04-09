@@ -38,9 +38,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(761, 327);
+            this.btnEliminar.Location = new System.Drawing.Point(870, 436);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(86, 31);
             this.btnEliminar.TabIndex = 19;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -49,27 +50,31 @@
             // dgvEstudiantes
             // 
             this.dgvEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstudiantes.Location = new System.Drawing.Point(17, 52);
+            this.dgvEstudiantes.Location = new System.Drawing.Point(19, 69);
+            this.dgvEstudiantes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvEstudiantes.Name = "dgvEstudiantes";
+            this.dgvEstudiantes.RowHeadersWidth = 51;
             this.dgvEstudiantes.RowTemplate.Height = 25;
-            this.dgvEstudiantes.Size = new System.Drawing.Size(726, 298);
+            this.dgvEstudiantes.Size = new System.Drawing.Size(830, 397);
             this.dgvEstudiantes.TabIndex = 18;
             this.dgvEstudiantes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstudiantes_CellClick);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(122, 10);
+            this.txtBuscar.Location = new System.Drawing.Point(139, 13);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(421, 23);
+            this.txtBuscar.Size = new System.Drawing.Size(481, 27);
             this.txtBuscar.TabIndex = 17;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // rbtnId
             // 
             this.rbtnId.AutoSize = true;
-            this.rbtnId.Location = new System.Drawing.Point(22, 26);
+            this.rbtnId.Location = new System.Drawing.Point(25, 35);
+            this.rbtnId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnId.Name = "rbtnId";
-            this.rbtnId.Size = new System.Drawing.Size(36, 19);
+            this.rbtnId.Size = new System.Drawing.Size(45, 24);
             this.rbtnId.TabIndex = 16;
             this.rbtnId.TabStop = true;
             this.rbtnId.Text = "ID";
@@ -78,9 +83,10 @@
             // rbtnNombre
             // 
             this.rbtnNombre.AutoSize = true;
-            this.rbtnNombre.Location = new System.Drawing.Point(22, 1);
+            this.rbtnNombre.Location = new System.Drawing.Point(25, 1);
+            this.rbtnNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnNombre.Name = "rbtnNombre";
-            this.rbtnNombre.Size = new System.Drawing.Size(69, 19);
+            this.rbtnNombre.Size = new System.Drawing.Size(85, 24);
             this.rbtnNombre.TabIndex = 15;
             this.rbtnNombre.TabStop = true;
             this.rbtnNombre.Text = "Nombre";
@@ -88,14 +94,16 @@
             // 
             // v_eliminar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 362);
+            this.ClientSize = new System.Drawing.Size(968, 483);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvEstudiantes);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.rbtnId);
             this.Controls.Add(this.rbtnNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "v_eliminar";
             this.Text = "Eliminar";
             this.Load += new System.EventHandler(this.v_eliminar_Load);

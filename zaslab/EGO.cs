@@ -50,9 +50,18 @@ namespace zaslab
             cmb_aspecto.Items.Add("Ligeramente Turbio");
             cmb_aspecto.Items.Add("Turbio");
 
+
+            cmbbacte.Items.Add("Poca cantidad x campo");
+            cmbbacte.Items.Add("Escasa cantidad x campo");
+            cmbbacte.Items.Add("Abundante cantidad x campo");
+
+
+            cmbceluepi.Items.Add("Poca cantidad x campo");
+            cmbceluepi.Items.Add("Escasa cantidad x campo");
+            cmbceluepi.Items.Add("Abundante cantidad x campo");
         }
 
- 
+
         private void relletabal() {
             DataTable orina;
             orina = sql.tablas("orina", "select * from orina where id=" + exam);
@@ -108,10 +117,10 @@ namespace zaslab
         {
 
             sql.multiple("update orina set color = '" + cmb_color.SelectedItem.ToString() +"', aspecto = '"+cmb_aspecto.SelectedItem.ToString()+"', " +
-                "ph = "+float.Parse(txtph.Text)+", densidad = '"+txtdensi.Text+"', leucocitosEF = '"+txtleucoEF.Text+"', nitritos = '"+txtnitritos.Text+"', " +
+                "ph = '"+ txtph.Text + "', densidad = '"+txtdensi.Text+"', leucocitosEF = '"+txtleucoEF.Text+"', nitritos = '"+txtnitritos.Text+"', " +
                 "urobilinogeno = '"+txturobili.Text+"', proteina ='"+txtproteina.Text+"', hemoglobina = '"+txthemo.Text+"', bilirrubinas= '"+txtbili.Text+"', glucosa='"+txtgluco.Text+"', " +
                 "celulas_epitaliales='"+cmbceluepi.Text+"', bacterias = '"+cmbbacte.Text+"', leucocitosEM = '"+txtleucoEQ.Text+"', eritrocitos='"+txteritro.Text+"', cristales='"+txtcrista.Text+"', " +
-                "otro = '"+txtotros.Text+"', fecharesul ='" + fecha2 + "', observacion = '"+txtobserva.Text+"', cetonas = '"+txtcetonas.Text+ "', " +
+                "otro = '"+txtotros.Text+"', fecharesul ='" + string.Format("{0: yyyy-MM-dd}", fecha2) + "', observacion = '"+txtobserva.Text+"', cetonas = '"+txtcetonas.Text+ "', " +
                 "clilindros = '"+txtcilin.Text+ "' where id = " + exam);
 
 
