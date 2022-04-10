@@ -30,11 +30,13 @@ namespace zaslab
         iTextSharp.text.Font contentPas = iTextSharp.text.FontFactory.GetFont("Webdings", 10, iTextSharp.text.Font.NORMAL);
 
 
-        float[] medidaCeldas = { 0.90f, 1.25f, 0.60f, 0.40f };
+        float[] medidaCeldas = { 0.90f, 1.60f, 0.60f, 0.40f };
 
         public void reporte(int fila, string folderPath) {
-            repnombre = dgvEstudiantes.Rows[fila].Cells[1].Value.ToString();
+            repnombre = dgvEstudiantes.Rows[fila].Cells[1].Value.ToString();//Version que utiliza el nombre del pasciente
             repcod = dgvEstudiantes.Rows[fila].Cells[0].Value.ToString();
+
+            //repnombre = dgvEstudiantes.Rows[fila].Cells[7].Value.ToString();//Version que utilza codigos de examen
 
 
             FileStream fs = new FileStream(@"" + folderPath + (repnombre+"-"+repcod) + ".pdf", FileMode.Create);
@@ -76,7 +78,7 @@ namespace zaslab
                 genero = "Femenino";
             }
 
-            String candea = "Paciente: " + dgvEstudiantes.Rows[fila].Cells[1].Value.ToString() + " " +
+            String candea = "Paciente: " + dgvEstudiantes.Rows[fila].Cells[1].Value.ToString() + "" +
                 "\nEdad: " + dgvEstudiantes.Rows[fila].Cells[3].Value.ToString() + " años" +
                 " \nGénero: " + genero +
                 "\nFecha de Toma: " + string.Format("{0: dd-MM-yyyy}", dgvEstudiantes.Rows[fila].Cells[8].Value);
@@ -191,10 +193,11 @@ namespace zaslab
         int orinae = 0;
 
 
+        //--9 9
+        iTextSharp.text.Font contentFont = iTextSharp.text.FontFactory.GetFont("Webdings", 8, iTextSharp.text.Font.BOLD);
+        iTextSharp.text.Font contentFont2 = iTextSharp.text.FontFactory.GetFont("Webdings", 8, iTextSharp.text.Font.NORMAL);
 
-        iTextSharp.text.Font contentFont = iTextSharp.text.FontFactory.GetFont("Webdings", 9, iTextSharp.text.Font.BOLD);
-        iTextSharp.text.Font contentFont2 = iTextSharp.text.FontFactory.GetFont("Webdings", 9, iTextSharp.text.Font.NORMAL);
-
+        
         float pad = -5;
         float padr = -5;
         float primero = -3;

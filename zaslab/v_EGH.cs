@@ -88,6 +88,11 @@ namespace zaslab
             cmb_Consis.Items.Add("Rigida");
             cmb_Consis.Items.Add("Liquida");
             cmb_Consis.Items.Add("Solida");
+            cmb_Consis.Items.Add("Semi solida");
+            cmb_Consis.Items.Add("Diarreica");
+            cmb_Consis.Items.Add("Diarreica mucosa");
+            cmb_Consis.Items.Add("Diarreica liquida");
+
             cmb_Consis.SelectedIndex = 0;
         }
     }

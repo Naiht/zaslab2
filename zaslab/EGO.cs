@@ -54,11 +54,14 @@ namespace zaslab
             cmbbacte.Items.Add("Poca cantidad x campo");
             cmbbacte.Items.Add("Escasa cantidad x campo");
             cmbbacte.Items.Add("Abundante cantidad x campo");
+            cmbbacte.Items.Add("Regular cantidad x campo");
 
 
             cmbceluepi.Items.Add("Poca cantidad x campo");
             cmbceluepi.Items.Add("Escasa cantidad x campo");
             cmbceluepi.Items.Add("Abundante cantidad x campo");
+            cmbceluepi.Items.Add("Regular cantidad x campo");
+
         }
 
 
@@ -110,7 +113,63 @@ namespace zaslab
                 {
                     cmb_color.SelectedIndex = 0;
                 }
+
+                valordefrabrica();
+
             }
+        }
+
+        private void valordefrabrica()
+        {
+            if (txtnitritos.Text == "")
+            {
+                txtnitritos.Text = "Negativo";
+            }
+
+            if (txtleucoEQ.Text == "")
+            {
+                txtleucoEQ.Text = "Negativo";
+            }
+            if (txtproteina.Text == "")
+            {
+                txtproteina.Text = "Negativo";
+            }
+            if (txthemo.Text == "")
+            {
+                txthemo.Text = "Negativo";
+            }
+            if (txtcetonas.Text == "")
+            {
+                txtcetonas.Text = "Negativo";
+            }
+            if (txtbili.Text == "")
+            {
+                txtbili.Text = "Negativo";
+            }
+            if (txtgluco.Text == "")
+            {
+                txtgluco.Text = "Negativo";
+            }
+            if (txturobili.Text == "")
+            {
+                txturobili.Text = "Normal";
+            }
+            if (txtcrista.Text == "")
+            {
+                txtcrista.Text = "No se observo";
+            }
+            if (txtcilin.Text == "")
+            {
+                txtcilin.Text = "No se observo";
+            }
+            if (txtleucoEF.Text == ""){
+
+                txtleucoEF.Text = " x campo";
+            }
+            if (txteritro.Text == ""){
+                txteritro.Text = " x campo";
+            }
+
         }
 
         private void btn_Guardar_Click(object sender, EventArgs e)
