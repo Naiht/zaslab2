@@ -26,9 +26,14 @@ namespace zaslab
             {
                 DialogResult = DialogResult.OK;
 
+                fecharesultados = dtpRegisResultados.Value;
+                fechamuestra = dtpTomaMuestra.Value;
+                fecharecepcion = dtpRecepMuestra.Value;
 
                 sql.multiple("update heces set color = '" + cmb_color.Text + "'" +
-                    ", consistencia = '"+ cmb_Consis.Text + "',fecharesul='" + string.Format("{0: yyyy-MM-dd}", fecha)+ "',observacion = '"+txt_obser.Text+ "', parasito= '"+txt_Parasito.Text+"' where id = "+exam); 
+                    ", consistencia = '"+ cmb_Consis.Text + "',fecharesul='" + string.Format("{0: yyyy-MM-dd}", fecharesultados) +
+                    "',fechamuestra='" + string.Format("{0: yyyy-MM-dd}", fechamuestra) +
+                    "',fecharecep='" + string.Format("{0: yyyy-MM-dd}", fecharecepcion) + "',observacion = '" +txt_obser.Text+ "', parasito= '"+txt_Parasito.Text+"' where id = "+exam); 
 
                 this.Close();
             }
@@ -42,13 +47,13 @@ namespace zaslab
 
         sqlcon sql = new sqlcon();
         int exam;
-        DateTime fecha;
+        DateTime fechamuestra, fecharecepcion, fecharesultados;
 
-        public v_EGH(int idexam, DateTime fecharesul)
+        public v_EGH(int idexam)
         {
             InitializeComponent();
             exam = idexam;
-            fecha = fecharesul;
+            //fecha = fecharesul;
         }
 
         private void v_EGH_Load(object sender, EventArgs e)
@@ -66,6 +71,9 @@ namespace zaslab
                 cmb_Consis.Text = dgvdatosexam.Rows[0].Cells[2].Value.ToString();
                 txt_Parasito.Text = dgvdatosexam.Rows[0].Cells[3].Value.ToString();
                 txt_obser.Text = dgvdatosexam.Rows[0].Cells[5].Value.ToString();
+                dtpTomaMuestra.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[6].Value.ToString());
+                dtpRecepMuestra.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[7].Value.ToString());
+                dtpRegisResultados.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[4].Value.ToString());
                 if (cmb_Consis.SelectedItem == "") {
                     cmb_Consis.SelectedIndex = 0;
                 }

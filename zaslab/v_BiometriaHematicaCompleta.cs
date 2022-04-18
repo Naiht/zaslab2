@@ -19,13 +19,13 @@ namespace zaslab
 
         sqlcon sql = new sqlcon();
         int exam;
-        DateTime fecha;
+        DateTime fechamuestra, fecharecepcion, fecharesultados;
 
-        public v_BiometriaHematicaCompleta(int idexam,DateTime fecharesul)
+        public v_BiometriaHematicaCompleta(int idexam)
         {
             InitializeComponent();
             exam = idexam;
-            fecha = fecharesul;
+            //fecha = fecharesul;
 
         }
 
@@ -38,13 +38,17 @@ namespace zaslab
             {
                 DialogResult = DialogResult.OK;
 
+                fecharesultados = dtpRegisResultados.Value;
+                fechamuestra = dtpTomaMuestra.Value;
+                fecharecepcion = dtpRecepMuestra.Value;
 
                 if (txtGlobulosRojos.Text != "" && txtHematocrito.Text != " " && txtHemoglobina.Text != "" && txtLeucocitos.Text != "" && txtMCV.Text != "" &&
                     txtMCH.Text != "" && txtMCHC.Text != "" && txtNeutrofilos.Text != "" && txtLinfocitos.Text != "" && txtMonocitos.Text != "" && txtEosinofilos.Text != "" && txtBasofilos.Text != "")
                 {
                     sql.multiple("update sangre set globulos_rojos ='" + txtGlobulosRojos.Text + "',hematocrito = '" + txtHematocrito.Text + "', hemoglobina ='" + txtHemoglobina.Text + "',leucocitos ='" + txtLeucocitos.Text +
                         "',MCV ='" + txtMCV.Text + "',MCH='" + txtMCH.Text + "',MCHC='" + txtMCHC.Text + "',neutrofilos ='" + txtNeutrofilos.Text + "',linfocitos ='" + txtLinfocitos.Text + "',monocitos ='" + txtMonocitos.Text +
-                        "',eosinofilos ='" + txtEosinofilos.Text + "',basofilos ='" + txtBasofilos.Text + "',fecharesul ='" + string.Format("{0: yyyy-MM-dd}", fecha) + "',observaciones = '" + txtObservacion.Text + "' where id =" + exam);
+                        "',eosinofilos ='" + txtEosinofilos.Text + "',basofilos ='" + txtBasofilos.Text + "',fecharesul ='" + string.Format("{0: yyyy-MM-dd}", fecharesultados) +
+                        "',fechamuestra ='" + string.Format("{0: yyyy-MM-dd}", fechamuestra) + "',fecharecep ='" + string.Format("{0: yyyy-MM-dd}", fecharecepcion) + "',observaciones = '" + txtObservacion.Text + "' where id =" + exam);
                 }
                 else
                 {
@@ -76,6 +80,9 @@ namespace zaslab
                 txtEosinofilos.Text = dgvdatosexam.Rows[0].Cells[11].Value.ToString();
                 txtBasofilos.Text = dgvdatosexam.Rows[0].Cells[12].Value.ToString();
                 txtObservacion.Text = dgvdatosexam.Rows[0].Cells[14].Value.ToString();
+                dtpTomaMuestra.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[15].Value.ToString());
+                dtpRecepMuestra.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[16].Value.ToString());
+                dtpRegisResultados.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[13].Value.ToString());
             }
 
 
