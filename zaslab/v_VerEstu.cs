@@ -55,7 +55,7 @@ namespace zaslab
             cargadatos();
             rdb_Nombre.Checked = true;
         }
-
+        v_Principal proy = new v_Principal();
         private void cargadatos() {
 
             dtgv_verest.ReadOnly = true;
@@ -63,7 +63,12 @@ namespace zaslab
             dtgv_verest.AllowUserToResizeRows = false;
 
             DataTable tabla;
-            tabla = sql.tablas("reparacion", "select e.idb, e.nombreape, g.genero, e.fechanac, e.edad, e.obser from estudiantes e INNER JOIN generos g ON g.idtipo = e.genero");
+            tabla = sql.tablas("reparacion", "select e.idb, e.nombreape, g.genero, e.fechanac, e.edad, e.obser from estudiantes e " +
+                "INNER JOIN generos g ON g.idtipo = e.genero where e.proyecto = 2");
+
+            /*tabla = sql.tablas("reparacion", "select e.idb, e.nombreape, g.genero, e.fechanac, e.edad, e.obser from estudiantes e " +
+            "INNER JOIN generos g ON g.idtipo = e.genero where e.proyecto = "+ proy.proy);*/
+
 
             if (tabla.Rows.Count > 0)
             {

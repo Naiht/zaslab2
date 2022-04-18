@@ -801,19 +801,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Na1hTKRZ\\.nuget\\packages\\": {}
+    "C:\\Users\\Na1hT\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Na1hTKRZ\\source\\repos\\zaslab\\zaslab\\zaslab.csproj",
+      "projectUniqueName": "D:\\CCHAR\\zaslab2\\zaslab\\zaslab.csproj",
       "projectName": "zaslab",
-      "projectPath": "C:\\Users\\Na1hTKRZ\\source\\repos\\zaslab\\zaslab\\zaslab.csproj",
-      "packagesPath": "C:\\Users\\Na1hTKRZ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Na1hTKRZ\\source\\repos\\zaslab\\zaslab\\obj\\",
+      "projectPath": "D:\\CCHAR\\zaslab2\\zaslab\\zaslab.csproj",
+      "packagesPath": "C:\\Users\\Na1hT\\.nuget\\packages\\",
+      "outputPath": "D:\\CCHAR\\zaslab2\\zaslab\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Na1hTKRZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Na1hT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -882,7 +882,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   },

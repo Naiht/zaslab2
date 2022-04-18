@@ -31,6 +31,9 @@
     <Compile Update="v_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="v_Proyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="v_VerEstu.cs">
       <SubType>Form</SubType>
     </Compile>
