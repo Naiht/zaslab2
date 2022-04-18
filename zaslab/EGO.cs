@@ -19,13 +19,13 @@ namespace zaslab
 
         sqlcon sql = new sqlcon();
         int exam;
-        DateTime fecha,fecha2;
+        DateTime fechamuestra, fecharecepcion, fecharesultados;
 
-        public EGO(int idexam, DateTime fecharesul)
+        public EGO(int idexam)
         {
             InitializeComponent();
             exam = idexam;
-            fecha2=fecharesul;
+            //fecha2=fecharesul;
             rellenarcm();
             relletabal();
         }
@@ -97,12 +97,16 @@ namespace zaslab
                 txtcrista.Text = dgvdatosexam.Rows[0].Cells[17].Value.ToString();
                 txtcilin.Text = dgvdatosexam.Rows[0].Cells[18].Value.ToString();
                 txtotros.Text = dgvdatosexam.Rows[0].Cells[19].Value.ToString();
-                fecha = DateTime.Parse(dgvdatosexam.Rows[0].Cells[20].Value.ToString());
+                //fecha = DateTime.Parse(dgvdatosexam.Rows[0].Cells[20].Value.ToString());
                 txtobserva.Text = dgvdatosexam.Rows[0].Cells[21].Value.ToString();
                 //txt_obser.Text = dgvdatosexam.Rows[0].Cells[5].Value.ToString();
 
+                dtpTomaMuestra.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[22].Value.ToString());
+                dtpRecepMuestra.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[23].Value.ToString());
+                dtpRegisResultados.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[20].Value.ToString());
 
-                
+
+
 
                 if (cmb_aspecto.Text == "")
                 {
@@ -175,11 +179,17 @@ namespace zaslab
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
 
+            fecharesultados = dtpRegisResultados.Value;
+            fechamuestra = dtpTomaMuestra.Value;
+            fecharecepcion = dtpRecepMuestra.Value;
+
             sql.multiple("update orina set color = '" + cmb_color.SelectedItem.ToString() +"', aspecto = '"+cmb_aspecto.SelectedItem.ToString()+"', " +
                 "ph = '"+ txtph.Text + "', densidad = '"+txtdensi.Text+"', leucocitosEF = '"+txtleucoEF.Text+"', nitritos = '"+txtnitritos.Text+"', " +
                 "urobilinogeno = '"+txturobili.Text+"', proteina ='"+txtproteina.Text+"', hemoglobina = '"+txthemo.Text+"', bilirrubinas= '"+txtbili.Text+"', glucosa='"+txtgluco.Text+"', " +
                 "celulas_epitaliales='"+cmbceluepi.Text+"', bacterias = '"+cmbbacte.Text+"', leucocitosEM = '"+txtleucoEQ.Text+"', eritrocitos='"+txteritro.Text+"', cristales='"+txtcrista.Text+"', " +
-                "otro = '"+txtotros.Text+"', fecharesul ='" + string.Format("{0: yyyy-MM-dd}", fecha2) + "', observacion = '"+txtobserva.Text+"', cetonas = '"+txtcetonas.Text+ "', " +
+                "otro = '"+txtotros.Text+"', fecharesul ='" + string.Format("{0: yyyy-MM-dd}", fecharesultados) +
+                "', fechamuestra ='" + string.Format("{0: yyyy-MM-dd}", fechamuestra) +
+                "', fecharecep ='" + string.Format("{0: yyyy-MM-dd}", fecharecepcion) + "', observacion = '" +txtobserva.Text+"', cetonas = '"+txtcetonas.Text+ "', " +
                 "clilindros = '"+txtcilin.Text+ "' where id = " + exam);
 
 

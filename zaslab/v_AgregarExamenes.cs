@@ -128,10 +128,10 @@ namespace zaslab
         private void btnSangre_Click(object sender, EventArgs e)
         {
             int id = int.Parse(dgvEstudiantes.Rows[fila].Cells[6].Value.ToString()); ;
-            DateTime fecha = dateTimePicker1.Value;
+            //DateTime fecha = dateTimePicker1.Value; tomaba la fecha en que se registran los examenes
 
             //MessageBox.Show("" + id + "" + fecha);
-            v_BiometriaHematicaCompleta datossangre = new v_BiometriaHematicaCompleta(id,fecha);
+            v_BiometriaHematicaCompleta datossangre = new v_BiometriaHematicaCompleta(id);
             datossangre.ShowDialog();
             if (datossangre.DialogResult == DialogResult.OK)
             {
@@ -143,9 +143,9 @@ namespace zaslab
         {
 
             int id = int.Parse(dgvEstudiantes.Rows[fila].Cells[5].Value.ToString()); ;
-            DateTime fecha = dateTimePicker1.Value;
+            //DateTime fecha = dateTimePicker1.Value;
 
-            EGO mensaje2 = new EGO(id, fecha);
+            EGO mensaje2 = new EGO(id);
             mensaje2.ShowDialog();
             if (mensaje2.DialogResult == DialogResult.OK)
             {
@@ -156,9 +156,9 @@ namespace zaslab
         private void btnHeces_Click(object sender, EventArgs e)
         {
             int id = int.Parse(dgvEstudiantes.Rows[fila].Cells[4].Value.ToString()); ;
-            DateTime fecha = dateTimePicker1.Value;
+            //DateTime fecha = dateTimePicker1.Value;
 
-            v_EGH mensaje2 = new v_EGH(id, fecha);
+            v_EGH mensaje2 = new v_EGH(id);
             mensaje2.ShowDialog();
 
             if (mensaje2.DialogResult == DialogResult.OK)

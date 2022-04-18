@@ -70,6 +70,12 @@
             this.txtObservacion = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.dgvdatosexam = new System.Windows.Forms.DataGridView();
+            this.dtpTomaMuestra = new System.Windows.Forms.DateTimePicker();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.dtpRecepMuestra = new System.Windows.Forms.DateTimePicker();
+            this.label28 = new System.Windows.Forms.Label();
+            this.dtpRegisResultados = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdatosexam)).BeginInit();
             this.SuspendLayout();
@@ -438,18 +444,76 @@
             // dgvdatosexam
             // 
             this.dgvdatosexam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvdatosexam.Location = new System.Drawing.Point(319, 230);
+            this.dgvdatosexam.Location = new System.Drawing.Point(338, 365);
             this.dgvdatosexam.Name = "dgvdatosexam";
             this.dgvdatosexam.RowTemplate.Height = 25;
-            this.dgvdatosexam.Size = new System.Drawing.Size(240, 150);
+            this.dgvdatosexam.Size = new System.Drawing.Size(240, 68);
             this.dgvdatosexam.TabIndex = 27;
             this.dgvdatosexam.Visible = false;
+            // 
+            // dtpTomaMuestra
+            // 
+            this.dtpTomaMuestra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTomaMuestra.Location = new System.Drawing.Point(472, 241);
+            this.dtpTomaMuestra.Name = "dtpTomaMuestra";
+            this.dtpTomaMuestra.Size = new System.Drawing.Size(106, 23);
+            this.dtpTomaMuestra.TabIndex = 28;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(319, 249);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(110, 15);
+            this.label25.TabIndex = 29;
+            this.label25.Text = "Toma de la Muestra";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(319, 278);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(136, 15);
+            this.label26.TabIndex = 31;
+            this.label26.Text = "Recepción de la Muestra";
+            // 
+            // dtpRecepMuestra
+            // 
+            this.dtpRecepMuestra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpRecepMuestra.Location = new System.Drawing.Point(472, 270);
+            this.dtpRecepMuestra.Name = "dtpRecepMuestra";
+            this.dtpRecepMuestra.Size = new System.Drawing.Size(106, 23);
+            this.dtpRecepMuestra.TabIndex = 30;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(319, 307);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(144, 15);
+            this.label28.TabIndex = 33;
+            this.label28.Text = "Registro de los Resultados";
+            // 
+            // dtpRegisResultados
+            // 
+            this.dtpRegisResultados.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpRegisResultados.Location = new System.Drawing.Point(472, 299);
+            this.dtpRegisResultados.Name = "dtpRegisResultados";
+            this.dtpRegisResultados.Size = new System.Drawing.Size(106, 23);
+            this.dtpRegisResultados.TabIndex = 32;
             // 
             // v_BiometriaHematicaCompleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(609, 445);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.dtpRegisResultados);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.dtpRecepMuestra);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.dtpTomaMuestra);
             this.Controls.Add(this.dgvdatosexam);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.txtObservacion);
@@ -477,6 +541,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtGlobulosRojos);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "v_BiometriaHematicaCompleta";
             this.Text = "Biometria Hematica Completa";
             this.Load += new System.EventHandler(this.v_BiometriaHematicaCompleta_Load);
@@ -532,5 +597,11 @@
         private TextBox txtObservacion;
         private Label label27;
         private DataGridView dgvdatosexam;
+        private DateTimePicker dtpTomaMuestra;
+        private Label label25;
+        private Label label26;
+        private DateTimePicker dtpRecepMuestra;
+        private Label label28;
+        private DateTimePicker dtpRegisResultados;
     }
 }
