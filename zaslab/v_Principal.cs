@@ -6,6 +6,23 @@ namespace zaslab
         public v_Principal()
         {
             InitializeComponent();
+
+
+            StreamWriter miEscritura = File.CreateText("proyecto.txt");
+            miEscritura.WriteLine("2");
+            miEscritura.Close();
+
+
+            // Creamos un objeto para leer el archivo.
+            StreamReader miLectura = File.OpenText("proyecto.txt");
+
+            // Leemos la primera linea del archivo.
+            string lineaLeida = miLectura.ReadLine();
+
+            MessageBox.Show(""+lineaLeida);
+
+            miLectura.Close();
+
         }
 
         private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)

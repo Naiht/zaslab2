@@ -1973,6 +1973,32 @@ namespace zaslab
 
         private void pruebareportes_Load(object sender, EventArgs e)
         {
+            int tsange = 0, theces=0,torina=0;
+
+            DataTable dt;
+            dt = sql.tablas("estu","select COUNT(idorina) As Sangre from examrealizados ex INNER JOIN estudiantes e ON e.idb = ex.idestudiante where idorina != 0 and e.proyecto = 2");
+            if (dt.Rows.Count > 0)
+            {
+                dgvEstudiantes.DataSource = dt;
+                torina = int.Parse(dgvEstudiantes.Rows[0].Cells[0].Value.ToString());
+            }
+
+            dt = sql.tablas("estu", "select COUNT(idheces) As Sangre from examrealizados ex INNER JOIN estudiantes e ON e.idb = ex.idestudiante where idheces != 0 and e.proyecto = 2");
+            if (dt.Rows.Count > 0)
+            {
+                dgvEstudiantes.DataSource = dt;
+                theces = int.Parse(dgvEstudiantes.Rows[0].Cells[0].Value.ToString());
+            }
+
+            dt = sql.tablas("estu", "select COUNT(idsangre) As Sangre from examrealizados ex INNER JOIN estudiantes e ON e.idb = ex.idestudiante where idsangre != 0 and e.proyecto = 2");
+            if (dt.Rows.Count > 0)
+            {
+                dgvEstudiantes.DataSource = dt;
+                tsange = int.Parse(dgvEstudiantes.Rows[0].Cells[0].Value.ToString());
+            }
+
+            lbl_total.Text = "EGO: "+torina+ " EGH: " + theces + " BHC: "+tsange;
+
             this.MaximizeBox = false;
             dgvEstudiantes.ReadOnly = true;
             dgvEstudiantes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
@@ -1985,9 +2011,9 @@ namespace zaslab
 
             // llena el datagridview al cargar el formulario
 
-            DataTable dt;
+            
             dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombre, g.genero Genero, e.edad as Edad, " +
-                "er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen], er.fechatoma as [Fecha de toma], er.fecharecep as [Fecha de recepcion] from estudiantes as e" +
+                "er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
                 " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante");
             if (dt.Rows.Count > 0)
             {
@@ -2048,7 +2074,7 @@ namespace zaslab
             {
                 DataTable dt;
                 dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombe, g.genero Genero, e.edad" +
-                    ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen],er.fechatoma as [Fecha de toma], er.fecharecep as [Fecha de recepcion]from estudiantes as e" +
+                    ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
                     " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.nombreape like '%"
                    + txtBuscar.Text + "%'");
                 if (dt.Rows.Count > 0)

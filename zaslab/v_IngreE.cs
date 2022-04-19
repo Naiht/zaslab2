@@ -89,7 +89,25 @@ namespace zaslab
 
             for (int i = 0; i < table.Rows.Count; i++)
             {
-                 test = table.Rows[0][1].ToString();
+                 //insert into estudiantes values('codp','nombrep',1,'2000-05-05',15,'',3)
+                string cod = table.Rows[i][0].ToString();
+                string nom = table.Rows[i][1].ToString();
+
+                string fechan = table.Rows[i][2].ToString();
+
+                int genero = int.Parse(table.Rows[i][3].ToString());
+
+                string fecha = "00/00/0000";
+                fecha = string.Format("{0: yyyy-MM-dd}", fechan);
+                DateTime fechaNacimiento = DateTime.Parse(fecha);
+
+                int edad = DateTime.Today.Year - fechaNacimiento.Year;
+
+                if (DateTime.Today < fechaNacimiento.AddYears(edad))
+                    --edad;
+                sql.multiple("insert into estudiantes values('" + cod + "','" + nom + "'," + genero + ",'" + string.Format("{0: yyyy-MM-dd}", fechaNacimiento) + "'," + edad + ",'" + txt_obser.Text + "','3')");
+
+
             }
 
             MessageBox.Show("" + test);
