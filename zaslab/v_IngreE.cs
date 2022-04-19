@@ -60,9 +60,11 @@ namespace zaslab
                 }
 
                 string obser = txt_obser.Text;
+                StreamReader miLectura = File.OpenText("proyecto.txt");
+                string lineaLeida = miLectura.ReadLine();
+                miLectura.Close();
 
-
-                sql.multiple("insert into estudiantes values('" + codigob + "','" + nombrea + "'," + genero + ",'" + string.Format("{0: yyyy-MM-dd}", fechanac) + "'," + edad + ",'" + txt_obser.Text + "')");
+                sql.multiple("insert into estudiantes values('" + codigob + "','" + nombrea + "'," + genero + ",'" + string.Format("{0: yyyy-MM-dd}", fechanac) + "'," + edad + ",'" + txt_obser.Text + "','"+int.Parse(lineaLeida)+"')");
 
                 limpiar();
             }
@@ -87,6 +89,10 @@ namespace zaslab
 
             string test = "";
 
+            StreamReader miLectura = File.OpenText("proyecto.txt");
+            string lineaLeida = miLectura.ReadLine();
+            miLectura.Close();
+
             for (int i = 0; i < table.Rows.Count; i++)
             {
                  //insert into estudiantes values('codp','nombrep',1,'2000-05-05',15,'',3)
@@ -105,12 +111,12 @@ namespace zaslab
 
                 if (DateTime.Today < fechaNacimiento.AddYears(edad))
                     --edad;
-                sql.multiple("insert into estudiantes values('" + cod + "','" + nom + "'," + genero + ",'" + string.Format("{0: yyyy-MM-dd}", fechaNacimiento) + "'," + edad + ",'" + txt_obser.Text + "','3')");
+                sql.multiple("insert into estudiantes values('" + cod + "','" + nom + "'," + genero + ",'" + string.Format("{0: yyyy-MM-dd}", fechaNacimiento) + "'," + edad + ",'" + txt_obser.Text + "','"+int.Parse(lineaLeida)+"')");
 
 
             }
 
-            MessageBox.Show("" + test);
+            MessageBox.Show("Importado correctamente");
 
         }
     }

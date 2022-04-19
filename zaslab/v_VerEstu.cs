@@ -62,9 +62,13 @@ namespace zaslab
             dtgv_verest.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
             dtgv_verest.AllowUserToResizeRows = false;
 
+            StreamReader miLectura = File.OpenText("proyecto.txt");
+            string lineaLeida = miLectura.ReadLine();
+            miLectura.Close();
+
             DataTable tabla;
             tabla = sql.tablas("reparacion", "select e.idb, e.nombreape, g.genero, e.fechanac, e.edad, e.obser from estudiantes e " +
-                "INNER JOIN generos g ON g.idtipo = e.genero where e.proyecto = 2");
+                "INNER JOIN generos g ON g.idtipo = e.genero where e.proyecto = 2 and proyecto = "+int.Parse(lineaLeida));
 
             /*tabla = sql.tablas("reparacion", "select e.idb, e.nombreape, g.genero, e.fechanac, e.edad, e.obser from estudiantes e " +
             "INNER JOIN generos g ON g.idtipo = e.genero where e.proyecto = "+ proy.proy);*/
@@ -88,11 +92,16 @@ namespace zaslab
             dtgv_verest.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
             dtgv_verest.AllowUserToResizeRows = false;
 
+            StreamReader miLectura = File.OpenText("proyecto.txt");
+            string lineaLeida = miLectura.ReadLine();
+            miLectura.Close();
+
+
             if (rdb_id.Checked == true)
             {
 
                 DataTable tabla;
-                tabla = sql.tablas("estudiantes", "select e.idb, e.nombreape, g.genero, e.fechanac, e.edad, e.obser from estudiantes e INNER JOIN generos g ON g.idtipo = e.genero where e.idb like '%" + textBox1.Text + "%'");
+                tabla = sql.tablas("estudiantes", "select e.idb, e.nombreape, g.genero, e.fechanac, e.edad, e.obser from estudiantes e INNER JOIN generos g ON g.idtipo = e.genero where e.idb like '%" + textBox1.Text + "%' and proyecto = "+int.Parse(lineaLeida));
 
                 if (tabla.Rows.Count > 0)
                 {
@@ -108,7 +117,7 @@ namespace zaslab
             else if (rdb_Nombre.Checked == true)
             {
                 DataTable tabla;
-                tabla = sql.tablas("estudiantes", "select e.idb, e.nombreape, g.genero, e.fechanac, e.edad, e.obser from estudiantes e INNER JOIN generos g ON g.idtipo = e.genero where e.nombreape like '%" + textBox1.Text + "%'");
+                tabla = sql.tablas("estudiantes", "select e.idb, e.nombreape, g.genero, e.fechanac, e.edad, e.obser from estudiantes e INNER JOIN generos g ON g.idtipo = e.genero where e.nombreape like '%" + textBox1.Text + "%' and proyecto = " + int.Parse(lineaLeida));
 
                 if (tabla.Rows.Count > 0)
                 {

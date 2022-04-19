@@ -33,12 +33,15 @@ namespace zaslab
             dgvEstudiantes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;//cambia el tamaño de la columna de acuerdo al contenido
 
             dgvEstudiantes.AllowUserToAddRows = false;
-
+            StreamReader miLectura = File.OpenText("proyecto.txt");
+            string lineaLeida = miLectura.ReadLine();
+            miLectura.Close();
+            int proy = int.Parse(lineaLeida);
             DataTable dt;
             dt = sql.tablas("estudiantes", "select e.idb as [Codigo de Beneficiario], e.nombreape as Nombre," +
                  " g.genero as Genero, e.fechanac as [Fecha de Nacimiento]," +
                  " e.edad as Edad, e.obser as Observaciones from estudiantes as e " +
-                 "inner join generos as g on e.genero=g.idtipo  ");
+                 "inner join generos as g on e.genero=g.idtipo where e.proyecto ="+proy);
 
                if (dt.Rows.Count > 0)
                {
@@ -114,13 +117,17 @@ namespace zaslab
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
+            StreamReader miLectura = File.OpenText("proyecto.txt");
+            string lineaLeida = miLectura.ReadLine();
+            miLectura.Close();
+            int proy = int.Parse(lineaLeida);
             if (rbtnNombre.Checked == true)
             {
                 DataTable dt;
                 dt = sql.tablas("estudiantes", "select e.idb as [Codigo de Beneficiario], e.nombreape as Nombre," +
                 " g.genero as Genero, e.fechanac as [Fecha de Nacimiento]," +
                 " e.edad as Edad, e.obser as Observaciones from estudiantes as e " +
-                "inner join generos as g on e.genero=g.idtipo where e.nombreape like '%" + txtBuscar.Text + "%'");
+                "inner join generos as g on e.genero=g.idtipo where e.nombreape like '%" + txtBuscar.Text + "%' and e.proyecto = "+proy);
                  
                 if (dt.Rows.Count > 0)
                 {
@@ -134,7 +141,7 @@ namespace zaslab
                 dt = sql.tablas("estudiantes", "select e.idb as [Codigo de Beneficiario], e.nombreape as Nombre," +
                 " g.genero as Genero, e.fechanac as [Fecha de Nacimiento]," +
                 " e.edad as Edad, e.obser as Observaciones from estudiantes as e " +
-                "inner join generos as g on e.genero=g.idtipo  where e.idb like '%" + txtBuscar.Text + "%'");
+                "inner join generos as g on e.genero=g.idtipo  where e.idb like '%" + txtBuscar.Text + "%' and e.proyecto = "+proy);
                
                 if (dt.Rows.Count > 0)
                 {

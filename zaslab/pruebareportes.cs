@@ -78,10 +78,15 @@ namespace zaslab
                 genero = "Femenino";
             }
 
-            String candea = "Paciente: " + dgvEstudiantes.Rows[fila].Cells[1].Value.ToString() + "" +
+            /*String candea = "Paciente: " + dgvEstudiantes.Rows[fila].Cells[1].Value.ToString() + "" +
                 "\nEdad: " + dgvEstudiantes.Rows[fila].Cells[3].Value.ToString() + " años" +
                 " \nGénero: " + genero +
-                "\nFecha de Toma: " + string.Format("{0: dd-MM-yyyy}", dgvEstudiantes.Rows[fila].Cells[8].Value);
+                "\nFecha de Toma: " + string.Format("{0: dd-MM-yyyy}", dgvEstudiantes.Rows[fila].Cells[8].Value);*/
+
+           String candea = "Paciente: " + dgvEstudiantes.Rows[fila].Cells[1].Value.ToString() + "" +
+                "\nEdad: " + dgvEstudiantes.Rows[fila].Cells[3].Value.ToString() + " años" +
+                " \nGénero: " + genero +
+                "\nFecha de Toma: ";
 
             Paragraph parrafopaci = new Paragraph(candea, contentPas);
             
@@ -1975,22 +1980,27 @@ namespace zaslab
         {
             int tsange = 0, theces=0,torina=0;
 
+            StreamReader miLectura = File.OpenText("proyecto.txt");
+            string lineaLeida = miLectura.ReadLine();
+            miLectura.Close();
+            int proy = int.Parse(lineaLeida);
+
             DataTable dt;
-            dt = sql.tablas("estu","select COUNT(idorina) As Sangre from examrealizados ex INNER JOIN estudiantes e ON e.idb = ex.idestudiante where idorina != 0 and e.proyecto = 2");
+            dt = sql.tablas("estu","select COUNT(idorina) As Sangre from examrealizados ex INNER JOIN estudiantes e ON e.idb = ex.idestudiante where idorina != 0 and e.proyecto = "+proy);
             if (dt.Rows.Count > 0)
             {
                 dgvEstudiantes.DataSource = dt;
                 torina = int.Parse(dgvEstudiantes.Rows[0].Cells[0].Value.ToString());
             }
 
-            dt = sql.tablas("estu", "select COUNT(idheces) As Sangre from examrealizados ex INNER JOIN estudiantes e ON e.idb = ex.idestudiante where idheces != 0 and e.proyecto = 2");
+            dt = sql.tablas("estu", "select COUNT(idheces) As Sangre from examrealizados ex INNER JOIN estudiantes e ON e.idb = ex.idestudiante where idheces != 0 and e.proyecto = " + proy);
             if (dt.Rows.Count > 0)
             {
                 dgvEstudiantes.DataSource = dt;
                 theces = int.Parse(dgvEstudiantes.Rows[0].Cells[0].Value.ToString());
             }
 
-            dt = sql.tablas("estu", "select COUNT(idsangre) As Sangre from examrealizados ex INNER JOIN estudiantes e ON e.idb = ex.idestudiante where idsangre != 0 and e.proyecto = 2");
+            dt = sql.tablas("estu", "select COUNT(idsangre) As Sangre from examrealizados ex INNER JOIN estudiantes e ON e.idb = ex.idestudiante where idsangre != 0 and e.proyecto = " + proy);
             if (dt.Rows.Count > 0)
             {
                 dgvEstudiantes.DataSource = dt;
@@ -2014,13 +2024,17 @@ namespace zaslab
             
             dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombre, g.genero Genero, e.edad as Edad, " +
                 "er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
-                " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante");
+                " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.proyecto = " + proy);
             if (dt.Rows.Count > 0)
             {
                 dgvEstudiantes.DataSource = dt;
                 dgvEstudiantes.Columns[4].Visible = false;
                 dgvEstudiantes.Columns[5].Visible = false;
                 dgvEstudiantes.Columns[6].Visible = false;
+            }
+            else
+            {
+                dgvEstudiantes.DataSource = null;
             }
         }
 
@@ -2070,13 +2084,18 @@ namespace zaslab
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
+            StreamReader miLectura = File.OpenText("proyecto.txt");
+            string lineaLeida = miLectura.ReadLine();
+            miLectura.Close();
+            int proy = int.Parse(lineaLeida);
             if (rbtnNombre.Checked == true)
             {
+
                 DataTable dt;
                 dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombe, g.genero Genero, e.edad" +
                     ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
                     " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.nombreape like '%"
-                   + txtBuscar.Text + "%'");
+                   + txtBuscar.Text + "%' and e.proyecto = "+proy);
                 if (dt.Rows.Count > 0)
                 {
                     dgvEstudiantes.DataSource = dt;
@@ -2093,7 +2112,7 @@ namespace zaslab
                 dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombe, g.genero Genero, e.edad" +
                     ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
                     " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.idb like '%"
-                   + txtBuscar.Text + "%'");
+                   + txtBuscar.Text + "%' and e.proyecto = " + proy);
                 if (dt.Rows.Count > 0)
                 {
                     dgvEstudiantes.DataSource = dt;

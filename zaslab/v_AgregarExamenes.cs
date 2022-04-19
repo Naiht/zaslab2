@@ -18,19 +18,21 @@ namespace zaslab
         }
 
         sqlcon sql = new sqlcon();
-
-       
-
      
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
+
+            StreamReader miLectura = File.OpenText("proyecto.txt");
+            string lineaLeida = miLectura.ReadLine();
+            miLectura.Close();
+            int proy = int.Parse(lineaLeida);
             if (rbtnNombre.Checked == true)
             {
                 DataTable dt;
                 dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombe, g.genero Genero, e.edad" +
                     ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
                     " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.nombreape like '%"
-                   + txtBuscar.Text + "%'");
+                   + txtBuscar.Text + "%' and e.proyecto = "+proy);
                 if (dt.Rows.Count > 0)
                 {
                     dgvEstudiantes.DataSource = dt;
@@ -47,7 +49,7 @@ namespace zaslab
                 dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombe, g.genero Genero, e.edad" +
                     ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
                     " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.idb like '%"
-                   + txtBuscar.Text + "%'");
+                   + txtBuscar.Text + "%' and e.proyecto ="+proy);
                 if (dt.Rows.Count > 0)
                 {
                     dgvEstudiantes.DataSource = dt;
@@ -107,14 +109,17 @@ namespace zaslab
             dgvEstudiantes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;//cambia el tamaño de la columna de acuerdo al contenido
             dgvEstudiantes.AllowUserToAddRows = false;
 
-            
+
 
             // llena el datagridview al cargar el formulario
-
+            StreamReader miLectura = File.OpenText("proyecto.txt");
+            string lineaLeida = miLectura.ReadLine();
+            miLectura.Close();
+            int proy = int.Parse(lineaLeida);
             DataTable dt;
             dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombe, g.genero Genero, e.edad as Edad, " +
                 "er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
-                " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante");
+                " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.proyecto ="+proy);
             if (dt.Rows.Count > 0)
             {
                 dgvEstudiantes.DataSource = dt;

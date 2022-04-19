@@ -8,20 +8,18 @@ namespace zaslab
             InitializeComponent();
 
 
-            StreamWriter miEscritura = File.CreateText("proyecto.txt");
-            miEscritura.WriteLine("2");
-            miEscritura.Close();
 
 
-            // Creamos un objeto para leer el archivo.
-            StreamReader miLectura = File.OpenText("proyecto.txt");
+            if (File.Exists("proyecto.txt"))
+            {
 
-            // Leemos la primera linea del archivo.
-            string lineaLeida = miLectura.ReadLine();
-
-            MessageBox.Show(""+lineaLeida);
-
-            miLectura.Close();
+            }
+            else
+            {
+                StreamWriter miEscritura = File.CreateText("proyecto.txt");
+                miEscritura.WriteLine("2");
+                miEscritura.Close();
+            }
 
         }
 
@@ -56,6 +54,13 @@ namespace zaslab
         private void reportesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pruebareportes ver = new pruebareportes();
+            ver.MdiParent = this;
+            ver.Show();
+        }
+
+        private void proyectoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProySelect ver = new ProySelect();
             ver.MdiParent = this;
             ver.Show();
         }
