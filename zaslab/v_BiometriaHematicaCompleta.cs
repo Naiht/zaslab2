@@ -80,9 +80,16 @@ namespace zaslab
                 txtEosinofilos.Text = dgvdatosexam.Rows[0].Cells[11].Value.ToString();
                 txtBasofilos.Text = dgvdatosexam.Rows[0].Cells[12].Value.ToString();
                 txtObservacion.Text = dgvdatosexam.Rows[0].Cells[14].Value.ToString();
-                dtpTomaMuestra.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[15].Value.ToString());
-                dtpRecepMuestra.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[16].Value.ToString());
-                dtpRegisResultados.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[13].Value.ToString());
+
+                // en caso de los examenes anteriores donde la fecha no era individual este if valida errores al asignar una fecha que esta vacia en la base de datos
+                if (dgvdatosexam.Rows[0].Cells[15].Value.ToString() != "" && dgvdatosexam.Rows[0].Cells[16].Value.ToString() != "" && dgvdatosexam.Rows[0].Cells[13].Value.ToString() != "")
+                {
+                    //MessageBox.Show("" + dgvdatosexam.Rows[0].Cells[6].Value.ToString()+"" + dgvdatosexam.Rows[0].Cells[7].Value.ToString() +""+ dgvdatosexam.Rows[0].Cells[4].Value.ToString());
+                    dtpTomaMuestra.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[15].Value.ToString());
+                    dtpRecepMuestra.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[16].Value.ToString());
+                    dtpRegisResultados.Value = DateTime.Parse(dgvdatosexam.Rows[0].Cells[13].Value.ToString());
+                }
+
             }
 
 
