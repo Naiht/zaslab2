@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExcelDataReader;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace zaslab
     {
         public v_IngreE()
         {
-            InitializeComponent();     
+            InitializeComponent();
 
         }
         private void v_IngreE_Load(object sender, EventArgs e)
@@ -44,7 +45,7 @@ namespace zaslab
 
             DialogResult dr = MessageBox.Show("¿Son corretos los datos?", "Datos", MessageBoxButtons.YesNo);
 
-            if(dr == DialogResult.Yes){
+            if (dr == DialogResult.Yes) {
                 string codigob = txt_id.Text;
                 string nombrea = txt_nombrea.Text;
                 int genero = cmb_Genero.SelectedIndex;
@@ -61,7 +62,7 @@ namespace zaslab
                 string obser = txt_obser.Text;
 
 
-                sql.multiple("insert into estudiantes values('" + codigob + "','" + nombrea + "'," + genero + ",'" + string.Format("{0: yyyy-MM-dd}", fechanac) + "'," + edad + ",'"+txt_obser.Text+"')");
+                sql.multiple("insert into estudiantes values('" + codigob + "','" + nombrea + "'," + genero + ",'" + string.Format("{0: yyyy-MM-dd}", fechanac) + "'," + edad + ",'" + txt_obser.Text + "')");
 
                 limpiar();
             }
@@ -74,5 +75,25 @@ namespace zaslab
             vali.limpiarfrm(this);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FileStream fStream = File.Open(@"C:\Users\Na1hT\Desktop\Libro1.xlsx", FileMode.Open, FileAccess.Read);
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+            IExcelDataReader excelDataReader = ExcelReaderFactory.CreateOpenXmlReader(fStream);
+            DataSet resultDataSet = excelDataReader.AsDataSet();
+            excelDataReader.Close();
+
+            DataTable table = resultDataSet.Tables[0];
+
+            string test = "";
+
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                 test = table.Rows[0][1].ToString();
+            }
+
+            MessageBox.Show("" + test);
+
+        }
     }
 }
