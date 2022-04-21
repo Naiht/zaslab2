@@ -68,7 +68,7 @@ namespace zaslab
 
             DataTable tabla;
             tabla = sql.tablas("reparacion", "select e.idb, e.nombreape, g.genero, e.fechanac, e.edad, e.obser from estudiantes e " +
-                "INNER JOIN generos g ON g.idtipo = e.genero where e.proyecto = 2 and proyecto = "+int.Parse(lineaLeida));
+                "INNER JOIN generos g ON g.idtipo = e.genero where proyecto = "+int.Parse(lineaLeida));
 
             /*tabla = sql.tablas("reparacion", "select e.idb, e.nombreape, g.genero, e.fechanac, e.edad, e.obser from estudiantes e " +
             "INNER JOIN generos g ON g.idtipo = e.genero where e.proyecto = "+ proy.proy);*/

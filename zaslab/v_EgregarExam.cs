@@ -177,6 +177,7 @@ namespace zaslab
             {
                 if (txtNumExam.Text != "")
                 {
+
                     if (chbSangre.Checked == true)
                     {
                         sql.multiple("insert into sangre values('','','','','','','','','','','','','" + string.Format("{0: yyyy-MM-dd}", DateTime.Today) + "','','" + string.Format("{0: yyyy-MM-dd}", DateTime.Today) + "','" + string.Format("{0: yyyy-MM-dd}", DateTime.Today) + "')");
@@ -272,7 +273,7 @@ namespace zaslab
                 {
                     if (int.Parse(dgvdatos.Rows[0].Cells[5].Value.ToString()) == 0)
                     {
-                        sql.multiple("insert into sangre values('','','','','','','','','','','" + string.Format("{0: yyyy-MM-dd}", DateTime.Today) + "','','" + string.Format("{0: yyyy-MM-dd}", DateTime.Today) + "','" + string.Format("{0: yyyy-MM-dd}", DateTime.Today) + "')");
+                        sql.multiple("insert into sangre values('','','','','','','','','','','','','" + string.Format("{0: yyyy-MM-dd}", DateTime.Today) + "','','" + string.Format("{0: yyyy-MM-dd}", DateTime.Today) + "','" + string.Format("{0: yyyy-MM-dd}", DateTime.Today) + "')");
                         ultimoexamen("sangre");
                         sql.multiple("update examrealizados set idsangre = " + valor + " where idestudiante = '" + lbId.Text + "'");
                     }
@@ -316,6 +317,7 @@ namespace zaslab
                     sql.multiple("delete from heces where id=" + int.Parse(dgvdatos.Rows[0].Cells[3].Value.ToString()));
                     sql.multiple("update examrealizados set idheces = 0 where idestudiante = '" + lbId.Text + "'");
                 }
+                sql.multiple("update examrealizados set numexamen  = " + txtNumExam.Text + " where idestudiante = '" + lbId.Text + "'");
             }
 
             lbId.Text = "";

@@ -25,7 +25,7 @@ namespace zaslab
         string repnombre = @"\img\Logo.png";
         string repcod = "";
         string logo = Environment.CurrentDirectory + @"\img\Logo.jpg";
-
+        string repnumexam = "";
         iTextSharp.text.Font contentFontEnca = iTextSharp.text.FontFactory.GetFont("Webdings", 10, iTextSharp.text.Font.BOLD);
         iTextSharp.text.Font contentPas = iTextSharp.text.FontFactory.GetFont("Webdings", 10, iTextSharp.text.Font.NORMAL);
 
@@ -33,13 +33,14 @@ namespace zaslab
         float[] medidaCeldas = { 0.90f, 1.60f, 0.60f, 0.40f };
 
         public void reporte(int fila, string folderPath) {
+            repnumexam = dgvEstudiantes.Rows[fila].Cells[7].Value.ToString();
             repnombre = dgvEstudiantes.Rows[fila].Cells[1].Value.ToString();//Version que utiliza el nombre del pasciente
             repcod = dgvEstudiantes.Rows[fila].Cells[0].Value.ToString();
 
             //repnombre = dgvEstudiantes.Rows[fila].Cells[7].Value.ToString();//Version que utilza codigos de examen
 
 
-            FileStream fs = new FileStream(@"" + folderPath + (repnombre+"-"+repcod) + ".pdf", FileMode.Create);
+            FileStream fs = new FileStream(@"" + folderPath + (repnumexam + "-" + repnombre + "-" + repcod) + ".pdf", FileMode.Create);
             Document doc = new Document(PageSize.LETTER, 20, 20, 30, 5);
             PdfWriter pw = PdfWriter.GetInstance(doc, fs);
 
@@ -48,12 +49,12 @@ namespace zaslab
             iTextSharp.text.Image imagen = iTextSharp.text.Image.GetInstance(logo);
             imagen.BorderWidth = 0;
             imagen.Alignment = Element.ALIGN_LEFT;
-            imagen.SetAbsolutePosition(18f,690);
+            imagen.SetAbsolutePosition(18f, 690);
 
             float percentage = 0.0f;
             percentage = 150 / imagen.Width;
             imagen.ScalePercent(percentage * 50);
-            
+
 
             // Insertamos la imagen en el documento
             doc.Add(imagen);
@@ -83,13 +84,13 @@ namespace zaslab
                 " \nGénero: " + genero +
                 "\nFecha de Toma: " + string.Format("{0: dd-MM-yyyy}", dgvEstudiantes.Rows[fila].Cells[8].Value);*/
 
-           String candea = "Paciente: " + dgvEstudiantes.Rows[fila].Cells[1].Value.ToString() + "" +
-                "\nEdad: " + dgvEstudiantes.Rows[fila].Cells[3].Value.ToString() + " años" +
-                " \nGénero: " + genero +
-                "\nFecha de Toma: ";
+            String candea = "Paciente: " + dgvEstudiantes.Rows[fila].Cells[1].Value.ToString() + "" +
+                 "\nEdad: " + dgvEstudiantes.Rows[fila].Cells[3].Value.ToString() + " años" +
+                 " \nGénero: " + genero +
+                 "\nFecha de Toma: " + fechas();
 
             Paragraph parrafopaci = new Paragraph(candea, contentPas);
-            
+
 
             //parrafopaci.Add();
 
@@ -103,7 +104,7 @@ namespace zaslab
             // ASIGNAS LAS MEDIDAS A LA TABLA (ANCHO)
             tbl.SetWidths(medidaCeldas);
 
-            Paragraph txtnombre = new Paragraph("Nombre",contentFontEnca);
+            Paragraph txtnombre = new Paragraph("Nombre", contentFontEnca);
             //txtnombre.Add("Nombre examen");
             txtnombre.Alignment = Element.ALIGN_LEFT;
             PdfPCell clNombre = new PdfPCell();
@@ -125,7 +126,7 @@ namespace zaslab
 
             tbl.AddCell(clResultado);
             //---------------------
-            Paragraph txtRef = new Paragraph("Valor de referencia",contentFontEnca);
+            Paragraph txtRef = new Paragraph("Valor de referencia", contentFontEnca);
             //txtRef.Add("Valores de Referencia");
             txtRef.Alignment = Element.ALIGN_LEFT;
             PdfPCell clValoresRef = new PdfPCell();
@@ -137,7 +138,7 @@ namespace zaslab
             tbl.AddCell(clValoresRef);
 
             //--------------------------
-            Paragraph txtuni = new Paragraph("Unidad",contentFontEnca);
+            Paragraph txtuni = new Paragraph("Unidad", contentFontEnca);
             //txtuni.Add("Unidad");
             txtuni.Alignment = Element.ALIGN_LEFT;
             PdfPCell clunidad = new PdfPCell();
@@ -173,12 +174,12 @@ namespace zaslab
             NumExam.Alignment = Element.ALIGN_RIGHT;
             doc.Add(NumExam);
 
-            Paragraph obser = new Paragraph("Observación: ",contentFont2);
+            Paragraph obser = new Paragraph("Observación: ", contentFont2);
             obser.Alignment = Element.ALIGN_LEFT;
             doc.Add(obser);
 
 
-            Paragraph Piedepagi = new Paragraph("BIOANALISTA CLINICO\nTodos los dias ayudamos a las personas a vivir mejor su vida",contentFont);
+            Paragraph Piedepagi = new Paragraph("BIOANALISTA CLINICO\nTodos los dias ayudamos a las personas a vivir mejor su vida", contentFont);
             Piedepagi.Alignment = Element.ALIGN_CENTER;
             doc.Add(Piedepagi);
 
@@ -189,7 +190,7 @@ namespace zaslab
             pw.Close();
         }
 
- 
+
 
         sqlcon sql = new sqlcon();
 
@@ -202,16 +203,60 @@ namespace zaslab
         iTextSharp.text.Font contentFont = iTextSharp.text.FontFactory.GetFont("Webdings", 8, iTextSharp.text.Font.BOLD);
         iTextSharp.text.Font contentFont2 = iTextSharp.text.FontFactory.GetFont("Webdings", 8, iTextSharp.text.Font.NORMAL);
 
-        
+
         float pad = -5;
         float padr = -5;
         float primero = -3;
+
+        public string fechas()
+        {
+            string fecha = "";
+
+            DataTable sangre;
+            sangre = sql.tablas("sangre", "select * from sangre where id=" + sangree);
+            if (sangre.Rows.Count > 0)
+            {
+                dgv_resultado.DataSource = sangre;
+                fecha = string.Format("{0: dd-MM-yyyy}", dgv_resultado.Rows[0].Cells[14].Value);
+            }
+            else
+            {
+                fecha = "";
+            }
+
+            DataTable heces;
+            heces = sql.tablas("sangre", "select * from heces where id=" + hecese);
+            if (heces.Rows.Count > 0)
+            {
+                dgv_resultado.DataSource = heces;
+
+                fecha = string.Format("{0: dd-MM-yyyy}", dgv_resultado.Rows[0].Cells[4].Value);
+            }
+            else
+            {
+                fecha = "";
+            }
+
+            DataTable orina;
+            orina = sql.tablas("sangre", "select * from orina where id= " + orinae);
+            if (orina.Rows.Count > 0)
+            {
+                dgv_resultado.DataSource = orina;
+                fecha = string.Format("{0: dd-MM-yyyy}", dgv_resultado.Rows[0].Cells[20].Value);
+            }
+            else
+            {
+                fecha = "";
+            }
+
+            return fecha;
+        }
 
         public void sangret(Document doc)
         {
 
             DataTable sangre;
-            sangre = sql.tablas("sangre", "select * from sangre where id="+sangree);
+            sangre = sql.tablas("sangre", "select * from sangre where id=" + sangree);
             //heces = sql.tablas("sangre", "select * from sangre where id= 3");
             if (sangre.Rows.Count > 0)
             {
@@ -222,7 +267,7 @@ namespace zaslab
                 return;
             }
 
-            Paragraph nom = new Paragraph("",contentFont);
+            Paragraph nom = new Paragraph("", contentFont);
             nom.Clear();
             nom.Add("Biometria Hemática Completa (BHC) \n");
             doc.Add(new Paragraph(""));
@@ -767,13 +812,12 @@ namespace zaslab
 
         }
 
-
         public void hecest(Document doc)
         {
 
             DataTable heces;
             //heces = sql.tablas("sangre", "select * from heces where id= 3");
-            heces = sql.tablas("sangre", "select * from heces where id="+hecese);
+            heces = sql.tablas("sangre", "select * from heces where id=" + hecese);
             if (heces.Rows.Count > 0)
             {
                 dgv_resultado.DataSource = heces;
@@ -783,7 +827,7 @@ namespace zaslab
             }
 
 
-            Paragraph nom = new Paragraph("",contentFont);
+            Paragraph nom = new Paragraph("", contentFont);
             nom.Clear();
             nom.Add("Examen General de Heces (EGH) \n");
             doc.Add(new Paragraph(""));
@@ -979,7 +1023,7 @@ namespace zaslab
         private void orinat(Document doc) {
 
             DataTable orina;
-            orina = sql.tablas("sangre", "select * from orina where id= "+ orinae);
+            orina = sql.tablas("sangre", "select * from orina where id= " + orinae);
             if (orina.Rows.Count > 0)
             {
                 dgv_resultado.DataSource = orina;
@@ -1976,9 +2020,14 @@ namespace zaslab
             MessageBox.Show("Reporte Generado Exitosamente");
         }
 
+
+        repTotalExamn test = new repTotalExamn();
+
+
         private void pruebareportes_Load(object sender, EventArgs e)
         {
-            int tsange = 0, theces=0,torina=0;
+
+            int tsange = 0, theces = 0, torina = 0;
 
             StreamReader miLectura = File.OpenText("proyecto.txt");
             string lineaLeida = miLectura.ReadLine();
@@ -1986,7 +2035,7 @@ namespace zaslab
             int proy = int.Parse(lineaLeida);
 
             DataTable dt;
-            dt = sql.tablas("estu","select COUNT(idorina) As Sangre from examrealizados ex INNER JOIN estudiantes e ON e.idb = ex.idestudiante where idorina != 0 and e.proyecto = "+proy);
+            dt = sql.tablas("estu", "select COUNT(idorina) As Sangre from examrealizados ex INNER JOIN estudiantes e ON e.idb = ex.idestudiante where idorina != 0 and e.proyecto = " + proy);
             if (dt.Rows.Count > 0)
             {
                 dgvEstudiantes.DataSource = dt;
@@ -2007,7 +2056,7 @@ namespace zaslab
                 tsange = int.Parse(dgvEstudiantes.Rows[0].Cells[0].Value.ToString());
             }
 
-            lbl_total.Text = "EGO: "+torina+ " EGH: " + theces + " BHC: "+tsange;
+            lbl_total.Text = "EGO: " + torina + " EGH: " + theces + " BHC: " + tsange;
 
             this.MaximizeBox = false;
             dgvEstudiantes.ReadOnly = true;
@@ -2021,7 +2070,7 @@ namespace zaslab
 
             // llena el datagridview al cargar el formulario
 
-            
+
             dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombre, g.genero Genero, e.edad as Edad, " +
                 "er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
                 " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.proyecto = " + proy);
@@ -2068,7 +2117,7 @@ namespace zaslab
                 return;
             }
 
-            fila = dgvEstudiantes.RowCount-1;
+            fila = dgvEstudiantes.RowCount - 1;
             while (fila >= 0)
             {
                 hecese = int.Parse(dgvEstudiantes.Rows[fila].Cells[4].Value.ToString());
@@ -2095,7 +2144,7 @@ namespace zaslab
                 dt = sql.tablas("estudiantes", "select e.idb as[Codigo de Beneficiario], e.nombreape as Nombe, g.genero Genero, e.edad" +
                     ", er.idheces as Heces, er.idorina as Orina, er.idsangre as Sangre, er.numexamen as [numero de examen] from estudiantes as e" +
                     " inner join generos as g on e.genero=g.idtipo inner join examrealizados as er on e.idb = er.idestudiante where e.nombreape like '%"
-                   + txtBuscar.Text + "%' and e.proyecto = "+proy);
+                   + txtBuscar.Text + "%' and e.proyecto = " + proy);
                 if (dt.Rows.Count > 0)
                 {
                     dgvEstudiantes.DataSource = dt;
@@ -2122,6 +2171,60 @@ namespace zaslab
                 }
 
             }
+        }
+
+        private void btn_generartotal_Click(object sender, EventArgs e)
+        {
+            string dummyFileName = "Guardar aqui";
+
+            SaveFileDialog sf = new SaveFileDialog();
+            // Feed the dummy name to the save dialog
+            sf.FileName = dummyFileName;
+            string folderPath = "";
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                // Now here's our save folder
+                folderPath = Path.GetDirectoryName(sf.FileName);
+                folderPath += @"\";
+                // Do whatever
+            }
+            else
+            {
+                return;
+            }
+            int torina = 0, theces = 0, tsange = 0;
+            StreamReader miLectura = File.OpenText("proyecto.txt");
+            string lineaLeida = miLectura.ReadLine();
+            miLectura.Close();
+            int proy = int.Parse(lineaLeida);
+
+            string fecha = "" + string.Format("{0: yyyy-MM-dd}", DateTime.Today);
+
+            DataTable dt;
+            dt = sql.tablas("estu", "select COUNT(idorina) As Sangre from examrealizados ex INNER JOIN estudiantes e ON e.idb = ex.idestudiante INNER JOIN orina o ON ex.idorina = o.id where idorina != 0 and e.proyecto = " + proy + " and o.fecharecep = '"+fecha+"'");
+            if (dt.Rows.Count > 0)
+            {
+                // dgvEstudiantes.DataSource = dt;
+                torina = int.Parse(dt.Rows[0][0].ToString());
+            }
+
+            dt = sql.tablas("estu", "select COUNT(idheces) As Sangre from examrealizados ex INNER JOIN estudiantes e ON e.idb = ex.idestudiante INNER JOIN heces h ON ex.idheces = h.id where idheces != 0 and e.proyecto = " + proy+ " and h.fecharecep = '" + fecha + "'");
+            if (dt.Rows.Count > 0)
+            {
+                //dgvEstudiantes.DataSource = dt;
+                theces = int.Parse(dt.Rows[0][0].ToString());
+            }
+
+            dt = sql.tablas("estu", "select COUNT(idsangre) As Sangre from examrealizados ex INNER JOIN estudiantes e ON e.idb = ex.idestudiante INNER JOIN sangre s ON ex.idsangre = s.id where idsangre != 0 and e.proyecto = " + proy + " and s.fecharecep = '" + fecha + "'");
+            if (dt.Rows.Count > 0)
+            {
+                //dgvEstudiantes.DataSource = dt;
+                tsange = int.Parse(dt.Rows[0][0].ToString());
+            }
+
+            String total = "BHC:" + tsange + " EGO: " + torina + "EGH: "+theces ;
+
+            test.reporte(folderPath,total);
         }
     }
 }

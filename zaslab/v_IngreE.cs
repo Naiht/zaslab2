@@ -113,7 +113,7 @@ namespace zaslab
                     --edad;
                 sql.multiple("insert into estudiantes values('" + cod + "','" + nom + "'," + genero + ",'" + string.Format("{0: yyyy-MM-dd}", fechaNacimiento) + "'," + edad + ",'" + txt_obser.Text + "','"+int.Parse(lineaLeida)+"')");
 
-
+            
             }
 
             MessageBox.Show("Importado correctamente");

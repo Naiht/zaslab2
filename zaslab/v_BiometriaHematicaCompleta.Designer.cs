@@ -83,175 +83,182 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 20);
+            this.label1.Location = new System.Drawing.Point(33, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 15);
+            this.label1.Size = new System.Drawing.Size(109, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Globulos Rojos";
             // 
             // txtGlobulosRojos
             // 
-            this.txtGlobulosRojos.Location = new System.Drawing.Point(121, 12);
+            this.txtGlobulosRojos.Location = new System.Drawing.Point(138, 16);
+            this.txtGlobulosRojos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGlobulosRojos.Name = "txtGlobulosRojos";
-            this.txtGlobulosRojos.Size = new System.Drawing.Size(100, 23);
+            this.txtGlobulosRojos.Size = new System.Drawing.Size(114, 27);
             this.txtGlobulosRojos.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 49);
+            this.label2.Location = new System.Drawing.Point(33, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 15);
+            this.label2.Size = new System.Drawing.Size(93, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Hematocrito";
             // 
             // txtHematocrito
             // 
-            this.txtHematocrito.Location = new System.Drawing.Point(121, 41);
+            this.txtHematocrito.Location = new System.Drawing.Point(138, 55);
+            this.txtHematocrito.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHematocrito.Name = "txtHematocrito";
-            this.txtHematocrito.Size = new System.Drawing.Size(100, 23);
+            this.txtHematocrito.Size = new System.Drawing.Size(114, 27);
             this.txtHematocrito.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(227, 20);
+            this.label3.Location = new System.Drawing.Point(259, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 15);
+            this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "x10^6/uL";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(227, 49);
+            this.label4.Location = new System.Drawing.Point(259, 65);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(17, 15);
+            this.label4.Size = new System.Drawing.Size(21, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "%";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(227, 78);
+            this.label5.Location = new System.Drawing.Point(259, 104);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 15);
+            this.label5.Size = new System.Drawing.Size(37, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "g/dl";
             // 
             // txtHemoglobina
             // 
-            this.txtHemoglobina.Location = new System.Drawing.Point(121, 70);
+            this.txtHemoglobina.Location = new System.Drawing.Point(138, 93);
+            this.txtHemoglobina.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHemoglobina.Name = "txtHemoglobina";
-            this.txtHemoglobina.Size = new System.Drawing.Size(100, 23);
+            this.txtHemoglobina.Size = new System.Drawing.Size(114, 27);
             this.txtHemoglobina.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 78);
+            this.label6.Location = new System.Drawing.Point(33, 104);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 15);
+            this.label6.Size = new System.Drawing.Size(101, 20);
             this.label6.TabIndex = 6;
             this.label6.Text = "Hemoglobina";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(227, 107);
+            this.label7.Location = new System.Drawing.Point(259, 143);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 15);
+            this.label7.Size = new System.Drawing.Size(70, 20);
             this.label7.TabIndex = 11;
             this.label7.Text = "mil/mm3";
             // 
             // txtLeucocitos
             // 
-            this.txtLeucocitos.Location = new System.Drawing.Point(121, 99);
+            this.txtLeucocitos.Location = new System.Drawing.Point(138, 132);
+            this.txtLeucocitos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLeucocitos.Name = "txtLeucocitos";
-            this.txtLeucocitos.Size = new System.Drawing.Size(100, 23);
+            this.txtLeucocitos.Size = new System.Drawing.Size(114, 27);
             this.txtLeucocitos.TabIndex = 10;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 107);
+            this.label8.Location = new System.Drawing.Point(33, 143);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 15);
+            this.label8.Size = new System.Drawing.Size(79, 20);
             this.label8.TabIndex = 9;
             this.label8.Text = "Leucocitos";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(227, 136);
+            this.label9.Location = new System.Drawing.Point(259, 181);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(17, 15);
+            this.label9.Size = new System.Drawing.Size(21, 20);
             this.label9.TabIndex = 14;
             this.label9.Text = "fL";
             // 
             // txtMCV
             // 
-            this.txtMCV.Location = new System.Drawing.Point(121, 128);
+            this.txtMCV.Location = new System.Drawing.Point(138, 171);
+            this.txtMCV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMCV.Name = "txtMCV";
-            this.txtMCV.Size = new System.Drawing.Size(100, 23);
+            this.txtMCV.Size = new System.Drawing.Size(114, 27);
             this.txtMCV.TabIndex = 13;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(29, 136);
+            this.label10.Location = new System.Drawing.Point(33, 181);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 15);
+            this.label10.Size = new System.Drawing.Size(40, 20);
             this.label10.TabIndex = 12;
             this.label10.Text = "MCV";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(227, 165);
+            this.label11.Location = new System.Drawing.Point(259, 220);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(20, 15);
+            this.label11.Size = new System.Drawing.Size(25, 20);
             this.label11.TabIndex = 17;
             this.label11.Text = "pL";
             // 
             // txtMCH
             // 
-            this.txtMCH.Location = new System.Drawing.Point(121, 157);
+            this.txtMCH.Location = new System.Drawing.Point(138, 209);
+            this.txtMCH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMCH.Name = "txtMCH";
-            this.txtMCH.Size = new System.Drawing.Size(100, 23);
+            this.txtMCH.Size = new System.Drawing.Size(114, 27);
             this.txtMCH.TabIndex = 16;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(29, 165);
+            this.label12.Location = new System.Drawing.Point(33, 220);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 15);
+            this.label12.Size = new System.Drawing.Size(42, 20);
             this.label12.TabIndex = 15;
             this.label12.Text = "MCH";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(227, 194);
+            this.label13.Location = new System.Drawing.Point(259, 259);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 15);
+            this.label13.Size = new System.Drawing.Size(40, 20);
             this.label13.TabIndex = 20;
             this.label13.Text = "g/dL";
             // 
             // txtMCHC
             // 
-            this.txtMCHC.Location = new System.Drawing.Point(121, 186);
+            this.txtMCHC.Location = new System.Drawing.Point(138, 248);
+            this.txtMCHC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMCHC.Name = "txtMCHC";
-            this.txtMCHC.Size = new System.Drawing.Size(100, 23);
+            this.txtMCHC.Size = new System.Drawing.Size(114, 27);
             this.txtMCHC.TabIndex = 19;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(29, 194);
+            this.label14.Location = new System.Drawing.Point(33, 259);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(43, 15);
+            this.label14.Size = new System.Drawing.Size(51, 20);
             this.label14.TabIndex = 18;
             this.label14.Text = "MCHC";
             // 
@@ -272,9 +279,11 @@
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.txtNeutrofilos);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Location = new System.Drawing.Point(23, 219);
+            this.groupBox1.Location = new System.Drawing.Point(26, 292);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(277, 166);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(317, 221);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DIFERENCIAL";
@@ -282,133 +291,139 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(204, 146);
+            this.label23.Location = new System.Drawing.Point(233, 195);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(17, 15);
+            this.label23.Size = new System.Drawing.Size(21, 20);
             this.label23.TabIndex = 24;
             this.label23.Text = "%";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(204, 117);
+            this.label21.Location = new System.Drawing.Point(233, 156);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(17, 15);
+            this.label21.Size = new System.Drawing.Size(21, 20);
             this.label21.TabIndex = 16;
             this.label21.Text = "%";
             // 
             // txtBasofilos
             // 
-            this.txtBasofilos.Location = new System.Drawing.Point(98, 138);
+            this.txtBasofilos.Location = new System.Drawing.Point(112, 184);
+            this.txtBasofilos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBasofilos.Name = "txtBasofilos";
-            this.txtBasofilos.Size = new System.Drawing.Size(100, 23);
+            this.txtBasofilos.Size = new System.Drawing.Size(114, 27);
             this.txtBasofilos.TabIndex = 23;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 146);
+            this.label24.Location = new System.Drawing.Point(7, 195);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(54, 15);
+            this.label24.Size = new System.Drawing.Size(69, 20);
             this.label24.TabIndex = 22;
             this.label24.Text = "Basofilos";
             // 
             // txtEosinofilos
             // 
-            this.txtEosinofilos.Location = new System.Drawing.Point(98, 109);
+            this.txtEosinofilos.Location = new System.Drawing.Point(112, 145);
+            this.txtEosinofilos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEosinofilos.Name = "txtEosinofilos";
-            this.txtEosinofilos.Size = new System.Drawing.Size(100, 23);
+            this.txtEosinofilos.Size = new System.Drawing.Size(114, 27);
             this.txtEosinofilos.TabIndex = 15;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 117);
+            this.label22.Location = new System.Drawing.Point(7, 156);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(64, 15);
+            this.label22.Size = new System.Drawing.Size(81, 20);
             this.label22.TabIndex = 14;
             this.label22.Text = "Eosinofilos";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(204, 88);
+            this.label19.Location = new System.Drawing.Point(233, 117);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(17, 15);
+            this.label19.Size = new System.Drawing.Size(21, 20);
             this.label19.TabIndex = 13;
             this.label19.Text = "%";
             // 
             // txtMonocitos
             // 
-            this.txtMonocitos.Location = new System.Drawing.Point(98, 80);
+            this.txtMonocitos.Location = new System.Drawing.Point(112, 107);
+            this.txtMonocitos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMonocitos.Name = "txtMonocitos";
-            this.txtMonocitos.Size = new System.Drawing.Size(100, 23);
+            this.txtMonocitos.Size = new System.Drawing.Size(114, 27);
             this.txtMonocitos.TabIndex = 12;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 88);
+            this.label20.Location = new System.Drawing.Point(7, 117);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(64, 15);
+            this.label20.Size = new System.Drawing.Size(79, 20);
             this.label20.TabIndex = 11;
             this.label20.Text = "Monocitos";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(204, 59);
+            this.label17.Location = new System.Drawing.Point(233, 79);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(17, 15);
+            this.label17.Size = new System.Drawing.Size(21, 20);
             this.label17.TabIndex = 10;
             this.label17.Text = "%";
             // 
             // txtLinfocitos
             // 
-            this.txtLinfocitos.Location = new System.Drawing.Point(98, 51);
+            this.txtLinfocitos.Location = new System.Drawing.Point(112, 68);
+            this.txtLinfocitos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLinfocitos.Name = "txtLinfocitos";
-            this.txtLinfocitos.Size = new System.Drawing.Size(100, 23);
+            this.txtLinfocitos.Size = new System.Drawing.Size(114, 27);
             this.txtLinfocitos.TabIndex = 9;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 59);
+            this.label18.Location = new System.Drawing.Point(7, 79);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(59, 15);
+            this.label18.Size = new System.Drawing.Size(73, 20);
             this.label18.TabIndex = 8;
             this.label18.Text = "Linfocitos";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(204, 30);
+            this.label15.Location = new System.Drawing.Point(233, 40);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(17, 15);
+            this.label15.Size = new System.Drawing.Size(21, 20);
             this.label15.TabIndex = 7;
             this.label15.Text = "%";
             // 
             // txtNeutrofilos
             // 
-            this.txtNeutrofilos.Location = new System.Drawing.Point(98, 22);
+            this.txtNeutrofilos.Location = new System.Drawing.Point(112, 29);
+            this.txtNeutrofilos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNeutrofilos.Name = "txtNeutrofilos";
-            this.txtNeutrofilos.Size = new System.Drawing.Size(100, 23);
+            this.txtNeutrofilos.Size = new System.Drawing.Size(114, 27);
             this.txtNeutrofilos.TabIndex = 6;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 30);
+            this.label16.Location = new System.Drawing.Point(7, 40);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 15);
+            this.label16.Size = new System.Drawing.Size(83, 20);
             this.label16.TabIndex = 5;
             this.label16.Text = "Neutrofilos";
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(40, 400);
+            this.btnGuardar.Location = new System.Drawing.Point(46, 533);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(86, 31);
             this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -416,9 +431,10 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(170, 400);
+            this.btnCancelar.Location = new System.Drawing.Point(194, 533);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(86, 31);
             this.btnCancelar.TabIndex = 23;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -426,88 +442,94 @@
             // 
             // txtObservacion
             // 
-            this.txtObservacion.Location = new System.Drawing.Point(319, 41);
+            this.txtObservacion.Location = new System.Drawing.Point(365, 55);
+            this.txtObservacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(259, 139);
+            this.txtObservacion.Size = new System.Drawing.Size(295, 184);
             this.txtObservacion.TabIndex = 25;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(319, 20);
+            this.label27.Location = new System.Drawing.Point(365, 27);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(84, 15);
+            this.label27.Size = new System.Drawing.Size(105, 20);
             this.label27.TabIndex = 26;
             this.label27.Text = "Observaciones";
             // 
             // dgvdatosexam
             // 
             this.dgvdatosexam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvdatosexam.Location = new System.Drawing.Point(338, 365);
+            this.dgvdatosexam.Location = new System.Drawing.Point(386, 487);
+            this.dgvdatosexam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvdatosexam.Name = "dgvdatosexam";
+            this.dgvdatosexam.RowHeadersWidth = 51;
             this.dgvdatosexam.RowTemplate.Height = 25;
-            this.dgvdatosexam.Size = new System.Drawing.Size(240, 68);
+            this.dgvdatosexam.Size = new System.Drawing.Size(274, 91);
             this.dgvdatosexam.TabIndex = 27;
             this.dgvdatosexam.Visible = false;
             // 
             // dtpTomaMuestra
             // 
             this.dtpTomaMuestra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTomaMuestra.Location = new System.Drawing.Point(472, 241);
+            this.dtpTomaMuestra.Location = new System.Drawing.Point(556, 327);
+            this.dtpTomaMuestra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpTomaMuestra.Name = "dtpTomaMuestra";
-            this.dtpTomaMuestra.Size = new System.Drawing.Size(106, 23);
+            this.dtpTomaMuestra.Size = new System.Drawing.Size(121, 27);
             this.dtpTomaMuestra.TabIndex = 28;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(319, 249);
+            this.label25.Location = new System.Drawing.Point(365, 332);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(110, 15);
+            this.label25.Size = new System.Drawing.Size(140, 20);
             this.label25.TabIndex = 29;
             this.label25.Text = "Toma de la Muestra";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(319, 278);
+            this.label26.Location = new System.Drawing.Point(365, 371);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(136, 15);
+            this.label26.Size = new System.Drawing.Size(172, 20);
             this.label26.TabIndex = 31;
             this.label26.Text = "Recepción de la Muestra";
             // 
             // dtpRecepMuestra
             // 
             this.dtpRecepMuestra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpRecepMuestra.Location = new System.Drawing.Point(472, 270);
+            this.dtpRecepMuestra.Location = new System.Drawing.Point(556, 366);
+            this.dtpRecepMuestra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpRecepMuestra.Name = "dtpRecepMuestra";
-            this.dtpRecepMuestra.Size = new System.Drawing.Size(106, 23);
+            this.dtpRecepMuestra.Size = new System.Drawing.Size(121, 27);
             this.dtpRecepMuestra.TabIndex = 30;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(319, 307);
+            this.label28.Location = new System.Drawing.Point(365, 409);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(144, 15);
+            this.label28.Size = new System.Drawing.Size(184, 20);
             this.label28.TabIndex = 33;
             this.label28.Text = "Registro de los Resultados";
             // 
             // dtpRegisResultados
             // 
             this.dtpRegisResultados.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpRegisResultados.Location = new System.Drawing.Point(472, 299);
+            this.dtpRegisResultados.Location = new System.Drawing.Point(556, 405);
+            this.dtpRegisResultados.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpRegisResultados.Name = "dtpRegisResultados";
-            this.dtpRegisResultados.Size = new System.Drawing.Size(106, 23);
+            this.dtpRegisResultados.Size = new System.Drawing.Size(121, 27);
             this.dtpRegisResultados.TabIndex = 32;
             // 
             // v_BiometriaHematicaCompleta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(609, 445);
+            this.ClientSize = new System.Drawing.Size(696, 593);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.dtpRegisResultados);
             this.Controls.Add(this.label26);
@@ -541,6 +563,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtGlobulosRojos);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "v_BiometriaHematicaCompleta";
             this.Text = "Biometria Hematica Completa";

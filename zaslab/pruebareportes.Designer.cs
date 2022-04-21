@@ -38,6 +38,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.lbl_total = new System.Windows.Forms.Label();
+            this.btn_generartotal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_resultado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).BeginInit();
             this.SuspendLayout();
@@ -130,11 +131,22 @@
             this.lbl_total.TabIndex = 29;
             this.lbl_total.Text = "EGO: 0 EGH: 0 BHC: 0";
             // 
+            // btn_generartotal
+            // 
+            this.btn_generartotal.Location = new System.Drawing.Point(172, 530);
+            this.btn_generartotal.Name = "btn_generartotal";
+            this.btn_generartotal.Size = new System.Drawing.Size(74, 29);
+            this.btn_generartotal.TabIndex = 30;
+            this.btn_generartotal.Text = "Generar Todo";
+            this.btn_generartotal.UseVisualStyleBackColor = true;
+            this.btn_generartotal.Click += new System.EventHandler(this.btn_generartotal_Click);
+            // 
             // pruebareportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(803, 567);
+            this.Controls.Add(this.btn_generartotal);
             this.Controls.Add(this.lbl_total);
             this.Controls.Add(this.bnt_ImprTodo);
             this.Controls.Add(this.dgvEstudiantes);
@@ -166,5 +178,6 @@
         private OpenFileDialog openFileDialog1;
         private SaveFileDialog saveFileDialog1;
         private Label lbl_total;
+        private Button btn_generartotal;
     }
 }
